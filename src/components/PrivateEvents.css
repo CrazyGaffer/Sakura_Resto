@@ -8,7 +8,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/* ===== Hero Section ===== */
+/* ===== Home Section ===== */
 .private-events-hero {
     text-align: center;
     padding: 60px 20px;
@@ -26,7 +26,12 @@
     text-transform: uppercase;
 }
 
-/* Hero text animations and styles */
+.hero-description {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+/* Home text animations and styles */
 .private-events-hero h1 {
     font-size: 3em;
     margin-bottom: 20px;
@@ -132,11 +137,15 @@
 /* Staggered animation delays for package cards */
 .package-card:nth-child(1) {
     animation-delay: 0.3s;
+    margin-top: 20px;
 }
 .package-card:nth-child(2) {
+    margin-top: -20px;
+
     animation-delay: 0.5s;
 }
 .package-card:nth-child(3) {
+    margin-top: 20px;
     animation-delay: 0.7s;
 }
 
@@ -197,6 +206,7 @@
     padding: 60px 20px;
     background: #fff;
     text-align: center;
+    border-radius: 16px;
 }
 
 .private-events-testimonials h2 {
@@ -228,9 +238,11 @@
 .testimonial-card p {
     margin-bottom: 15px;
     font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .testimonial-card span {
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.9em;
     color: #777;
 }

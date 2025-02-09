@@ -7,10 +7,10 @@ function PrivateEvents() {
 
     return (
         <section id="private-events" className="private-events">
-            {/* Hero Section */}
+            {/* Home Section */}
             <div className="private-events-hero">
                 <h1 className= "hero-title">Make Your Event Unforgettable</h1>
-                <p>
+                <p className= "hero-description">
                     Host your private event with us and let our experienced team create an atmosphere that exceeds your
                     expectations. Whether it’s an intimate gathering or a grand celebration, we have the perfect setting for you.
                 </p>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 /* Сброс стилей для всех элементов */
 * {
   margin: 0;
@@ -24,6 +26,16 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
 }
 
 /* Утилитарный класс для контейнеров */

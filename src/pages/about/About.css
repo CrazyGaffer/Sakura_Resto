@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 .about {
     padding: 100px 20px;
     background-color: #f9f9f9;
@@ -8,6 +10,8 @@
     font-size: 2.5em;
     color: #e91e63;
     margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 
 .about p {
@@ -15,6 +19,7 @@
     color: #333;
     max-width: 800px;
     margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Адаптив */
