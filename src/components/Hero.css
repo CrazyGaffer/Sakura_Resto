@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.hero {
+    position: relative;
+    height: 100vh;           /* Во всю высоту экрана */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px; /* отступ для navbar */
+}
+
+/* Фоновый слой с изображением и блюром */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    filter: blur(8px);
+    transform: scale(1.1);
+    z-index: -2;
+}
+
+/* Слой затемнения */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Основной контент */
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #f0f0f0;
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-family: 'Montserrat', sans-serif;;
+    font-size: 1.3em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+/* Кнопки внутри Hero */
+.hero-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+/* Общий базовый стиль для кнопок */
+.hero-btn {
+    position: relative;
+    overflow: hidden; /* Чтобы псевдоэлемент не вылезал за границы */
+    padding: 16px 28px;
+    border: none;
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Плавная анимация */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* "Primary" кнопка — яркий градиент + shimmer */
+.hero-btn--primary {
+    background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Псевдоэлемент с белым бликом */
+.hero-btn--primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75px;  /* Спрятали за пределами слева */
+    width: 50px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: skewX(-20deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+/* Ховер-эффекты */
+.hero-btn--primary:hover {
+    filter: brightness(1.1);
+    transform: scale(1.03);  /* Немного увеличиваем кнопку */
+}
+
+/* Двигаем "блик" слева направо */
+.hero-btn--primary:hover::before {
+    left: 120%;
+    opacity: 1;
+}
+
+/* Вторичная кнопка — обводка + плавная заливка */
+.hero-btn--secondary {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-btn--secondary:hover {
+    background: #fff;
+    color: #e91e63;
+    transform: scale(1.03);
+}

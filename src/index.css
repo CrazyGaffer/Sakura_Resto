@@ -1,0 +1,34 @@
+/* Сброс стилей для всех элементов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Задание высоты для html, body и корневого элемента */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Глобальные стили для body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Стили для ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Утилитарный класс для контейнеров */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
