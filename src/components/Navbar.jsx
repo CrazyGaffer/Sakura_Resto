@@ -1,15 +1,24 @@
+import React, { useState } from 'react';
 import './Navbar.css';
 
 function Navbar() {
+    const [selectedLang, setSelectedLang] = useState('EN');
+    // 'EN' as the default language
+
     const handleScroll = (e, targetId) => {
         e.preventDefault();
         const element = document.getElementById(targetId);
         if (element) {
-            // Calculate the offset position, e.g., subtract the navbar height (80px)
-            const yOffset = -80; // negative value if navbar is fixed at the top
+            const yOffset = -80;
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
+    };
+
+    const handleLanguageChange = (lang) => {
+        setSelectedLang(lang);
+        // If you are using a translation library, you can also trigger the language change here
+        // i18n.changeLanguage(lang);
     };
 
     return (
@@ -43,9 +52,24 @@ function Navbar() {
                 </li>
             </ul>
             <div className="navbar-languages">
-                <button className="lang-btn">EN</button>
-                <button className="lang-btn">EST</button>
-                <button className="lang-btn">RU</button>
+                <button
+                    className={`lang-btn ${selectedLang === 'EN' ? 'active' : ''}`}
+                    onClick={() => handleLanguageChange('EN')}
+                >
+                    EN
+                </button>
+                <button
+                    className={`lang-btn ${selectedLang === 'EST' ? 'active' : ''}`}
+                    onClick={() => handleLanguageChange('EST')}
+                >
+                    EST
+                </button>
+                <button
+                    className={`lang-btn ${selectedLang === 'RU' ? 'active' : ''}`}
+                    onClick={() => handleLanguageChange('RU')}
+                >
+                    RU
+                </button>
             </div>
         </nav>
     );

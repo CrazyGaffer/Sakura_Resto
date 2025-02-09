@@ -30,19 +30,19 @@ function PrivateEvents() {
                         <button className="package-btn">Learn More</button>
                     </div>
                     <div className="package-card">
-                        <h3>Premium Package</h3>
-                        <p>
-                            Ideal for mid-sized events. Enjoy a full-course meal, exclusive decor, and personalized service.
-                        </p>
-                        <p className="price">$399</p>
-                        <button className="package-btn">Learn More</button>
-                    </div>
-                    <div className="package-card">
                         <h3>Luxury Package</h3>
                         <p>
                             For lavish celebrations. Experience gourmet dining, state-of-the-art decor, and our premium service.
                         </p>
                         <p className="price">$699</p>
+                        <button className="package-btn">Learn More</button>
+                    </div>
+                    <div className="package-card">
+                        <h3>Premium Package</h3>
+                        <p>
+                            Ideal for mid-sized events. Enjoy a full-course meal, exclusive decor, and personalized service.
+                        </p>
+                        <p className="price">$399</p>
                         <button className="package-btn">Learn More</button>
                     </div>
                 </div>

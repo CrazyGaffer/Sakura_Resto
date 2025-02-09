@@ -90,6 +90,12 @@
     color: #e91e63;
 }
 
+.lang-btn.active {
+    color: #e91e63;       /* Highlight color */
+    font-weight: bold;    /* Bold it */
+    text-decoration: underline; /* Optional underline for clarity */
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar {

@@ -28,7 +28,12 @@
 
 .hero-description {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
     color: black;
+    text-align: center;
 }
 
 /* Home text animations and styles */
@@ -137,15 +142,11 @@
 /* Staggered animation delays for package cards */
 .package-card:nth-child(1) {
     animation-delay: 0.3s;
-    margin-top: 20px;
 }
 .package-card:nth-child(2) {
-    margin-top: -20px;
-
     animation-delay: 0.5s;
 }
 .package-card:nth-child(3) {
-    margin-top: 20px;
     animation-delay: 0.7s;
 }
 

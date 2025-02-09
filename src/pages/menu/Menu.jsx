@@ -18,7 +18,7 @@ function Menu() {
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
             >
-                <h2>Наше меню</h2>
+                <h2>Our menu</h2>
                 <div className="menu-items">
                     {menuItems.map((item, index) => (
                         <div className="menu-item" key={index}>
