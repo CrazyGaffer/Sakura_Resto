@@ -44,8 +44,8 @@ const Navbar = () => {
                             <ScrollLink
                                 to={item.toLowerCase()}
                                 smooth={true}
-                                offset={-70}  // adjust if you have a fixed navbar height
-                                duration={500}
+                                duration={150}
+                                onClick={toggleDrawer(false)}
                             >
                                 <ListItemText primary={item} />
                             </ScrollLink>

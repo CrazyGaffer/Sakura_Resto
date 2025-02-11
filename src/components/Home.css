@@ -129,3 +129,25 @@
     color: #e91e63;
     transform: scale(1.03);
 }
+
+@media (max-width: 600px) {
+    /* Optionally scale down the hero text as well */
+    .hero-content h1 {
+        font-size: 2em;   /* instead of 3em */
+    }
+    .hero-content p {
+        font-size: 1em;  /* was 1.3em */
+    }
+
+    /* Stack the buttons and reduce their size */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;  /* smaller gap */
+        align-items: center; /* center them horizontally */
+    }
+
+    .hero-btn {
+        font-size: 1em;    /* smaller font size */
+        padding: 12px 20px;  /* less padding */
+    }
+}

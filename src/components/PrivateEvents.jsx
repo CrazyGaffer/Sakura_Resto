@@ -27,7 +27,6 @@ function PrivateEvents() {
                             Perfect for small gatherings. Includes a selection of appetizers, beverages, and a simple decor setup.
                         </p>
                         <p className="price">$199</p>
-                        <button className="package-btn">Learn More</button>
                     </div>
                     <div className="package-card">
                         <h3>Luxury Package</h3>
@@ -35,7 +34,6 @@ function PrivateEvents() {
                             For lavish celebrations. Experience gourmet dining, state-of-the-art decor, and our premium service.
                         </p>
                         <p className="price">$699</p>
-                        <button className="package-btn">Learn More</button>
                     </div>
                     <div className="package-card">
                         <h3>Premium Package</h3>
@@ -43,7 +41,6 @@ function PrivateEvents() {
                             Ideal for mid-sized events. Enjoy a full-course meal, exclusive decor, and personalized service.
                         </p>
                         <p className="price">$399</p>
-                        <button className="package-btn">Learn More</button>
                     </div>
                 </div>
             </div>

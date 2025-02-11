@@ -16,7 +16,7 @@
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 700 !important;
     color: #e91e63 !important;
-    font-size: 32px !important;
+    font-size: 32px !important; /* desktop size */
     text-transform: uppercase !important;
 }
 
@@ -29,7 +29,6 @@
     font-family: 'Montserrat', sans-serif !important;
 }
 
-/* Style the hamburger icon button */
 .navbar-menu-icon {
     margin-left: 8px;
     color: #333;
@@ -39,3 +38,8 @@ html {
     scroll-behavior: smooth;
 }
 
+@media (max-width: 600px) {
+    .navbar-title {
+        font-size: 20px !important;
+    }
+}
