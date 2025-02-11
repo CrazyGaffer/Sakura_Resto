@@ -6,7 +6,7 @@ function PrivateEvents() {
     const example2 = "Our celebration exceeded all expectations. The service and quality were top-notch."
 
     return (
-        <section id="private-events" className="private-events">
+        <section id="events" className="private-events">
             {/* Home Section */}
             <div className="private-events-hero">
                 <h1 className= "hero-title">Make Your Event Unforgettable</h1>

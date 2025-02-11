@@ -1,118 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-.navbar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 20px 40px;
+/* Style the AppBar */
+.navbar-appbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Style the toolbar if needed */
+.navbar-toolbar {
+    padding: 0 16px;
     background-color: #fff;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo styling */
-.navbar-logo {
-    font-size: 2.2em;
-    font-weight: bold;
+/* Style the title */
+.navbar-title {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    color: #e91e63 !important;
+    font-size: 32px !important;
+    text-transform: uppercase !important;
+}
+
+/* Style the navigation buttons */
+.navbar-button {
+    color: #333 !important;
+    margin-left: 8px;
     text-transform: uppercase;
-    color: #e91e63;
+    font-weight: 600 !important;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
-/* Navigation links styling */
-.navbar-links {
-    text-transform: uppercase;
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    margin-left: 40px; /* Added left margin to separate the logo from the links */
+/* Style the hamburger icon button */
+.navbar-menu-icon {
+    margin-left: 8px;
+    color: #333;
 }
 
-.navbar-links li {
-    margin-left: 20px;
-    position: relative;
+html {
+    scroll-behavior: smooth;
 }
 
-.navbar-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-    transition: color 0.3s ease, transform 0.3s ease;
-    position: relative;
-}
-
-/* Underline hover effect */
-.navbar-links a:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 0;
-    height: 2px;
-    background-color: #e91e63;
-    transition: width 0.3s ease;
-}
-
-.navbar-links a:hover {
-    color: #e91e63;
-    transform: scale(1.1);
-}
-
-.navbar-links a:hover:after {
-    width: 100%;
-}
-
-/* Language buttons container */
-.navbar-languages {
-    margin-left: auto; /* Pushes language buttons to the right */
-    display: flex;
-    gap: 10px;
-}
-
-/* Language buttons styling */
-.lang-btn {
-    background: transparent;
-    border: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 1em;
-    color: black;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.lang-btn:hover {
-    color: #e91e63;
-}
-
-.lang-btn.active {
-    color: #e91e63;       /* Highlight color */
-    font-weight: bold;    /* Bold it */
-    text-decoration: underline; /* Optional underline for clarity */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .navbar-links {
-        flex-direction: column;
-        margin: 10px 0 0 0;
-    }
-
-    .navbar-links li {
-        margin: 10px 0;
-    }
-
-    .navbar-languages {
-        margin: 10px 0 0 0;
-    }
-}

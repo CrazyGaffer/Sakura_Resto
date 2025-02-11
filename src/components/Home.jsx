@@ -1,17 +1,15 @@
 import { motion } from 'framer-motion';
 import './Home.css';
-import heroBackground from '../assets/backround.avif'; // Убедитесь в правильности пути
+import heroBackground from '../assets/backround.avif';
 
 function Home() {
     return (
-        <section id="hero" className="hero">
-            {/* Фоновый слой с блюром */}
+        <section id="home" className="hero">
             <div
                 className="hero-bg"
                 style={{ backgroundImage: `url(${heroBackground})` }}
             ></div>
 
-            {/* Контент */}
             <motion.div
                 className="hero-content"
                 initial={{ opacity: 0, y: -50 }}
@@ -23,10 +21,8 @@ function Home() {
                     Inspired by Asian culture, we elevate traditional Japanese dishes by fusing
                     Asian and European flavors into an unforgettable culinary journey.
                 </p>
-
             </motion.div>
 
-            {/* Кнопки (если нужно, можно оставить или убрать) */}
             <motion.div
                 className="hero-buttons"
                 initial={{ opacity: 0, y: 50 }}
@@ -42,6 +38,7 @@ function Home() {
                     className="hero-btn hero-btn--primary"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => window.open('https://v2.tableonline.fi/instabook/bookings/AwHHJD2/selection?locale=ee')}
                 >
                     Reservations
                 </motion.button>
@@ -50,6 +47,7 @@ function Home() {
                     className="hero-btn hero-btn--secondary"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => window.open('https://sakura-restoran.choiceqr.com/online-menu')}
                 >
                     Order Online
                 </motion.button>
