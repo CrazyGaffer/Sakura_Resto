@@ -28,7 +28,7 @@ const Navbar = () => {
                         {navItems.map(item => (
                             <li key={item}>
                                 <ScrollLink
-                                    to={item.toLowerCase()}
+                                    to={item === 'Contact' ? 'footer' : item.toLowerCase()}
                                     smooth={true}
                                     duration={150}
                                     onClick={closeMenu}
