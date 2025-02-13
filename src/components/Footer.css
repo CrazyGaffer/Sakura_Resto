@@ -1,6 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 .footer {
-    padding: 20px;
     background-color: #333;
-    text-align: center;
     color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding: 10px 20px; /* Reduced padding for a more compact look */
+}
+
+/* Main container holding all info */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+/* Each info block */
+.footer-item {
+    margin: 5px 10px;
+    flex: 1;
+    text-align: center;
+}
+
+/* Links styling */
+.footer-item a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 3px;
+    transition: color 0.3s;
+}
+
+.footer-item a:hover {
+    color: #aaa;
+    text-decoration: underline;
+}
+
+/* Bottom section with copyright/developer info */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #444;
+    padding-top: 5px;
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
 }

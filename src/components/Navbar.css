@@ -57,6 +57,10 @@ html {
     cursor: pointer;
 }
 
+.nav-menu li a:hover {
+    color: #e91e63;
+}
+
 /* Hamburger Icon (initially hidden) */
 .hamburger {
     display: none;
