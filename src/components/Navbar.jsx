@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import './Navbar.css';
 
@@ -6,6 +6,7 @@ const navItems = ['Home', 'About', 'Menu', 'Events', 'Contact'];
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     // Toggle the hamburger menu state
     const toggleMenu = () => {
@@ -17,8 +18,23 @@ const Navbar = () => {
         setMenuOpen(false);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {  // Adjust the threshold as needed
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup on component unmount
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <header className="navbar">
+        <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-container">
                 <div className="navbar-title">Sakura Resto</div>
 

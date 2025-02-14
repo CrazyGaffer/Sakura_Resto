@@ -15,10 +15,11 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: transparent; /* Initially transparent */
+    color: #fff; /* White text when transparent */
     z-index: 10;
     font-family: 'Montserrat', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .navbar-container {
@@ -34,7 +35,7 @@ html {
 .navbar-title {
     font-size: 32px;
     font-weight: 700;
-    color: #e91e63;
+    color: inherit; /* Inherit color from .navbar */
     text-transform: uppercase;
 }
 
@@ -51,7 +52,7 @@ html {
 
 .nav-menu li a {
     text-decoration: none;
-    color: #333;
+    color: inherit; /* Inherit white from .navbar */
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
@@ -73,8 +74,25 @@ html {
 .hamburger .bar {
     width: 25px;
     height: 3px;
-    background-color: #333;
+    background-color: #fff; /* White bars for transparent navbar */
     transition: 0.3s;
+}
+
+/* Scrolled Navbar (White Background & Dark Text) */
+.navbar.scrolled {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333; /* Dark text color */
+}
+
+.navbar.scrolled .navbar-title,
+.navbar.scrolled a {
+    color: #333;
+}
+
+/* Set hamburger bars to dark when scrolled */
+.navbar.scrolled .hamburger .bar {
+    background-color: #333;
 }
 
 /* Responsive Styles for Mobile */
@@ -113,6 +131,7 @@ html {
         width: 100%;
         text-align: left;
         padding-left: 20px;  /* Added spacing from the left side */
+        color: #333;         /* Dark text for white mobile background */
     }
 
     /* Display the hamburger icon on mobile */

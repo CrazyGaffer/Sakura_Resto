@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+.custom-language-selector {
+    /* Fixed position for the entire selector */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+/* Toggle button styling */
+.selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px; /* Increased vertical padding */
+    cursor: pointer;
+}
+
+/* Dropdown list positioned above the toggle */
+.dropdown {
+    position: absolute;
+    bottom: calc(100% + 4px); /* Positioned above with a 4px gap */
+    left: 0;
+    width: 100%;  /* Make the dropdown as wide as its parent */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+}
+
+/* Dropdown items */
+.dropdown li {
+    padding: 4px 8px;
+    cursor: pointer;
+}
+.dropdown li:hover,
+.dropdown li:focus {
+    background: #f7f7f7;
+}
+
+/* Inline layout for flag and text */
+.language-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Chevron icon animation */
+.chevron {
+    transition: transform 0.3s ease;
+}
+.chevron.rotate {
+    transform: rotate(180deg);
+}
