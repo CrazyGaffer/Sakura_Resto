@@ -40,7 +40,7 @@ function Home() {
                     whileTap={{ scale: 0.95 }}
                     onClick={() => window.open('https://v2.tableonline.fi/instabook/bookings/AwHHJD2/selection?locale=ee')}
                 >
-                    Reservations
+                    Book a table
                 </motion.button>
 
                 <motion.button

@@ -45,25 +45,6 @@ function PrivateEvents() {
                 </div>
             </div>
 
-            {/* Gallery Section */}
-            <div className="private-events-gallery">
-                <h2>Event Gallery</h2>
-                <div className="gallery-grid">
-                    <div className="gallery-item">
-                        <img src="https://via.placeholder.com/300" alt="Event 1" />
-                    </div>
-                    <div className="gallery-item">
-                        <img src="https://via.placeholder.com/300" alt="Event 2" />
-                    </div>
-                    <div className="gallery-item">
-                        <img src="https://via.placeholder.com/300" alt="Event 3" />
-                    </div>
-                    <div className="gallery-item">
-                        <img src="https://via.placeholder.com/300" alt="Event 4" />
-                    </div>
-                </div>
-            </div>
-
             {/* Testimonials Section */}
             <div className="private-events-testimonials">
                 <h2>What Our Clients Say</h2>
