@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import ReactCountryFlag from 'react-country-flag';
-import './CustomLanguageSelector.css';
+import './LanguageSelector.css';
 
 const languages = [
     { code: 'et', countryCode: 'EE', language: 'EST' },
@@ -9,7 +9,7 @@ const languages = [
     { code: 'ru', countryCode: 'RU', language: 'RU' },
 ];
 
-const CustomLanguageSelector = () => {
+const LanguageSelector = () => {
     const [open, setOpen] = useState(false);
     const [selected, setSelected] = useState('et'); // Estonian is the primary
     const dropdownRef = useRef(null);
@@ -94,4 +94,4 @@ const CustomLanguageSelector = () => {
     );
 };
 
-export default CustomLanguageSelector;
+export default LanguageSelector;
