@@ -1,80 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.footer {
-    background-color: #333;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    padding: 20px;
+:root {
+    --primary-bg: #151515;
+    --accent-color: #FF576F;
+    --text-color: #FFFFFF;
 }
 
+h3 {
+text-transform: uppercase;
+}
+
+/* Overall Footer Styles */
+.footer {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------- TOP SECTION ---------- */
 .footer-top {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    text-align: center;
-    padding-bottom: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 30px;
 }
 
-.footer-top h3 {
-    margin-bottom: 10px;
+.footer-column {
+    min-width: 150px;
+}
+
+/* Section Headings */
+.footer-column h3 {
+    font-size: 1rem;
     font-weight: 700;
+    margin-bottom: 0.8rem;
+    position: relative;
 }
 
-.footer-top p {
+/* Accent underline for headings */
+.footer-column h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-color);
+    margin-top: 5px;
+}
+
+/* Paragraph spacing */
+.footer-column p {
     margin: 5px 0;
     font-size: 0.9rem;
 }
 
-.footer-top a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 5px;
-    transition: color 0.3s;
-}
-
-.footer-top a:hover {
-    color: #aaa;
-    text-decoration: underline;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    border-top: 1px solid #444;
-    padding-top: 20px;
-    font-size: 0.8rem;
-}
-
-.footer-info {
-    display: flex;
-    flex-direction: column;
+/* Social Icons */
+.footer-socials {
+    margin-top: 10px;
 }
 
 .footer-socials a {
-    color: #fff;
-    margin-left: 10px;
+    margin-right: 10px;
     font-size: 1.2rem;
+    color: var(--text-color);
     transition: color 0.3s;
 }
 
 .footer-socials a:hover {
-    color: #aaa;
+    color: var(--accent-color);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* ---------- Quick Links in a row with "|" separator ---------- */
+.footer-links-row {
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-links-row a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+    margin-right: 0; /* Remove default spacing */
+}
+
+/* Add a pipe after each link except the last one */
+.footer-links-row a:not(:last-child)::after {
+    content: "|";
+    color: var(--text-color);
+    margin: 0 8px;
+}
+
+/* Hover effect */
+.footer-links-row a:hover {
+    color: var(--accent-color);
+}
+
+/* ---------- BOTTOM SECTION ---------- */
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+/* ---------- RESPONSIVE STYLES ---------- */
+@media (max-width: 992px) {
     .footer-top {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr; /* Switch to 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-top {
+        grid-template-columns: 1fr; /* Single column on mobile */
     }
 
     .footer-bottom {
-        flex-direction: column;
         text-align: center;
-    }
-
-    .footer-socials {
-        margin-top: 10px;
     }
 }

@@ -49,7 +49,7 @@ function Home() {
                     whileTap={{ scale: 0.95 }}
                     onClick={() => window.open('https://sakura-restoran.choiceqr.com/online-menu')}
                 >
-                    Order Online
+                    Order Now
                 </motion.button>
             </motion.div>
         </section>
