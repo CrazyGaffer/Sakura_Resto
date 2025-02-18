@@ -12,15 +12,17 @@ function Footer() {
                     {/* Column 1: Working Hours */}
                     <div className="footer-column">
                         <h3>Working Hours</h3>
-                        <p>Mon-Fri: 11 AM – 10 PM</p>
-                        <p>Sat-Sun: 12 PM – 11 PM</p>
+                        <p>Mon-Thu: 11 AM – 11 PM</p>
+                        <p>Fri: 11 AM – 12 AM</p>
+                        <p>Sat: 12 PM – 12 AM</p>
+                        <p>Sun: 12 PM – 10 PM</p>
                     </div>
 
                     {/* Column 2: Contact */}
                     <div className="footer-column">
                         <h3>Contact</h3>
                         <p>info@sakuraresto.ee</p>
-                        <p>+1 234 567 890</p>
+                        <p>+372 5486 0852</p>
                         <p>Pärnu mnt 32, Tallinn</p>
                     </div>
 
@@ -28,9 +30,30 @@ function Footer() {
                     <div className="footer-column">
                         <h3>Follow Us</h3>
                         <div className="footer-socials">
-                            <a href="https://facebook.com" aria-label="Facebook"><FaFacebookF /></a>
-                            <a href="https://instagram.com" aria-label="Instagram"><FaInstagram /></a>
-                            <a href="https://www.tiktok.com/" aria-label="TikTok"><FaTiktok/></a>
+                            <a
+                                href="https://www.facebook.com/sakuraresto.ee/?locale=et_EE"
+                                aria-label="Facebook"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaFacebookF />
+                            </a>
+                            <a
+                                href="https://www.instagram.com/sakuraresto.ee/?hl=en"
+                                aria-label="Instagram"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaInstagram />
+                            </a>
+                            <a
+                                href="https://www.tiktok.com/@sakuraresto.ee"
+                                aria-label="TikTok"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaTiktok />
+                            </a>
                         </div>
                     </div>
 
@@ -40,6 +63,7 @@ function Footer() {
                         <div className="footer-links-row">
                             <a href="#home">Home</a>
                             <a href="#menu">Menu</a>
+                            <a href="#gallery">Gallery</a>
                             <a href="#events">Events</a>
                         </div>
                     </div>
@@ -47,9 +71,9 @@ function Footer() {
 
                 {/* ---------- BOTTOM ROW ---------- */}
                 <div className="footer-bottom">
-          <span>
-            &copy; {new Date().getFullYear()} All rights reserved. Developed by Jakeovski
-          </span>
+                    <span>
+                        &copy; {new Date().getFullYear()} All rights reserved. Developed by Jakeovski
+                    </span>
                 </div>
             </div>
         </footer>

@@ -74,8 +74,13 @@ html {
 .hamburger .bar {
     width: 25px;
     height: 3px;
-    background-color: #fff; /* White bars for transparent navbar */
+    background-color: #fff;
     transition: 0.3s;
+}
+
+/* Force dark bars when the hamburger is active */
+.hamburger.active .bar {
+    background-color: #333;
 }
 
 /* Scrolled Navbar (White Background & Dark Text) */
@@ -90,17 +95,16 @@ html {
     color: #333;
 }
 
-/* Set hamburger bars to dark when scrolled */
 .navbar.scrolled .hamburger .bar {
     background-color: #333;
 }
 
 /* Responsive Styles for Mobile */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     /* Full-screen mobile nav sliding from the top */
     .nav-menu {
         position: fixed;
-        top: -100%;
+        top: -100vh; /* Use -100vh instead of -100% */
         left: 0;
         width: 100%;
         height: 100vh;
@@ -118,6 +122,10 @@ html {
         top: 0;
     }
 
+    .navbar-title {
+        font-size: 25px;
+    }
+
     .nav-menu ul {
         width: 100%;
         display: flex;
@@ -125,7 +133,6 @@ html {
         gap: 30px;
     }
 
-    /* Add extra left padding to the links for spacing */
     .nav-menu ul li a {
         display: block;
         width: 100%;
@@ -151,11 +158,4 @@ html {
 
 .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-}
-
-/* Adjust Navbar Title for smaller screens */
-@media (max-width: 600px) {
-    .navbar-title {
-        font-size: 20px;
-    }
 }
