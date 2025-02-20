@@ -2,7 +2,7 @@
 
 .hero {
     position: relative;
-    height: 100vh;           /* Во всю высоту экрана */
+    height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;

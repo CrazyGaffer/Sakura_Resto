@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.upcoming-events {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.upcoming-events h2 {
+    font-size: 2.5em;
+    font-family: 'Montserrat', sans-serif;
+    color: #e91e63;
+    margin-bottom: 40px;
+}
+
+.upcoming-events p {
+    font-size: 1rem;
+    color: #555;
+}

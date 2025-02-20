@@ -1,20 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* Сброс стилей для всех элементов */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Задание высоты для html, body и корневого элемента */
 html,
 body,
 #root {
   height: 100%;
 }
 
-/* Глобальные стили для body */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #fff;
@@ -22,7 +19,6 @@ body {
   line-height: 1.6;
 }
 
-/* Стили для ссылок */
 a {
   text-decoration: none;
   color: inherit;
@@ -38,7 +34,6 @@ h2 {
   text-transform: uppercase;
 }
 
-/* Утилитарный класс для контейнеров */
 .container {
   width: 90%;
   max-width: 1200px;

@@ -1,4 +1,5 @@
 import './PrivateEvents.css';
+import UpcomingEvents from "./UpcomingEvents.jsx";
 
 function PrivateEvents() {
 
@@ -16,6 +17,9 @@ function PrivateEvents() {
                 </p>
                 <button className="cta-btn">Book Now</button>
             </div>
+
+            {/* Upcoming Events Section */}
+            <UpcomingEvents/>
 
             {/* Packages Section */}
             <div className="private-events-packages">
