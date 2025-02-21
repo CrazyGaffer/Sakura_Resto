@@ -1,19 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.upcoming-events {
+.upcoming-events-carousel h2 {
+    font-size: 2.5em;
+    color: #e91e63;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.upcoming-events-carousel {
+    text-align: center;
     padding: 2rem;
     background-color: #f9f9f9;
-    text-align: center;
 }
 
-.upcoming-events h2 {
-    font-size: 2.5em;
-    font-family: 'Montserrat', sans-serif;
-    color: #e91e63;
-    margin-bottom: 40px;
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.upcoming-events p {
-    font-size: 1rem;
-    color: #555;
+.carousel-view {
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 1rem; /* Gap between cards */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Each card takes up one-third of the container width minus the gap */
+.carousel-card {
+    flex: 0 0 calc((100% - 2rem) / 3);
+    box-sizing: border-box;
+    padding: 2rem 1rem; /* Increased vertical padding */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* Styled chevron buttons */
+.carousel-btn {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: #e91e63;
+    color: #fff;
+}
+
+.carousel-dots {
+    margin-top: 1rem;
+}
+
+.carousel-dots .dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin: 0 5px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-dots .dot:hover {
+    transform: scale(1.2);
+}
+
+.carousel-dots .dot.active {
+    background: #333;
+    transform: scale(1.5);
 }
