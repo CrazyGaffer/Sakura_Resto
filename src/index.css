@@ -6,10 +6,17 @@
   box-sizing: border-box;
 }
 
-html,
-body,
+/* Allow vertical scrolling if content exceeds viewport */
+html, body {
+  min-height: 100%;
+  width: auto;
+  overflow-x: hidden;  /* Only hide horizontal overflow */
+  overflow-y: auto;
+}
+
+/* Ensure the root element grows with the content */
 #root {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -24,11 +31,7 @@ a {
   color: inherit;
 }
 
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-}
-
+h1,
 h2 {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;

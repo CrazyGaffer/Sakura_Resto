@@ -14,17 +14,21 @@
     background-color: #f9f9f9;
 }
 
+/* Add horizontal padding to ensure space between chevron buttons and screen sides */
 .carousel-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    padding: 0 2rem;
 }
 
 .carousel-view {
     overflow: hidden;
     width: 80%;
     margin: 0 auto;
+    padding: 1rem 2rem; /* 1rem top/bottom and 2rem left/right */
+    box-sizing: border-box;
 }
 
 .carousel-track {
@@ -33,29 +37,39 @@
     transition: transform 0.5s ease-in-out;
 }
 
-/* Each card takes up one-third of the container width minus the gap */
+/* Each card takes up one-third of the available width on larger screens */
 .carousel-card {
-    flex: 0 0 calc((100% - 2rem) / 3);
+    flex: 0 0 auto;
     box-sizing: border-box;
-    padding: 2rem 1rem; /* Increased vertical padding */
+    padding: 2rem 1rem;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-card:hover {
+    cursor: pointer;
+}
+
+.carousel-card:hover h3 {
+    color: #e91e63;
 }
 
 .card-image {
     width: 100%;
-    height: auto;
-    border-radius: 4px;
+    height: 300px;       /* Fixed height */
+    object-fit: cover;   /* Maintain aspect ratio */
+    border-radius: 10px;
     margin-bottom: 1rem;
+    display: block;
 }
 
-/* Styled chevron buttons */
+/* Styled chevron buttons with added horizontal margin */
 .carousel-btn {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 50%;
-    font-size: 2rem;
+    font-size: 20px;
     cursor: pointer;
     color: #333;
     padding: 0.5rem;
@@ -64,6 +78,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 1rem;
 }
 
 .carousel-btn:hover {
@@ -93,4 +108,20 @@
 .carousel-dots .dot.active {
     background: #333;
     transform: scale(1.5);
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Hide chevron buttons */
+    .carousel-btn {
+        display: none;
+    }
+    /* Remove gap so one card fills the view */
+    .carousel-track {
+        gap: 0;
+    }
+    /* Each card takes full width */
+    .carousel-card {
+        flex: 0 0 100%;
+    }
 }

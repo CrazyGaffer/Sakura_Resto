@@ -52,13 +52,15 @@ html {
 
 .nav-menu li a {
     text-decoration: none;
-    color: inherit; /* Inherit white from .navbar */
+    color: inherit; /* Inherits white or dark depending on navbar state */
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.nav-menu li a:hover {
+.nav-menu li a:hover,
+.nav-menu li a.active {
     color: #e91e63;
 }
 
@@ -85,7 +87,7 @@ html {
 
 /* Scrolled Navbar (White Background & Dark Text) */
 .navbar.scrolled {
-    background: #fff;
+    background: #fff !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: #333; /* Dark text color */
 }
