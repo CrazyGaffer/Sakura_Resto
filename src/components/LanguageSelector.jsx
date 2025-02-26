@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import ReactCountryFlag from 'react-country-flag';
+import i18n from '../i18next.config.jsx'; // adjust the path if necessary
 import './LanguageSelector.css';
 
 const languages = [
@@ -11,7 +12,7 @@ const languages = [
 
 const LanguageSelector = () => {
     const [open, setOpen] = useState(false);
-    const [selected, setSelected] = useState('et'); // Estonian is the primary
+    const [selected, setSelected] = useState(i18n.language); // initialize with current language
     const dropdownRef = useRef(null);
 
     const toggleDropdown = useCallback(() => {
@@ -20,6 +21,7 @@ const LanguageSelector = () => {
 
     const handleSelect = useCallback((code) => {
         setSelected(code);
+        i18n.changeLanguage(code);
         setOpen(false);
     }, []);
 

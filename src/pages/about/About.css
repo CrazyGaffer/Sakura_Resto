@@ -35,10 +35,23 @@
     padding: 20px;
 }
 
+/* Icon Wrapper: orange square rotated 45 degrees */
+.icon-wrapper {
+    width: 60px;         /* Reduced from 80px */
+    height: 60px;        /* Reduced from 80px */
+    background-color: #ff7043;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px; /* Increased bottom margin for spacing */
+}
+
+/* Feature Icon: white icon counter-rotated */
 .feature-icon {
-    font-size: 3em;
-    color: #ff7043;
-    margin-bottom: 10px;
+    font-size: 2em;      /* Adjusted from 3em */
+    color: #fff;
+    transform: rotate(-45deg);
 }
 
 /* Responsive */

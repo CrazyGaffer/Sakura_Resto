@@ -1,33 +1,35 @@
 import './Footer.css';
 import { FaFacebookF, FaInstagram, FaTiktok } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+    const { t } = useTranslation();
+
     return (
         <footer className="footer">
             <div className="footer-container">
-
                 {/* ---------- TOP ROW ---------- */}
                 <div className="footer-top">
                     {/* Column 1: Working Hours */}
                     <div className="footer-column">
-                        <h3>Working Hours</h3>
-                        <p>Mon-Thu: 11 AM – 11 PM</p>
-                        <p>Fri: 11 AM – 12 AM</p>
-                        <p>Sat: 12 PM – 12 AM</p>
-                        <p>Sun: 12 PM – 10 PM</p>
+                        <h3>{t('footer.workingHours')}</h3>
+                        <p>{t('footer.monThu')}</p>
+                        <p>{t('footer.fri')}</p>
+                        <p>{t('footer.sat')}</p>
+                        <p>{t('footer.sun')}</p>
                     </div>
 
                     {/* Column 2: Contact */}
                     <div className="footer-column">
-                        <h3>Contact</h3>
-                        <p>info@sakuraresto.ee</p>
-                        <p>+372 5486 0852</p>
-                        <p>Pärnu mnt 32, Tallinn</p>
+                        <h3>{t('footer.contact')}</h3>
+                        <p>{t('footer.email')}</p>
+                        <p>{t('footer.phone')}</p>
+                        <p>{t('footer.address')}</p>
                     </div>
 
                     {/* Column 3: Social Icons */}
                     <div className="footer-column">
-                        <h3>Follow Us</h3>
+                        <h3>{t('footer.followUs')}</h3>
                         <div className="footer-socials">
                             <a
                                 href="https://www.facebook.com/sakuraresto.ee/?locale=et_EE"
@@ -58,21 +60,21 @@ function Footer() {
 
                     {/* Column 4: Quick Links */}
                     <div className="footer-column">
-                        <h3>Quick Links</h3>
+                        <h3>{t('footer.quickLinks')}</h3>
                         <div className="footer-links-row">
-                            <a>Home</a>
-                            <a >Menu</a>
-                            <a>Gallery</a>
-                            <a>Events</a>
+                            <a href="#home">{t('footer.home')}</a>
+                            <a href="#menu">{t('footer.menu')}</a>
+                            <a href="#gallery">{t('footer.gallery')}</a>
+                            <a href="#events">{t('footer.events')}</a>
                         </div>
                     </div>
                 </div>
 
                 {/* ---------- BOTTOM ROW ---------- */}
                 <div className="footer-bottom">
-                    <span>
-                        &copy; {new Date().getFullYear()} All rights reserved. Developed by CrazyGaffer
-                    </span>
+          <span>
+            &copy; {new Date().getFullYear()} {t('footer.rightsReserved')}
+          </span>
                 </div>
             </div>
         </footer>
