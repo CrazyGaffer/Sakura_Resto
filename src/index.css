@@ -6,15 +6,13 @@
   box-sizing: border-box;
 }
 
-/* Allow vertical scrolling if content exceeds viewport */
 html, body {
   min-height: 100%;
   width: auto;
-  overflow-x: hidden;  /* Only hide horizontal overflow */
+  overflow-x: hidden !important;
   overflow-y: auto;
 }
 
-/* Ensure the root element grows with the content */
 #root {
   min-height: 100%;
 }
