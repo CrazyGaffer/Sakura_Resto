@@ -1,4 +1,3 @@
-import React from 'react';
 import './Footer.css';
 import { FaFacebookF, FaInstagram, FaTiktok } from 'react-icons/fa';
 
@@ -61,10 +60,10 @@ function Footer() {
                     <div className="footer-column">
                         <h3>Quick Links</h3>
                         <div className="footer-links-row">
-                            <a href="#home">Home</a>
-                            <a href="#menu">Menu</a>
-                            <a href="#gallery">Gallery</a>
-                            <a href="#events">Events</a>
+                            <a>Home</a>
+                            <a >Menu</a>
+                            <a>Gallery</a>
+                            <a>Events</a>
                         </div>
                     </div>
                 </div>
@@ -72,7 +71,7 @@ function Footer() {
                 {/* ---------- BOTTOM ROW ---------- */}
                 <div className="footer-bottom">
                     <span>
-                        &copy; {new Date().getFullYear()} All rights reserved. Developed by Jakeovski
+                        &copy; {new Date().getFullYear()} All rights reserved. Developed by CrazyGaffer
                     </span>
                 </div>
             </div>

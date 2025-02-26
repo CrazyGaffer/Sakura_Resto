@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { GiChopsticks, GiKnifeFork, GiBonsaiTree } from 'react-icons/gi';
 import './About.css';
 
 function About() {
@@ -11,21 +12,34 @@ function About() {
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
             >
-                <h2>About Us</h2>
+                <h2>Our story</h2>
                 <p>
-                    At Sakura Resto, we merge the art of traditional Japanese cuisine with
-                    modern culinary trends to bring you a truly unique dining experience.
-                    Our passionate team is dedicated to crafting each dish with the freshest
-                    ingredients, ensuring that every bite is a delightful fusion of flavor,
-                    culture, and innovation.
-                </p>
-                <p>
-                    Whether you’re enjoying our beautifully arranged sushi or savoring
-                    a steaming bowl of ramen, we strive to create an immersive atmosphere
-                    that transports you to the heart of Japan. Join us on a journey
-                    that will excite your taste buds and leave you with unforgettable memories.
+                    Experience the fusion of traditional Japanese cuisine with modern flair. Our menu balances time-honored techniques with a contemporary twist—highlighting classic umami flavors through creative, refined presentations.
                 </p>
             </motion.div>
+            <div className="features">
+                <div className="feature">
+                    <GiChopsticks className="feature-icon" />
+                    <h3>Fresh Flavors</h3>
+                    <p>
+                        We carefully select seasonal ingredients to create dishes bursting with vibrant taste and authentic flavor. From crisp salads to savory soups, our menu celebrates nature&apos;s bounty.
+                    </p>
+                </div>
+                <div className="feature">
+                    <GiKnifeFork className="feature-icon" />
+                    <h3>Artisan Craft</h3>
+                    <p>
+                        Each dish is meticulously handcrafted, blending traditional techniques with innovative presentation. Our chefs&apos; expertise ensures every creation is a masterpiece.
+                    </p>
+                </div>
+                <div className="feature">
+                    <GiBonsaiTree className="feature-icon" />
+                    <h3>Cultural Vibe</h3>
+                    <p>
+                        Immerse yourself in a dining experience that transports you to Japan through both traditional ambiance and modern style. Every detail echoes the rich heritage of Japanese culture.
+                    </p>
+                </div>
+            </div>
         </section>
     );
 }

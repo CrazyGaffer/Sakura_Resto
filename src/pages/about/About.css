@@ -22,7 +22,26 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Адаптив */
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.feature {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+}
+
+.feature-icon {
+    font-size: 3em;
+    color: #ff7043;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .about h2 {
         font-size: 2em;
@@ -30,5 +49,13 @@
 
     .about p {
         font-size: 1em;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature {
+        margin-bottom: 20px;
     }
 }

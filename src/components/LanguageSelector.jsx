@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import ReactCountryFlag from 'react-country-flag';
 import './LanguageSelector.css';

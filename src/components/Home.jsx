@@ -16,10 +16,9 @@ function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
-                <h1>Welcome to Sakura Resto</h1>
+                <h1>Experience the Fusion</h1>
                 <p>
-                    Inspired by Asian culture, we elevate traditional Japanese dishes by fusing
-                    Asian and European flavors into an unforgettable culinary journey.
+                    Traditional Japanese Cuisine with a Modern Twist
                 </p>
             </motion.div>
 
