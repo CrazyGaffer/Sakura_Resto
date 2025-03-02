@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link as ScrollLink } from 'react-scroll';
-import './Navbar.css';
+import './Header.css';
 
-const Navbar = () => {
+const Header = () => {
     const { t } = useTranslation();
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -64,4 +64,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Header;

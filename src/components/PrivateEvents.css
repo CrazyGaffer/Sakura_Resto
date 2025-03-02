@@ -149,60 +149,6 @@
     animation-delay: 0.7s;
 }
 
-/* ===== Testimonials Section ===== */
-.private-events-testimonials {
-    padding: 60px 20px;
-    background: #fff;
-    text-align: center;
-    border-radius: 16px;
-}
-
-.private-events-testimonials h2 {
-    font-size: 2.5em;
-    color: #e91e63;
-    margin-bottom: 40px;
-    opacity: 0;
-    animation: fadeInUp 1s forwards;
-}
-
-.testimonials-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.testimonial-card {
-    background: #f9f9f9;
-    padding: 20px;
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    font-style: italic;
-    opacity: 0;
-    animation: fadeInUp 1s forwards;
-}
-
-.testimonial-card p {
-    margin-bottom: 15px;
-    font-size: 1em;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.testimonial-card span {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9em;
-    color: #777;
-}
-
-/* Staggered animation delays for testimonial cards */
-.testimonial-card:nth-child(1) {
-    animation-delay: 0.3s;
-}
-.testimonial-card:nth-child(2) {
-    animation-delay: 0.5s;
-}
-
 /* ===== Animations ===== */
 @keyframes fadeInDown {
     from {

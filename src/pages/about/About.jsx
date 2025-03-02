@@ -8,7 +8,7 @@ function About() {
             <div className="about-content">
                 <h2>Our story</h2>
                 <p>
-                    Experience the fusion of traditional Japanese cuisine with modern flair. Our menu balances time-honored techniques with a contemporary twist—highlighting classic umami flavors through creative, refined presentations.
+                    Experience the fusion of traditional Japanese cuisine with modern flair, where every dish tells a story of heritage and innovation. Our culinary philosophy embraces time-honored techniques passed down through generations, reimagined with a contemporary twist to awaken your senses. Each creation is a masterpiece that artfully balances classic umami flavors with inventive presentations, inviting you to savor the depth of flavor and the beauty of modern design. We meticulously select seasonal ingredients and refine every detail—from the subtle aroma to the vibrant colors on your plate—to ensure that each bite is as memorable as it is exquisite. Join us on a culinary journey that transcends the ordinary, merging time-tested traditions with dynamic innovation to create an experience that delights both the palate and the eye.
                 </p>
             </div>
             <div className="features">

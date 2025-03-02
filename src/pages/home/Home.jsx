@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import './Home.css';
-import heroBackground from '../assets/backround.avif';
+import heroBackground from '../../assets/backround.avif';
 
 function Home() {
     const { t } = useTranslation();

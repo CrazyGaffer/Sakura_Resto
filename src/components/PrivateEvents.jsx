@@ -1,17 +1,14 @@
 import './PrivateEvents.css';
 import UpcomingEvents from "./UpcomingEvents.jsx";
+import Testimonials from "./testimonials/Testimonials.jsx";
 
 function PrivateEvents() {
-
-    const example1 = "The event was a hit! Every detail was flawlessly executed, and the atmosphere was just perfect."
-    const example2 = "Our celebration exceeded all expectations. The service and quality were top-notch."
-
     return (
         <section id="events" className="private-events">
             {/* Home Section */}
             <div className="private-events-hero">
-                <h1 className= "hero-title">Make Your Event Unforgettable</h1>
-                <p className= "hero-description">
+                <h1 className="hero-title">Make Your Event Unforgettable</h1>
+                <p className="hero-description">
                     Host your private event with us and let our experienced team create an atmosphere that exceeds your
                     expectations. Whether it’s an intimate gathering or a grand celebration, we have the perfect setting for you.
                 </p>
@@ -19,7 +16,7 @@ function PrivateEvents() {
             </div>
 
             {/* Upcoming Events Section */}
-            <UpcomingEvents/>
+            <UpcomingEvents />
 
             {/* Packages Section */}
             <div className="private-events-packages">
@@ -50,19 +47,7 @@ function PrivateEvents() {
             </div>
 
             {/* Testimonials Section */}
-            <div className="private-events-testimonials">
-                <h2>What Our Clients Say</h2>
-                <div className="testimonials-grid">
-                    <div className="testimonial-card">
-                        <p>{ example1 }</p>
-                        <span>- John Doe</span>
-                    </div>
-                    <div className="testimonial-card">
-                        <p>{ example2 }</p>
-                        <span>- Jane Smith</span>
-                    </div>
-                </div>
-            </div>
+            <Testimonials />
         </section>
     );
 }

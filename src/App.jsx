@@ -1,5 +1,5 @@
-import Navbar from './components/Navbar';
-import Home from './components/Home.jsx';
+import Header from './components/Header.jsx';
+import Home from './pages/home/Home.jsx';
 import About from './pages/about/About.jsx';
 import Menu from './pages/menu/Menu.jsx';
 import Gallery from './pages/gallery/Gallery.jsx';
@@ -11,7 +11,7 @@ import './i18next.config.jsx'; // Import the i18n configuration
 function App() {
     return (
         <div className="App">
-            <Navbar />
+            <Header />
             <Home />
             <About />
             <Menu />

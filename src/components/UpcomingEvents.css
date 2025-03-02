@@ -6,122 +6,65 @@
     margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-}
-
-.upcoming-events-carousel {
     text-align: center;
-    padding: 2rem;
-    background-color: #f9f9f9;
 }
 
-/* Add horizontal padding to ensure space between chevron buttons and screen sides */
-.carousel-wrapper {
+.embla__button {
+    color: #333333;
+    border: none;
+    border-radius: 50%;  /* circular shape */
+    width: 3rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    padding: 0 2rem;
-}
-
-.carousel-view {
-    overflow: hidden;
-    width: 80%;
-    margin: 0 auto;
-    padding: 1rem 2rem; /* 1rem top/bottom and 2rem left/right */
-    box-sizing: border-box;
-}
-
-.carousel-track {
-    display: flex;
-    gap: 1rem; /* Gap between cards */
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Each card takes up one-third of the available width on larger screens */
-.carousel-card {
-    flex: 0 0 auto;
-    box-sizing: border-box;
-    padding: 2rem 1rem;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.carousel-card:hover {
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.carousel-card:hover h3 {
+.embla__button:hover {
     color: #e91e63;
 }
 
-.card-image {
-    width: 100%;
-    height: 300px;       /* Fixed height */
-    object-fit: cover;   /* Maintain aspect ratio */
-    border-radius: 10px;
-    margin-bottom: 1rem;
+.embla__button:disabled {
+    opacity: 0.3;
+    cursor: default;
+    color: #333333;
+}
+
+/* Embla dot container */
+.embla__dot {
+    position: relative;
+    width: 1rem;  /* The container size for the dot */
+    height: 1rem;
+    margin-top: 3rem;
+}
+
+/* Unselected dot */
+.embla__dot:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #cccccc; /* default color */
+    /*transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;*/
+}
+
+.embla__dot--selected:after {
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: #333333; /* selected color */
+}
+
+/* Image styles */
+.embla__slide img {
     display: block;
-}
-
-/* Styled chevron buttons with added horizontal margin */
-.carousel-btn {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    color: #333;
-    padding: 0.5rem;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 1rem;
-}
-
-.carousel-btn:hover {
-    background: #e91e63;
-    color: #fff;
-}
-
-.carousel-dots {
-    margin-top: 1rem;
-}
-
-.carousel-dots .dot {
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    margin: 0 5px;
-    background: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.carousel-dots .dot:hover {
-    transform: scale(1.2);
-}
-
-.carousel-dots .dot.active {
-    background: #333;
-    transform: scale(1.5);
-}
-
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-    /* Hide chevron buttons */
-    .carousel-btn {
-        display: none;
-    }
-    /* Remove gap so one card fills the view */
-    .carousel-track {
-        gap: 0;
-    }
-    /* Each card takes full width */
-    .carousel-card {
-        flex: 0 0 100%;
-    }
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
