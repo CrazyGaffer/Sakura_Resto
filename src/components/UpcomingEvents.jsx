@@ -1,5 +1,5 @@
-import EmblaCarousel from './carousel/EmblaCarousel.jsx'
-import './carousel/embla.css'
+import UpcomingEventsCarousel from './carousel/UpcomingEventsCarousel.jsx'
+import './carousel/UpcomingEventsCarousel.css'
 import './UpcomingEvents.css';
 import events from "../data/eventsData.js";
 
@@ -11,7 +11,7 @@ const UpcomingEvents = () => {
     return (
         <div className="upcoming-events-carousel">
             <h2>Upcoming Events</h2>
-            <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+            <UpcomingEventsCarousel slides={SLIDES} options={OPTIONS} />
         </div>
     );
 };

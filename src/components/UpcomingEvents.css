@@ -3,7 +3,7 @@
 .upcoming-events-carousel h2 {
     font-size: 2.5em;
     color: #e91e63;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     text-align: center;
@@ -49,8 +49,7 @@
     transform: translate(-50%, -50%);
     width: 0.6rem;
     height: 0.6rem;
-    background-color: #cccccc; /* default color */
-    /*transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;*/
+    background-color: #cccccc;
 }
 
 .embla__dot--selected:after {

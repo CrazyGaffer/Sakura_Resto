@@ -63,8 +63,8 @@ function Footer() {
                         <h3>{t('footer.quickLinks')}</h3>
                         <div className="footer-links-row">
                             <a href="#home">{t('footer.home')}</a>
+                            <a href="#about">{t('footer.about')}</a>
                             <a href="#menu">{t('footer.menu')}</a>
-                            <a href="#gallery">{t('footer.gallery')}</a>
                             <a href="#events">{t('footer.events')}</a>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .about {
-    padding: 100px 20px;
+    padding: 100px 30px;
     background-color: #f9f9f9;
     text-align: center;
 }
@@ -14,43 +14,59 @@
     text-transform: uppercase;
 }
 
-.about p {
+.feature h3 {
+    padding-bottom: 5px;
     font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about p {
+    font-size: 1.1em;
     color: #333;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Features Section */
+/* Features Section as modern cards */
 .features {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     margin-top: 50px;
 }
 
 .feature {
-    flex: 1;
-    margin: 0 10px;
-    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    flex: 0 1 600px;  /* increased width */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Icon Wrapper */
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Wrapper updated for a modern circular style */
 .icon-wrapper {
     width: 60px;
     height: 60px;
     background-color: #e91e63;
-    transform: rotate(45deg);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 30px;
+    margin: 0 auto 20px;
 }
 
 .feature-icon {
     font-size: 2em;
     color: #fff;
-    transform: rotate(-45deg);
 }
 
 /* Responsive */
@@ -68,6 +84,8 @@
     }
 
     .feature {
+        flex: 0 1 100%; /* override fixed 600px width */
+        width: 100%;
         margin-bottom: 20px;
     }
 }

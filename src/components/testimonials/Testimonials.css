@@ -28,30 +28,9 @@
     width: 320px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-style: italic;
     opacity: 0;
     animation: fadeInUp 1s forwards;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.testimonial-card p {
-    margin-bottom: 20px;
-    font-size: 1.05em;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
-}
-
-.testimonial-card span {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.95em;
-    text-transform: uppercase;
-    color: #777;
 }
 
 .testimonial-content p {
@@ -66,7 +45,8 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 0.95em;
     text-transform: uppercase;
-    color: #777;
+    font-weight: 600;
+    color: #e91e63;
 }
 
 @keyframes fadeInUp {

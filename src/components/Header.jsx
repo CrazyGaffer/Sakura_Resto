@@ -13,7 +13,6 @@ const Header = () => {
         { id: 'home', label: t('navbar.home') },
         { id: 'about', label: t('navbar.about') },
         { id: 'menu', label: t('navbar.menu') },
-        { id: 'gallery', label: t('navbar.gallery') },
         { id: 'events', label: t('navbar.events') },
         { id: 'footer', label: t('navbar.contact') }, // Assuming 'Contact' scrolls to the footer
     ];

@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
-import { PrevButton, NextButton, usePrevNextButtons } from '../carousel/EmblaCarouselArrowButtons.jsx'
+import { PrevButton, NextButton, usePrevNextButtons } from '../carousel/CarouselArrowButtons.jsx'
 
 const AutoCarousel = (props) => {
     const { slides, options } = props
     const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-        Autoplay({ playOnInit: true, delay: 3000 }) // Always autoplay on initialization.
+        Autoplay({ playOnInit: true, delay: 4000 })
     ])
 
     const {
@@ -17,11 +17,11 @@ const AutoCarousel = (props) => {
     } = usePrevNextButtons(emblaApi)
 
     return (
-        <div className="embla">
-            <div className="embla__viewport" ref={emblaRef}>
-                <div className="embla__container">
+        <div className="testimonials-carousel">
+            <div className="carousel__viewport" ref={emblaRef}>
+                <div className="carousel__container">
                     {slides.map((testimonial, index) => (
-                        <div className="embla__slide" key={index}>
+                        <div className="carousel__slide" key={index}>
                             <div className="testimonial-content">
                                 <p>{testimonial.text}</p>
                                 <span>{testimonial.author}</span>
@@ -31,8 +31,8 @@ const AutoCarousel = (props) => {
                 </div>
             </div>
 
-            <div className="embla__controls">
-                <div className="embla__buttons">
+            <div className="carousel__controls">
+                <div className="carousel__buttons">
                     <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
                     <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
                 </div>

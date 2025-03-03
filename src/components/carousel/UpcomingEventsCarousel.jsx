@@ -1,8 +1,8 @@
-import { DotButton, useDotButton } from './EmblaCarouselDotButton.jsx'
-import { PrevButton, NextButton, usePrevNextButtons } from './EmblaCarouselArrowButtons.jsx'
+import { DotButton, useDotButton } from './CarouselDotButton.jsx'
+import { PrevButton, NextButton, usePrevNextButtons } from './CarouselArrowButtons.jsx'
 import useEmblaCarousel from 'embla-carousel-react'
 
-const EmblaCarousel = (props) => {
+const UpcomingEventsCarousel = (props) => {
   const { slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
@@ -49,4 +49,4 @@ const EmblaCarousel = (props) => {
   )
 }
 
-export default EmblaCarousel;
+export default UpcomingEventsCarousel;

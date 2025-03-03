@@ -6,8 +6,8 @@
 }
 
 .menu {
-    padding: 100px 20px;
-    text-align: center; /* This centers elements by default */
+    padding: 100px 100px;
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
 

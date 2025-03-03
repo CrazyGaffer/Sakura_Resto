@@ -1,0 +1,12 @@
+
+.packages {
+    background-color: #F8F1EB;
+}
+
+.packages h2 {
+    font-size: 2.5em;
+    color: #e91e63;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}

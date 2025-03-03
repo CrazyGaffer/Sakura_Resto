@@ -1,19 +1,22 @@
-.embla {
+.testimonials-carousel {
     max-width: 72rem;
     margin: auto;
     --slide-height: 19rem;
     --slide-spacing: 1rem;
-    --slide-size: 100%;  /* Changed from 70% to 100% */
+    --slide-size: 100%;
 }
-.embla__viewport {
+
+.carousel__viewport {
     overflow: hidden;
 }
-.embla__container {
+
+.carousel__container {
     display: flex;
     touch-action: pan-y pinch-zoom;
     margin-left: calc(var(--slide-spacing) * -1);
 }
-.embla__slide {
+
+.carousel__slide {
     transform: translate3d(0, 0, 0);
     flex: 0 0 var(--slide-size);
     min-width: 0;

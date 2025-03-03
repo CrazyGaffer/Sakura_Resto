@@ -1,6 +1,6 @@
 import { testimonialsData } from "../../data/testimonialsData.js";
 import AutoCarousel from './AutoCarousel.jsx';
-import './embla.css';
+import './AutoCarousel.css';
 import './Testimonials.css';
 
 const OPTIONS = { loop: true };
