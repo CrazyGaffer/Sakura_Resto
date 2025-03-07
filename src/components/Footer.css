@@ -78,26 +78,24 @@ text-transform: uppercase;
 
 /* ---------- Quick Links in a row with "|" separator ---------- */
 .footer-links-row {
-    display: inline-flex;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
 }
-
 .footer-links-row a {
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s;
     font-size: 0.9rem;
-    margin-right: 0; /* Remove default spacing */
 }
 
-/* Add a pipe after each link except the last one */
 .footer-links-row a:not(:last-child)::after {
     content: "|";
     color: var(--text-color);
     margin: 0 8px;
 }
 
-/* Hover effect */
 .footer-links-row a:hover {
     color: var(--accent-color);
 }
