@@ -39,6 +39,10 @@ const resources = {
                     }
                 }
             },
+            testimonials: {
+                subtitle: "Testimonials",
+                heading: "What Our Clients Say"
+            },
             footer: {
                 workingHours: "Working Hours",
                 monThu: "Mon-Thu: 11 AM – 11 PM",
@@ -94,6 +98,10 @@ const resources = {
                     }
                 }
             },
+            testimonials: {
+                subtitle: "Tagasiside",
+                heading: "Mida meie kliendid ütlevad"
+            },
             footer: {
                 workingHours: "Tööaeg",
                 monThu: "E-N: 11:00 – 23:00",
@@ -133,7 +141,8 @@ const resources = {
                 heading: "Наша история",
                 subtitle: "О нас",
                 subheading: "Особенности",
-                content: "Погрузитесь в слияние паназиатских кулинарных традиций с современным стилем, где каждое блюдо рассказывает историю разнообразного наследия и инноваций. Наша философия опирается на проверенные временем техники, переосмысленные для пробуждения ваших чувств, сочетая аутентичные вкусы Азии с креативными подачами. Тщательно подобранные сезонные ингредиенты и утончённые детали гарантируют, что каждый укус запомнится своей изысканностью. Отправьтесь в кулинарное путешествие, объединяющее традиции и современные инновации, чтобы порадовать как вкус, так и взгляд.",                features: {
+                content: "Погрузитесь в слияние паназиатских кулинарных традиций с современным стилем, где каждое блюдо рассказывает историю разнообразного наследия и инноваций. Наша философия опирается на проверенные временем техники, переосмысленные для пробуждения ваших чувств, сочетая аутентичные вкусы Азии с креативными подачами. Тщательно подобранные сезонные ингредиенты и утончённые детали гарантируют, что каждый укус запомнится своей изысканностью. Отправьтесь в кулинарное путешествие, объединяющее традиции и современные инновации, чтобы порадовать как вкус, так и взгляд.",
+                features: {
                     heading: "Почему люди выбирают нас?",
                     freshFlavors: {
                         title: "Свежие вкусы",
@@ -148,6 +157,10 @@ const resources = {
                         description: "Ощутите гармоничное сочетание азиатских культур в каждом укусе."
                     }
                 }
+            },
+            testimonials: {
+                subtitle: "Отзывы",
+                heading: "Что говорят наши клиенты"
             },
             footer: {
                 workingHours: "Режим работы",
@@ -172,14 +185,15 @@ const resources = {
 };
 
 i18n
-    .use(initReactI18next) // Passes i18n down to react-i18next
+    .use(initReactI18next)
     .init({
         resources,
-        lng: "et", // Default language
+        lng: "et",
         fallbackLng: "en",
-        interpolation: {
-            escapeValue: false, // React already protects from XSS
-        },
+        interpolation: { escapeValue: false }
+    })
+    .then(() => {
+        console.log("i18n initialized");
     });
 
 export default i18n;
