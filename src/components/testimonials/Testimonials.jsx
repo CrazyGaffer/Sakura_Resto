@@ -9,7 +9,11 @@ const SLIDES = Array.from(testimonialsData)
 const Testimonials = () => {
     return (
         <div className="private-events-testimonials">
-            <h2>What Our Clients Say</h2>
+            <div className="features-header">
+                <div className="small-rectangle"></div>
+                <h4 className="testimonials-subtitle">Testimonials</h4>
+                <h2>What Our Clients Say</h2>
+            </div>
             <AutoCarousel slides={SLIDES} options={OPTIONS} />
         </div>
     );

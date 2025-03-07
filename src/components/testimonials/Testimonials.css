@@ -6,6 +6,15 @@
     margin: 40px auto;
 }
 
+.testimonials-subtitle {
+    font-size: 1em;
+    color: #333;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
 .private-events-testimonials h2 {
     font-size: 2.8em;
     color: #e91e63;

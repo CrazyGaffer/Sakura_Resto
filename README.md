@@ -37,7 +37,7 @@ Ensure you have the following installed before running the project:
     npm run dev
     ```
 
-   This will start the server, and you can view the project in your browser at: http://localhost:5173/
+   This will start the server, and you can view the project in your browser at: [http://localhost:5173/](http://localhost:5173/)
 
 ### Executing program
 
@@ -45,9 +45,9 @@ To build and deploy the project:
 
 1. Run the production build command:
 
- ```bash
- npm run build
- ```
+    ```bash
+    npm run build
+    ```
 
 2. The build files will be generated inside the `dist/` directory.
 3. You can deploy the contents of `dist/` to any static hosting service like Netlify, Vercel, or GitHub Pages.
@@ -59,16 +59,16 @@ If you encounter any issues, try the following:
 * Ensure Node.js and npm are installed correctly.
 * Delete `node_modules` and `package-lock.json` and reinstall dependencies:
 
- ```bash
- rm -rf node_modules package-lock.json
- npm install
- ```
+    ```bash
+    rm -rf node_modules package-lock.json
+    npm install
+    ```
 
 * Run the Vite preview command to check the production build locally:
 
- ```bash
- npm run preview
- ```
+    ```bash
+    npm run preview
+    ```
 
 ## Authors
 
@@ -81,4 +81,7 @@ For inquiries, contact **krusman99@gmail.com**
 
 ## License
 
-This project is licensed under the **MIT License**. See the `LICENSE.md` file for details.
+**All rights reserved.**  
+This project is made available under a **proprietary license**. You may view this code, but any use, reproduction, modification, or distribution (in whole or in part) requires explicit written permission from the author.
+
+For more details, see the [`LICENSE.md`](./LICENSE.md) file.

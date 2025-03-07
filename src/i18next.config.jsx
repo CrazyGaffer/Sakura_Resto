@@ -20,19 +20,22 @@ const resources = {
             },
             about: {
                 heading: "Our story",
+                subheading: "Features",
+                subtitle: "About us",
                 content: "Experience the fusion of Pan-Asian culinary traditions with modern flair, where each dish tells a story of diverse heritage and innovation. Our philosophy embraces time-honored techniques reimagined to awaken your senses, blending authentic flavors from across Asia with inventive presentations. Carefully selected seasonal ingredients and refined details ensure every bite is as memorable as it is exquisite. Embark on a culinary journey that unites tradition with contemporary innovation to delight both the palate and the eye.",
                 features: {
+                    heading: "Why people choose us?",
                     freshFlavors: {
                         title: "Fresh Flavors",
-                        description: "We source seasonal ingredients to create dishes bursting with vibrant, authentic taste. From light salads to hearty broths, our menu celebrates the natural bounty of Asia."
+                        description: "We use seasonal ingredients to create dishes full of authentic taste."
                     },
                     artisanCraft: {
                         title: "Artisan Craft",
-                        description: "Each dish is meticulously crafted, blending time-honored techniques with innovative presentation. Our chefs combine skills from various Asian traditions to create culinary masterpieces."
+                        description: "Our dishes blend traditional techniques with innovative presentation."
                     },
                     culturalHarmony: {
                         title: "Cultural Harmony",
-                        description: "Immerse yourself in a dining experience that celebrates the rich tapestry of Asian cultures. Every detail reflects a harmonious blend of tradition and modern style."
+                        description: "Experience a harmonious blend of Asian cultures in every bite."
                     }
                 }
             },
@@ -72,19 +75,22 @@ const resources = {
             },
             about: {
                 heading: "Meie lugu",
+                subtitle: "Meist",
+                subheading: "Omadused",
                 content: "Koge Pan-Aasia kulinaaria traditsioonide ja kaasaegse stiili sulandumist, kus iga roog räägib mitmekesisest pärandist ja uuendusest. Meie filosoofia hõlmab ajaproovitud tehnikaid, mida ümber mõeldakse, et äratada teie meeli, segades autentsed maitsed kogu Aasias ning pakkudes loomingulisi esitusi. Hoolikalt valitud hooajalised koostisosad ja peenelt viimistletud detailid tagavad, et iga suutäis oleks sama meeldejääv kui õrn. Astu kulinaarsele teekonnale, mis ühendab traditsiooni ja kaasaegset innovatsiooni, pakkudes nautimist nii maitsemeelt kui ka silma.",
                 features: {
+                    heading: "Miks inimesed meid valivad?",
                     freshFlavors: {
                         title: "Värsked maitsed",
-                        description: "Valime hooajalisi koostisosi, et luua roogasid, mis on täis elavat ja autentset maitset. Alates kergetest salatitest kuni rikkalike puljongideni – meie menüü tähistab Aasia looduslikku rikkust."
+                        description: "Kasutame hooajalisi koostisosi, et luua autentse maitsega roogasid."
                     },
                     artisanCraft: {
                         title: "Käsitöö kunst",
-                        description: "Iga roog on hoolikalt valmistatud, segades ajaproovitud tehnikaid ja innovatiivset esitlust. Meie kokad ühendavad erinevate Aasia traditsioonide oskused, et luua kulinaarseid meistriteoseid."
+                        description: "Roogades ühenduvad traditsioonilised tehnikad ja uuenduslik esitlus."
                     },
                     culturalHarmony: {
                         title: "Kultuuriline harmoonia",
-                        description: "Koge söömiselamust, mis tähistab Aasia rikkalikku kultuuripärandit. Iga detail peegeldab traditsiooni ja kaasaegse stiili harmoonilist segu."
+                        description: "Koge Aasia kultuuride harmoonilist kooslust igas suutäies."
                     }
                 }
             },
@@ -125,19 +131,21 @@ const resources = {
             },
             about: {
                 heading: "Наша история",
-                content: "Погрузитесь в слияние паназиатских кулинарных традиций с современным стилем, где каждое блюдо рассказывает историю разнообразного наследия и инноваций. Наша философия опирается на проверенные временем техники, переосмысленные для пробуждения ваших чувств, сочетая аутентичные вкусы Азии с креативными подачами. Тщательно подобранные сезонные ингредиенты и утончённые детали гарантируют, что каждый укус запомнится своей изысканностью. Отправьтесь в кулинарное путешествие, объединяющее традиции и современные инновации, чтобы порадовать как вкус, так и взгляд.",
-                features: {
+                subtitle: "О нас",
+                subheading: "Особенности",
+                content: "Погрузитесь в слияние паназиатских кулинарных традиций с современным стилем, где каждое блюдо рассказывает историю разнообразного наследия и инноваций. Наша философия опирается на проверенные временем техники, переосмысленные для пробуждения ваших чувств, сочетая аутентичные вкусы Азии с креативными подачами. Тщательно подобранные сезонные ингредиенты и утончённые детали гарантируют, что каждый укус запомнится своей изысканностью. Отправьтесь в кулинарное путешествие, объединяющее традиции и современные инновации, чтобы порадовать как вкус, так и взгляд.",                features: {
+                    heading: "Почему люди выбирают нас?",
                     freshFlavors: {
                         title: "Свежие вкусы",
-                        description: "Мы подбираем сезонные ингредиенты для создания блюд, полных яркого, аутентичного вкуса. От легких салатов до насыщенных бульонов — наше меню отмечает природное богатство Азии."
+                        description: "Мы используем сезонные ингредиенты для создания блюд с аутентичным вкусом."
                     },
                     artisanCraft: {
                         title: "Ремесленный подход",
-                        description: "Каждое блюдо тщательно создается, объединяя проверенные временем техники с инновационной подачей. Наши шеф-повара сочетают навыки различных азиатских традиций для создания кулинарных шедевров."
+                        description: "Наши блюда сочетают традиционные техники с инновационной подачей."
                     },
                     culturalHarmony: {
                         title: "Культурная гармония",
-                        description: "Погрузитесь в кулинарный опыт, который отмечает богатство азиатских культур. Каждая деталь отражает гармоничное сочетание традиций и современного стиля."
+                        description: "Ощутите гармоничное сочетание азиатских культур в каждом укусе."
                     }
                 }
             },
@@ -150,7 +158,7 @@ const resources = {
                 contact: "Контакты",
                 email: "info@sakuraresto.ee",
                 phone: "+372 5486 0852",
-                address: "Пярну мnt 32, Таллин",
+                address: "Пярну mnt 32, Таллин",
                 followUs: "Подписывайтесь",
                 quickLinks: "Быстрые ссылки",
                 home: "Главная",
@@ -167,10 +175,10 @@ i18n
     .use(initReactI18next) // Passes i18n down to react-i18next
     .init({
         resources,
-        lng: "et", // default language
+        lng: "et", // Default language
         fallbackLng: "en",
         interpolation: {
-            escapeValue: false, // react already safes from xss
+            escapeValue: false, // React already protects from XSS
         },
     });
 

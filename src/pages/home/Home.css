@@ -72,14 +72,14 @@
 /* Общий базовый стиль для кнопок */
 .hero-btn {
     position: relative;
-    overflow: hidden; /* Чтобы псевдоэлемент не вылезал за границы */
+    overflow: hidden;
     padding: 16px 28px;
     border: none;
     color: #fff;
     font-size: 1.1em;
     cursor: pointer;
     border-radius: 6px;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Плавная анимация */
+    transition: transform 0.3s ease, filter 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import './Header.css';
 
 const Header = () => {
@@ -14,8 +14,9 @@ const Header = () => {
         { id: 'about', label: t('navbar.about') },
         { id: 'menu', label: t('navbar.menu') },
         { id: 'events', label: t('navbar.events') },
-        { id: 'footer', label: t('navbar.contact') }, // Assuming 'Contact' scrolls to the footer
+        { id: 'footer', label: t('navbar.contact') },
     ];
+
     const toggleMenu = () => setMenuOpen(prev => !prev);
     const closeMenu = () => setMenuOpen(false);
 
@@ -36,13 +37,15 @@ const Header = () => {
     return (
         <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-container">
-                <div className="navbar-title">Sakura Resto</div>
+                <div className="navbar-title" onClick={() => scroll.scrollToTop({ duration: 300 })}>
+                    Sakura Resto
+                </div>
                 <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
                     <ul>
                         {navItems.map((item) => (
                             <li key={item.id}>
                                 <ScrollLink
-                                    to={item.id}  // use the fixed id here
+                                    to={item.id}
                                     smooth={true}
                                     duration={150}
                                     onClick={closeMenu}

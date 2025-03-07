@@ -37,6 +37,7 @@ html {
     font-weight: 700;
     color: inherit; /* Inherit color from .navbar */
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 /* Navigation Menu (Desktop) */
