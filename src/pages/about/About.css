@@ -30,7 +30,7 @@
 
 /* Style for the small rectangle above the subtitle */
 .small-rectangle-about {
-    width: 50px;
+    width: 40px;
     height: 4px;
     background-color: #e91e63;
 }
@@ -93,8 +93,8 @@
     margin-top: 50px;
 }
 
-.small-rectangle {
-    width: 50px;
+.small-rectangle-features {
+    width: 40px;
     height: 4px;
     background-color: #e91e63;
     margin: 0 auto 15px;
@@ -146,8 +146,19 @@
 /* Divider styling */
 .divider {
     width: 100%;
-    margin: 60px auto;
+    margin: 80px auto;
     border-top: 4px dotted #ccc;
+}
+
+p.features-title {
+    font-size: 0.95em;
+    color: gray;
+    text-transform: none;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 500;
 }
 
 /* Working Hours Container */
@@ -159,6 +170,18 @@
     margin-bottom: 20px;
 }
 
+/* Small rectangle for Working Hours header */
+.small-rectangle-working-hours {
+    width: 40px;
+    height: 4px;
+    background-color: #e91e63;
+    margin: 0;
+}
+
+.working-hours-subtitle {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Working Hours Image styling */
 .working-hours-image {
     width: 60%;
     position: relative;
@@ -194,7 +217,8 @@
     z-index: 2;
 }
 
-.overlay-content h2, h4 {
+.overlay-content h2,
+.overlay-content h4 {
     color: #fff;
 }
 
@@ -202,13 +226,24 @@
     text-transform: uppercase;
 }
 
+/* Working Hours Header styling */
+.working-hours-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+/* Reservation text styling */
 .reservation-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.1em;
-    margin-bottom: 20px !important;
+    font-size: 1.0em !important;
+    margin-bottom: 30px !important;
     color: #fff !important;
 }
 
+/* Overlay buttons styling */
 .overlay-buttons {
     display: flex;
     gap: 10px;
@@ -252,10 +287,12 @@
     background: transparent;
     border: none;
     font-size: 0.8em;
+    font-weight: 550;
     color: white;
     cursor: pointer;
     letter-spacing: 1px;
     text-transform: uppercase;
+    z-index: 2;
 }
 
 /* Working Hours Info styling */
@@ -319,7 +356,7 @@
 }
 
 .time-colon {
-    color: #ff4081;
+    color: #e91e63;
     font-size: 1.2em;
     font-weight: bold;
     padding-inline: 5px;
@@ -357,13 +394,13 @@
 .count {
     font-size: 3em;
     font-weight: 600;
-    font-family: Montserrat, sans-serif; /* Increase the size of the number */
+    font-family: Montserrat, sans-serif;
 }
 
 .symbol {
-    color: #ff4081;    /* Set the symbol color */
-    font-size: 1.5em;  /* Optionally adjust its size */
-    vertical-align: top; /* Adjust vertical alignment if needed */
+    color: #e91e63;
+    font-size: 1.5em;
+    vertical-align: top;
 }
 
 /* ScrollLink anchor styling to fix vertical alignment */
@@ -432,7 +469,6 @@
     .working-hours-info {
         width: 100%;
     }
-    /* Force the image container to shrink-wrap its content */
     .working-hours-image {
         display: inline-block;
     }
@@ -446,8 +482,6 @@
         border-radius: 8px;
         text-align: center;
     }
-
-    /* Adjust Statistics Section */
     .statistics {
         flex-direction: column;
         gap: 30px;
@@ -458,22 +492,16 @@
     .statistic p {
         font-size: 0.9em;
     }
-
-    /* Adjust overlay content on Working Hours Image */
     .overlay-content {
         left: 20px;
         right: 20px;
         text-align: center;
         padding: 0 10px;
     }
-
-    /* Adjust decorative small rectangles */
     .small-rectangle-about,
-    .small-rectangle {
-        width: 40px;
+    .small-rectangle-features {
+        width: 30px;
     }
-
-    /* Adjust overlay buttons for smaller screens */
     .overlay-buttons {
         flex-direction: column;
         align-items: center;
@@ -483,5 +511,21 @@
         width: 100%;
         max-width: 250px;
         margin: 0 auto;
+    }
+
+    .reservation-text {
+        font-size: 0.8em !important;
+    }
+
+    .working-hours-header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        margin-bottom: 20px;
+        gap: 0;
+    }
+    .small-rectangle-working-hours {
+        margin: 0 auto 15px;
     }
 }
