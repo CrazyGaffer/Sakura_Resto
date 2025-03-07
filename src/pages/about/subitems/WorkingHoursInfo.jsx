@@ -12,18 +12,18 @@ const WorkingHoursInfo = () => {
                     className={activeGroup === 'monday-friday' ? 'active' : ''}
                     onClick={() => setActiveGroup('monday-friday')}
                 >
-                    Mon - Fri
+                    {t('about.workingHours.workingDays_short_1')}
                 </button>
                 <button
                     className={activeGroup === 'saturday-sunday' ? 'active' : ''}
                     onClick={() => setActiveGroup('saturday-sunday')}
                 >
-                    Sat - Sun
+                    {t('about.workingHours.workingDays_short_2')}
                 </button>
             </div>
             {activeGroup === 'monday-friday' ? (
                 <ul>
-                    <li className="working-day">{t('Monday to Thursday')}</li>
+                    <li className="working-day">{t('about.workingHours.workingDays_1')}</li>
                     <li className="working-time">
                         {t('11')}
                         <span className="time-colon">:</span>
@@ -33,7 +33,7 @@ const WorkingHoursInfo = () => {
                         <span className="time-colon">:</span>
                         {t('00')}
                     </li>
-                    <li className="working-day">{t('Friday')}</li>
+                    <li className="working-day">{t('about.workingHours.workingDays_2')}</li>
                     <li className="working-time">
                         {t('11')}
                         <span className="time-colon">:</span>
@@ -46,7 +46,7 @@ const WorkingHoursInfo = () => {
                 </ul>
             ) : (
                 <ul>
-                    <li className="working-day">{t('Saturday')}</li>
+                    <li className="working-day">{t('about.workingHours.workingDays_3')}</li>
                     <li className="working-time">
                         {t('12')}
                         <span className="time-colon">:</span>
@@ -56,7 +56,7 @@ const WorkingHoursInfo = () => {
                         <span className="time-colon">:</span>
                         {t('00')}
                     </li>
-                    <li className="working-day">{t('Sunday')}</li>
+                    <li className="working-day">{t('about.workingHours.workingDays_4')}</li>
                     <li className="working-time">
                         {t('12')}
                         <span className="time-colon">:</span>

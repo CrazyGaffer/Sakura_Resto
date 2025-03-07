@@ -15,10 +15,8 @@ const WorkingHoursImage = () => {
                     <div className="small-rectangle-working-hours"></div>
                     <h4 className="working-hours-subtitle">{t('about.subtitle')}</h4>
                 </div>
-                <h2>Working Hours</h2>
-                <p className="reservation-text">
-                    Reserve your table now for an exquisite dining experience!
-                </p>
+                <h2>{t('about.workingHours.heading')}</h2>
+                <p className="reservation-text">{t('about.workingHours.subheading')}</p>
                 <div className="overlay-buttons">
                     <motion.button
                         className="reservation-btn reservation-btn--primary"
@@ -30,7 +28,7 @@ const WorkingHoursImage = () => {
                             )
                         }
                     >
-                        Reservation
+                        {t('about.workingHours.button_reservation')}
                     </motion.button>
                     <motion.button
                         className="contact-button"
@@ -40,7 +38,7 @@ const WorkingHoursImage = () => {
                             scroller.scrollTo('footer', { smooth: true, duration: 150 });
                         }}
                     >
-                        Contact Us
+                        {t('about.workingHours.button_contact')}
                     </motion.button>
                 </div>
             </div>

@@ -1,14 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-:root {
-    --active-color: #000;              /* Fully opaque black for active tab */
-    --inactive-color: rgba(0, 0, 0, 0.4); /* 40% opacity for inactive tab */
+.menu {
+    padding: 100px 30px;
+    text-align: center;
 }
 
-.menu {
-    padding: 100px 100px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
+.menu-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.menu-image img {
+    width: 600px;
+    height: 570px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
 }
 
 .menu h2 {
@@ -17,91 +39,47 @@
     margin-bottom: 20px;
 }
 
-/* Category Switcher Section */
-.menu-categories {
-    margin-bottom: 30px;
-}
-
-.menu-categories button {
-    background: transparent;
-    color: var(--inactive-color);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1em;
+.menu p {
+    font-size: 1.1em;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    font-weight: 600;
-    position: relative; /* Needed for pseudo-element positioning */
-    transition: color 0.3s;
 }
 
-.menu-categories button.active {
-    color: var(--active-color);
+.menu-text {
+    max-width: 600px;
 }
 
-.menu-categories button::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 0;
-    background-color: var(--active-color);
-    transition: width 0.3s ease-in-out;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-}
-
-.menu-categories button.active::before {
-    width: 100%;
-}
-
-/* Menu Items Grid */
-.menu-items {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px;
-    justify-items: center;
-}
-
-/* Menu Item Card */
-.menu-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 25px ;
-    border: 1px solid #ddd;  /* Optional: adds a border around each card */
-    border-radius: 8px;      /* Optional: rounds the corners */
-    width: 100%;             /* Ensures the item fills the grid cell */
-    background: #fff;
-}
-
-/* Force the title and description in the card to be left-aligned */
-.menu-item .menu-info {
+.menu-text h2 {
     text-align: left;
 }
 
-.menu-info h3 {
-    margin: 0;
-    font-size: 1.2em;
-    font-weight: 600;
+.menu-text p {
+    text-align: left;
 }
 
-.menu-info p {
-    margin: 5px 0 0;
-    color: #666;
-    font-size: 0.9em;
-}
-
-.menu-price {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .menu-items {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
+    .menu {
+        padding: 50px 15px;
+    }
+    .menu-wrapper {
+        padding: 0 15px;
+    }
+    .menu-content {
+        flex-direction: column;
+    }
+    .menu-image img {
+        width: 100%;
+        height: auto;
+    }
+    .menu-text {
+        padding: 20px 0;
+    }
+    .menu h2 {
+        font-size: 2em;
+    }
+    .menu p {
+        font-size: 1em;
     }
 }

@@ -33,10 +33,8 @@ function About() {
                 <div className="features-header">
                     <div className="small-rectangle-features"></div>
                     <h4 className="features-subtitle">{t('about.subheading')}</h4>
-                    <h2 className="features-title">Why people choose us?</h2>
-                    <p className="features-title">
-                        Exceptional service and attention to detail that makes all the difference!
-                    </p>
+                    <h2 className="features-title">{t('about.features.heading')}</h2>
+                    <p className="features-title">{t('about.features.subheading')}</p>
 
                 </div>
                 <FeaturesSection />

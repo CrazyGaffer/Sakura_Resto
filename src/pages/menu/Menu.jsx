@@ -1,59 +1,48 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { menuItems } from '/src/data/menuItems.js';
 import './Menu.css';
+import menuItem1 from "../../assets/menuPage/menuItem1.jpeg";
+import menuItem2 from "../../assets/menuPage/menuItem2.jpeg";
+import {useTranslation} from "react-i18next";
+import MenuButton from "../menu/subitems/MenuButton.jsx";
 
 function Menu() {
-    // State to track active category
-    const [activeCategory, setActiveCategory] = useState('All');
-
-    // Define the available categories
-    const categories = ['All', 'Sushi', 'Ramen', 'Tempura', 'Drinks'];
-
-    // Filter items based on the active category
-    const filteredItems =
-        activeCategory === 'All'
-            ? menuItems
-            : menuItems.filter((item) => item.category === activeCategory);
+    const { t } = useTranslation();
 
     return (
         <section id="menu" className="menu">
-            <motion.div
-                className="menu-content"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: true }}
-            >
-                <h2>Our menu</h2>
-
-                {/* Category Switcher */}
-                <div className="menu-categories">
-                    {categories.map((category, index) => (
-                        <button
-                            key={index}
-                            className={activeCategory === category ? 'active' : ''}
-                            onClick={() => setActiveCategory(category)}
-                        >
-                            {category}
-                        </button>
-                    ))}
-                </div>
-
-                <div className="menu-items">
-                    {filteredItems.map((item, index) => (
-                        <div className="menu-item" key={index}>
-                            <div className="menu-info">
-                                <h3>{item.name}</h3>
-                                <p>{item.description}</p>
-                            </div>
-                            <div className="menu-price">
-                                <span>{item.price}</span>
-                            </div>
+            <div className="menu-wrapper">
+                <div className="menu-content">
+                    <div className="menu-image">
+                        <img src={menuItem1} alt="Menu" />
+                    </div>
+                    <div className="about-text">
+                        <div className="about-header">
+                            <div className="small-rectangle-about"></div>
+                            <h4 className="about-subtitle">{t('menu.subtitle')}</h4>
                         </div>
-                    ))}
+                        <h2>{t('menu.heading')}</h2>
+                        <p>{t('menu.content')}</p>
+                        <MenuButton link="https://www.sakuraresto.ee/_files/ugd/87015a_515e89e16ba04c3f9e58ca65b262e80c.pdf" />
+                    </div>
                 </div>
-            </motion.div>
+
+                <div className="divider"></div>
+
+                <div className="menu-content">
+                    <div className="menu-text">
+                        <div className="menu-header">
+                            <div className="small-rectangle-about"></div>
+                            <h4 className="about-subtitle">{t('menu.subtitle')}</h4>
+                        </div>
+                        <h2>{t('menu.heading_2')}</h2>
+                        <p>{t('menu.content_2')}</p>
+                        <MenuButton link="https://www.sakuraresto.ee/_files/ugd/87015a_53fe56f6fbc34d07bf076e4ed04f215a.pdf" />
+                    </div>
+                    <div className="menu-image">
+                        <img src={menuItem2} alt="Menu" />
+                    </div>
+                </div>
+
+            </div>
         </section>
     );
 }

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import CountUp from 'react-countup';
+import { useTranslation } from 'react-i18next';
 
 const StatisticItem = ({ end, symbol, label }) => (
     <div className="statistic">
@@ -17,13 +18,16 @@ StatisticItem.propTypes = {
     label: PropTypes.string.isRequired,
 };
 
-const Statistics = () => (
-    <div className="statistics">
-        <StatisticItem end={200} symbol="+" label="Visitors Daily" />
-        <StatisticItem end={400} symbol="+" label="Deliveries Monthly" />
-        <StatisticItem end={100} symbol="%" label="Positive Feedback" />
-        <StatisticItem end={40} symbol="+" label="Awards & Honors" />
-    </div>
-);
+const Statistics = () => {
+    const { t } = useTranslation();
+    return (
+        <div className="statistics">
+            <StatisticItem end={200} symbol="+" label={t('about.statistics.heading_customers')} />
+            <StatisticItem end={400} symbol="+" label={t('about.statistics.heading_deliveries')} />
+            <StatisticItem end={100} symbol="%" label={t('about.statistics.heading_feedback')} />
+            <StatisticItem end={40} symbol="+" label={t('about.statistics.heading_awards')} />
+        </div>
+    );
+};
 
 export default Statistics;
