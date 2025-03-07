@@ -52,7 +52,7 @@
 .about h2 {
     font-size: 2.5em;
     color: #e91e63;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     margin-top: 0;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -224,6 +224,10 @@ p.features-title {
     color: #fff;
 }
 
+.overlay-content h2 {
+    font-size: 2.5em;
+}
+
 .overlay-content h4 {
     text-transform: uppercase;
 }
@@ -248,7 +252,7 @@ p.features-title {
 /* Overlay buttons styling */
 .overlay-buttons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     margin-top: 10px;
 }
 

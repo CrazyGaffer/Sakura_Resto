@@ -25,46 +25,46 @@ const WorkingHoursInfo = () => {
                 <ul>
                     <li className="working-day">{t('about.workingHours.workingDays_1')}</li>
                     <li className="working-time">
-                        {t('11')}
+                        {"11"}
                         <span className="time-colon">:</span>
-                        {t('00')}
+                        {"00"}
                         <br />
-                        {t('23')}
+                        {"23"}
                         <span className="time-colon">:</span>
-                        {t('00')}
+                        {"00"}
                     </li>
                     <li className="working-day">{t('about.workingHours.workingDays_2')}</li>
                     <li className="working-time">
-                        {t('11')}
+                        {"11"}
                         <span className="time-colon">:</span>
-                        {t('00')}
+                        {"00"}
                         <br />
-                        {t('00')}
+                        {"00"}
                         <span className="time-colon">:</span>
-                        {t('00')}
+                        {"00"}
                     </li>
                 </ul>
             ) : (
                 <ul>
                     <li className="working-day">{t('about.workingHours.workingDays_3')}</li>
                     <li className="working-time">
-                        {t('12')}
+                        {"12"}
                         <span className="time-colon">:</span>
-                        {t('00')}
+                        {"00"}
                         <br />
-                        {t('00')}
+                        {"00"}
                         <span className="time-colon">:</span>
-                        {t('00')}
+                        {"00"}
                     </li>
                     <li className="working-day">{t('about.workingHours.workingDays_4')}</li>
                     <li className="working-time">
-                        {t('12')}
+                        {"12"}
                         <span className="time-colon">:</span>
-                        {t('00')}
+                        {"00"}
                         <br />
-                        {t('22')}
+                        {"22"}
                         <span className="time-colon">:</span>
-                        {t('00')}
+                        {"00"}
                     </li>
                 </ul>
             )}

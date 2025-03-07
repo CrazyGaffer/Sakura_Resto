@@ -130,7 +130,7 @@ const resources = {
                     heading: "Tööaeg",
                     subheading: "Broneeri oma laud juba täna, et nautida suurepärast söögielamust!",
                     button_reservation: "Broneering",
-                    button_contact: "Võta meiega ühendust",
+                    button_contact: "Kontakt",
                     workingDays_1: "Esmaspäevast neljapäevani",
                     workingDays_2: "Reede",
                     workingDays_3: "Laupäev",
