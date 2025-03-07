@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .private-events-testimonials {
-    padding: 80px 20px;
+    padding: 100px 30px;
     text-align: center;
-    margin: 40px auto;
 }
 
 .testimonials-subtitle {
@@ -20,6 +19,13 @@
     height: 4px;
     background-color: #e91e63;
     margin: 0 auto 10px auto;
+}
+
+.divider-testimonials {
+    width: 100%;
+    margin: 80px auto;
+    border-top: 4px dotted #ccc;
+    max-width: 1200px;
 }
 
 .private-events-testimonials h2 {

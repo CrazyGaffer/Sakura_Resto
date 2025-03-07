@@ -11,6 +11,7 @@ const Testimonials = () => {
     const { t } = useTranslation();
     return (
         <div className="private-events-testimonials">
+            <div className="divider-testimonials"></div>
             <div className="features-header">
                 <div className="small-rectangle-testimonials"></div>
                 <h4 className="testimonials-subtitle">{t("testimonials.subtitle")}</h4>

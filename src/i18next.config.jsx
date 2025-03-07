@@ -57,6 +57,7 @@ const resources = {
                 quickLinks: "Quick Links",
                 home: "Home",
                 menu: "Menu",
+                about: "About",
                 events: "Events",
                 rightsReserved: "All rights reserved. Developed by CrazyGaffer"
             }

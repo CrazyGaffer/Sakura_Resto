@@ -166,6 +166,7 @@ p.features-title {
     height: 380px;
     display: flex;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     overflow: visible;
     margin-bottom: 20px;
 }
@@ -181,6 +182,7 @@ p.features-title {
 .working-hours-subtitle {
     font-family: 'Montserrat', sans-serif;
 }
+
 /* Working Hours Image styling */
 .working-hours-image {
     width: 60%;
@@ -476,7 +478,10 @@ p.features-title {
         display: block;
         width: 100%;
         height: auto;
-        border-radius: 8px;
+        border-radius: 0;
+    }
+    .image-overlay {
+        border-radius: 0;
     }
     .working-hours-info {
         border-radius: 8px;
@@ -512,11 +517,9 @@ p.features-title {
         max-width: 250px;
         margin: 0 auto;
     }
-
     .reservation-text {
         font-size: 0.8em !important;
     }
-
     .working-hours-header {
         flex-direction: column;
         align-items: center;
