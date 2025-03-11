@@ -1,0 +1,43 @@
+.packages {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+}
+
+.packages .package {
+    margin-top: 40px;
+    flex: 1 1 0;
+    text-align: center;
+}
+
+.packages-subtitle {
+    margin-bottom: 10px;
+}
+
+.package h3 {
+    padding-bottom: 5px;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.package-icon {
+    font-size: 3em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.package h3 {
+    padding-bottom: 5px;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.package p {
+    font-size: 1em;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+}

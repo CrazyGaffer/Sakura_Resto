@@ -12,10 +12,9 @@
 .embla__button {
     color: #333333;
     border: none;
-    border-radius: 50%;  /* circular shape */
-    width: 3rem;
-    height: 3rem;
+    background: none;
     display: flex;
+    font-size: 18px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -35,9 +34,8 @@
 /* Embla dot container */
 .embla__dot {
     position: relative;
-    width: 1rem;  /* The container size for the dot */
+    width: 1rem;
     height: 1rem;
-    margin-top: 3rem;
 }
 
 /* Unselected dot */
@@ -58,7 +56,6 @@
     background-color: #333333; /* selected color */
 }
 
-/* Image styles */
 .embla__slide img {
     display: block;
     width: 100%;
@@ -66,4 +63,10 @@
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .embla__button {
+        display: none;
+    }
 }

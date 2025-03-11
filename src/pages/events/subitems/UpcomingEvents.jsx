@@ -1,7 +1,7 @@
-import UpcomingEventsCarousel from './carousel/UpcomingEventsCarousel.jsx'
-import './carousel/UpcomingEventsCarousel.css'
+import UpcomingEventsCarousel from '../../../components/carousel/UpcomingEventsCarousel.jsx'
+import '../../../components/carousel/UpcomingEventsCarousel.css'
 import './UpcomingEvents.css';
-import events from "../data/eventsData.js";
+import events from "../../../data/eventsData.js";
 
 const OPTIONS = { align: 'start' }
 const SLIDES = Array.from(events)

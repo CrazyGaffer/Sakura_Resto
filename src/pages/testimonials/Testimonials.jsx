@@ -9,10 +9,10 @@ const SLIDES = Array.from(testimonialsData);
 
 const Testimonials = () => {
     const { t } = useTranslation();
+
     return (
         <div className="private-events-testimonials">
-            <div className="divider-testimonials"></div>
-            <div className="features-header">
+            <div className="testimonials-header">
                 <div className="small-rectangle-testimonials"></div>
                 <h4 className="testimonials-subtitle">{t("testimonials.subtitle")}</h4>
                 <h2>{t("testimonials.heading")}</h2>

@@ -21,13 +21,6 @@
     margin: 0 auto 10px auto;
 }
 
-.divider-testimonials {
-    width: 100%;
-    margin: 80px auto;
-    border-top: 4px dotted #ccc;
-    max-width: 1200px;
-}
-
 .private-events-testimonials h2 {
     font-size: 2.8em;
     color: #e91e63;
@@ -35,24 +28,6 @@
     opacity: 0;
     animation: fadeInUp 1s forwards;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.testimonials-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.testimonial-card {
-    background: #ffffff;
-    padding: 30px;
-    width: 320px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    animation: fadeInUp 1s forwards;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .testimonial-content p {
