@@ -204,22 +204,31 @@
     .working-hours-container {
         flex-direction: column;
         height: auto;
-    }
-    .working-hours-image,
-    .working-hours-info {
-        width: 100%;
+        /* Keep full container border-radius and clip children */
+        border-radius: 8px;
+        overflow: hidden;
     }
     .working-hours-image {
+        width: 100%;
         display: inline-block;
+        /* Only top corners rounded */
+        border-radius: 8px 8px 0 0;
     }
     .working-hours-image img {
         display: block;
         width: 100%;
         height: auto;
-        border-radius: 0;
+        /* Only top corners rounded */
+        border-radius: 8px 8px 0 0;
     }
     .image-overlay {
-        border-radius: 0;
+        /* Only top corners rounded */
+        border-radius: 8px 8px 0 0;
+    }
+    .working-hours-info {
+        width: 100%;
+        /* Only bottom corners rounded */
+        border-radius: 0 0 8px 8px;
     }
     .overlay-content {
         left: 20px;

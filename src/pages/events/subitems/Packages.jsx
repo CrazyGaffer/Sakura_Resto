@@ -1,13 +1,13 @@
-import { FaRegSmile, FaStar, FaGem } from 'react-icons/fa';
+import { FaHeart, FaStar, FaGem } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
-import '/src/pages/events/subitems/Packages.css'
+import '/src/pages/events/subitems/Packages.css';
 
 const Packages = () => {
     const { t } = useTranslation();
 
     const eventPackages = [
         {
-            icon: <FaRegSmile className="package-icon " />,
+            icon: <FaHeart className="package-icon " />,
             title: "Basic",
             description: "Our basic package offers a simple yet delightful experience, perfect for casual gatherings.",
         },
@@ -25,13 +25,21 @@ const Packages = () => {
 
     return (
         <div className="packages">
-            {eventPackages.map((eventPackage, idx) => (
-                <div className="package" key={idx}>
-                    {eventPackage.icon}
-                    <h3>{eventPackage.title}</h3>
-                    <p>{eventPackage.description}</p>
-                </div>
-            ))}
+            <div className="packages-header">
+                <div className="small-rectangle-features"></div>
+                <h4 className="packages-subtitle">Events</h4>
+                <h2 className="packages-title">Party Packages</h2>
+                <p className="packages-description">We’ll Handle the Details, You Bring the Fun – Relax, Unwind, and Let Us Create an Unforgettable Celebration</p>
+            </div>
+            <div className="packages-list">
+                {eventPackages.map((eventPackage, idx) => (
+                    <div className="package" key={idx}>
+                        {eventPackage.icon}
+                        <h3>{eventPackage.title}</h3>
+                        <p>{eventPackage.description}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

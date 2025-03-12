@@ -3,6 +3,7 @@ import {useTranslation} from "react-i18next";
 import Packages from "./subitems/Packages.jsx";
 import UpcomingEvents from "./subitems/UpcomingEvents.jsx";
 import ContactButton from "../../components/ContactButton.jsx";
+import Divider from "../../components/Divider/Divider.jsx";
 
 function Events() {
     const { t } = useTranslation();
@@ -22,14 +23,8 @@ function Events() {
                     </div>
                 </div>
 
-                <div className="divider"></div>
+                <Divider/>
 
-                <div className="events-header">
-                    <div className="small-rectangle-features"></div>
-                    <h4 className="events-subtitle">Events</h4>
-                    <h2 className="events-title">Party Packages</h2>
-                    <p className="events-title">We’ll Handle the Details, You Bring the Fun – Relax, Unwind, and Let Us Create an Unforgettable Celebration.</p>
-                </div>
                 <Packages />
                 <div className="packages-footer">
                     <p className="packages-contact">
@@ -38,7 +33,7 @@ function Events() {
                     <ContactButton link="https://www.sakuraresto.ee/_files/ugd/87015a_53fe56f6fbc34d07bf076e4ed04f215a.pdf" />
                 </div>
 
-                <div className="divider"></div>
+                <Divider/>
 
                 <UpcomingEvents />
 

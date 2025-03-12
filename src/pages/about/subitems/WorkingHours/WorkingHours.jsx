@@ -1,5 +1,5 @@
-import WorkingHoursImage from './WorkingHoursImage';
-import WorkingHoursInfo from './WorkingHoursInfo';
+import WorkingHoursImage from './WorkingHoursImage.jsx';
+import WorkingHoursInfo from './WorkingHoursInfo.jsx';
 
 const WorkingHours = () => (
     <div className="working-hours-container">

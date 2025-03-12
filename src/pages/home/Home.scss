@@ -1,9 +1,12 @@
 @use "sass:color";
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
-$primary-color: #c5a47e;
-$secondary-color: #222;
-$text-light: #ffffff;
+$serif: 'Cormorant Garamond', serif;
+$sans: 'Montserrat', sans-serif;
+$primary-color: #e91e63;
+$secondary-color: #f8f5f2;
+$text-dark: #3a3a3a;
+$accent-dark: #2a2a2a;
 
 .hero {
   height: 100vh;
@@ -13,7 +16,7 @@ $text-light: #ffffff;
 
   &-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     height: 100%;
 
     .image-slider { order: 2; }
@@ -21,6 +24,7 @@ $text-light: #ffffff;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
 
       .image-slider,
       .content-column {
@@ -45,6 +49,7 @@ $text-light: #ffffff;
     background-position: center;
     opacity: 0;
     animation: slideShow 12s infinite;
+    transform: scale(1.05);
 
     &:nth-child(1) { animation-delay: 0s; }
     &:nth-child(2) { animation-delay: 4s; }
@@ -57,7 +62,11 @@ $text-light: #ffffff;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.3);
+      transition: background 0.3s ease;
+    }
+
+    @media (max-width: 480px) {
+      background-position: center 30%;
     }
   }
 }
@@ -69,33 +78,85 @@ $text-light: #ffffff;
   padding: 2rem 8%;
   position: relative;
   z-index: 2;
-  background: rgba(34, 34, 34, 0.95);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 1024px) {
+    padding: 2rem 5%;
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 2rem;
+    min-height: 60vh;
+    box-shadow: none;
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1.5rem;
+  }
 }
 
 .hero-content {
   .subtitle {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $sans;
     font-size: 1.2rem;
-    color: $primary-color;
+    color: color.adjust($primary-color);
     letter-spacing: 2px;
     margin-bottom: 0.8rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
   }
 
   .title {
-    font-family: 'Montserrat', serif;
-    font-size: 3rem;
-    color: $text-light;
+    font-family: $serif;
+    font-size: 3.2rem;
+    color: $accent-dark;
     margin-bottom: 1.2rem;
-    line-height: 1.05;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    @media (max-width: 1024px) {
+      font-size: 2.8rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+    }
   }
 
   .description {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.7;
+    font-family: $sans;
+    font-size: 1.1rem;
+    color: rgba($accent-dark, 0.9);
+    line-height: 1.6;
     max-width: 480px;
     margin-bottom: 1.5rem;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
   }
 }
 
@@ -105,22 +166,28 @@ $text-light: #ffffff;
   margin-top: 0.5rem;
   justify-content: flex-start;
 
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
+
   @media (max-width: 480px) {
     flex-direction: column;
     gap: 0.8rem;
+    margin-top: 1.2rem;
   }
 }
 
 .reserve-button, .secondary-button {
   width: auto;
   padding: 1rem 2rem;
-  border-radius: 30px;
-  font-family: 'Poppins', sans-serif;
+  border-radius: 6px;
+  font-family: $sans;
   font-weight: 600;
+  font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   border: none;
@@ -129,6 +196,20 @@ $text-light: #ffffff;
   align-items: center;
   flex: 0 1 auto;
   min-width: 200px;
+  backdrop-filter: blur(2px);
+
+  @media (max-width: 768px) {
+    padding: 1rem 1.5rem;
+    min-width: 180px;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    min-width: auto;
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
 
   &::before {
     content: '';
@@ -143,35 +224,51 @@ $text-light: #ffffff;
                     rgba(255, 255, 255, 0.3),
                     transparent
     );
-    transition: all 0.5s ease;
+    transition: all 0.6s ease;
   }
 
-  &:hover::before {
-    left: 100%;
+  &:hover {
+    transform: translateY(-2px);
+
+    &::before {
+      left: 100%;
+    }
   }
 }
 
 .reserve-button {
-  background: linear-gradient(
-                  45deg,
-                  $primary-color,
-                  color.adjust($primary-color, $lightness: -10%)
-  );
-  color: $text-light;
+  background: $primary-color;
+  color: $secondary-color;
+  box-shadow: 0 4px 20px rgba($primary-color, 0.3);
+
+  &:hover {
+    box-shadow: 0 6px 25px rgba($primary-color, 0.4);
+  }
 }
 
 .secondary-button {
   background: transparent;
   border: 2px solid $primary-color;
   color: $primary-color;
+  box-shadow: 0 4px 15px rgba($primary-color, 0.15);
 
   &:hover {
-    background: rgba($primary-color, 0.1);
+    background: rgba($primary-color, 0.08);
+    box-shadow: 0 6px 20px rgba($primary-color, 0.2);
   }
 }
 
 @keyframes slideShow {
-  0%, 100% { opacity: 0; }
-  10%, 33% { opacity: 1; }
-  43%, 66% { opacity: 0; }
+  0%, 100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  10%, 33% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  43%, 66% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
 }

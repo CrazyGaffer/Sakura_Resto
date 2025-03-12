@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import WorkingHours from '../about/subitems/WorkingHours.jsx';
+import WorkingHours from './subitems/WorkingHours/WorkingHours.jsx';
 import Statistics from './subitems/Statistics/Statistics.jsx';
 import FeaturesSection from '../about/subitems/FeaturesSection.jsx';
 import SocialLinks from '../about/subitems/SocialLinks.jsx';
@@ -7,7 +7,7 @@ import './About.css';
 import './subitems/Statistics/Statistics.css';
 import interiorImage from '../../assets/about/interiorImage.jpeg';
 import '/src/components/Divider/Divider.css';
-import '/src/pages/about/subitems/FeaturesSection.css';
+import '/src/pages/about/subitems/FeatureSection.scss';
 import Divider from "../../components/Divider/Divider.jsx";
 
 

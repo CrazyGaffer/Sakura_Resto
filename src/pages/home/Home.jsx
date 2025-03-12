@@ -41,13 +41,12 @@ function Home() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        <h4 className="subtitle">Experience Authentic Japan</h4>
+                        <h4 className="subtitle">Experience Fusion Flavors</h4>
                         <h1 className="title">
-                            Sakura Japanese Culinary Excellence
+                            Sakura Pan-Asian Culinary Adventure
                         </h1>
                         <p className="description">
-                            Traditional recipes meet modern artistry in our master-crafted dishes,
-                            prepared with seasonal ingredients.
+                            A vibrant fusion of Asian traditions meets local ingredients, where bold Thai spices mingle with Japanese precision, Vietnamese freshness, and regional produce.
                         </p>
                     </motion.div>
 
@@ -57,13 +56,16 @@ function Home() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
                     >
-                        <motion.button
+                        <motion.a
+                            href="https://v2.tableonline.fi/instabook/bookings/AwHHJD2/selection?locale=ee"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="reserve-button"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
                             Book Table Now
-                        </motion.button>
+                        </motion.a>
                         <motion.button
                             className="secondary-button"
                             whileHover={{ scale: 1.05 }}
