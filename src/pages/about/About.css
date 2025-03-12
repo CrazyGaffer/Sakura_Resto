@@ -37,15 +37,10 @@
 
 /* Styling for the image container */
 .about-image img {
-    width: 600px;
+    width: 570px;
     height: 570px;
     object-fit: cover;
     border-radius: 8px;
-}
-
-/* Styling for the text container */
-.about-text {
-    max-width: 600px;
 }
 
 /* Existing styles */
@@ -273,10 +268,6 @@ p.features-title {
 .reservation-btn:active {
     transform: translateY(0);
     filter: brightness(0.95);
-}
-
-.reservation-btn--primary {
-    /* Additional overrides can be placed here */
 }
 
 .contact-button {
