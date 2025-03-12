@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import '/src/pages/about/subitems/WorkingHours/WorkingHours.css';
 
 const WorkingHoursInfo = () => {
     const { t } = useTranslation();

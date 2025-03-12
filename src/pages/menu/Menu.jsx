@@ -1,6 +1,6 @@
 import './Menu.css';
-import menuItem1 from "../../assets/menuPage/menuItem1.jpeg";
-import menuItem2 from "../../assets/menuPage/menuItem2.jpeg";
+import menuItem1 from "../../assets/menu/menuItem1.jpeg";
+import menuItem2 from "../../assets/menu/menuItem2.jpeg";
 import {useTranslation} from "react-i18next";
 import MenuButton from "../menu/subitems/MenuButton.jsx";
 
@@ -14,8 +14,8 @@ function Menu() {
                     <div className="menu-image">
                         <img src={menuItem1} alt="Menu" />
                     </div>
-                    <div className="about-text">
-                        <div className="about-header">
+                    <div className="menu-text">
+                        <div className="menu-header">
                             <div className="small-rectangle-about"></div>
                             <h4 className="about-subtitle">{t('menu.subtitle')}</h4>
                         </div>

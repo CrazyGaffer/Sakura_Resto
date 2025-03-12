@@ -1,63 +1,79 @@
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import './Home.css';
-import heroBackground from '../../assets/homePage/backround.avif';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+import './Home.scss';
+import dish1 from '/src/assets/home/dish1.jpg';
+import dish2 from '/src/assets/home/dish2.jpg';
+import dish3 from '/src/assets/home/dish3.jpg';
 
 function Home() {
-    const { t } = useTranslation();
+    const controls = useAnimation();
+    const images = [dish1, dish2, dish3];
+
+    useEffect(() => {
+        const sequence = async () => {
+            await controls.start({ opacity: 1, y: 0 });
+        };
+        sequence();
+    }, [controls]);
 
     return (
         <section id="home" className="hero">
-            <div
-                className="hero-bg"
-                style={{ backgroundImage: `url(${heroBackground})` }}
-            ></div>
-
-            <motion.div
-                className="hero-content"
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-            >
-                <h1>{t('home.heading')}</h1>
-                <p>{t('home.subheading')}</p>
-            </motion.div>
-
-            <motion.div
-                className="hero-buttons"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                    type: 'spring',
-                    stiffness: 80,
-                    damping: 10,
-                    delay: 0.5
-                }}
-            >
-                <motion.button
-                    className="hero-btn hero-btn--primary"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() =>
-                        window.open(
-                            'https://v2.tableonline.fi/instabook/bookings/AwHHJD2/selection?locale=ee'
-                        )
-                    }
+            <div className="hero-container">
+                <motion.div
+                    className="image-slider"
+                    initial={{ opacity: 0 }}
+                    animate={controls}
+                    transition={{ duration: 1 }}
                 >
-                    {t('home.bookATable')}
-                </motion.button>
+                    {images.map((image, index) => (
+                        <div
+                            key={index}
+                            className="slide"
+                            style={{ backgroundImage: `url(${image})` }}
+                        />
+                    ))}
+                </motion.div>
 
-                <motion.button
-                    className="hero-btn hero-btn--secondary"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() =>
-                        window.open('https://sakura-restoran.choiceqr.com/online-menu')
-                    }
-                >
-                    {t('home.orderNow')}
-                </motion.button>
-            </motion.div>
+                <div className="content-column">
+                    <motion.div
+                        className="hero-content"
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                        <h4 className="subtitle">Experience Authentic Japan</h4>
+                        <h1 className="title">
+                            Sakura Japanese Culinary Excellence
+                        </h1>
+                        <p className="description">
+                            Traditional recipes meet modern artistry in our master-crafted dishes,
+                            prepared with seasonal ingredients.
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        className="buttons-container"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                    >
+                        <motion.button
+                            className="reserve-button"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            Book Table Now
+                        </motion.button>
+                        <motion.button
+                            className="secondary-button"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            View Menu
+                        </motion.button>
+                    </motion.div>
+                </div>
+            </div>
         </section>
     );
 }

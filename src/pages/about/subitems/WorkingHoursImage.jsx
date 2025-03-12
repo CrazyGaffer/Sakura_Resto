@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import {scroller} from 'react-scroll';
 import { useTranslation } from 'react-i18next';
-import workingHoursImg from '/src/assets/aboutPage/workingHours.jpeg';
+import workingHoursImg from '/src/assets/about/workingHours.jpeg';
+import '/src/pages/about/subitems/WorkingHours/WorkingHours.css';
 
 const WorkingHoursImage = () => {
     const { t } = useTranslation();

@@ -1,0 +1,258 @@
+
+.working-hours-container {
+    height: 380px;
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: visible;
+    margin-bottom: 20px;
+}
+
+.small-rectangle-working-hours {
+    width: 40px;
+    height: 4px;
+    background-color: #e91e63;
+    margin: 0;
+}
+
+.working-hours-subtitle {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.working-hours-image {
+    width: 60%;
+    position: relative;
+}
+
+.working-hours-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 8px 0 0 8px;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: left;
+    z-index: 2;
+}
+
+.overlay-content h2,
+.overlay-content h4 {
+    color: #fff;
+}
+
+.overlay-content h2 {
+    font-size: 2.5em;
+}
+
+.overlay-content h4 {
+    text-transform: uppercase;
+}
+
+.working-hours-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.reservation-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.0em !important;
+    margin-bottom: 30px !important;
+    color: #fff !important;
+}
+
+.overlay-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.reservation-btn {
+    position: relative;
+    overflow: hidden;
+    padding: 14px 28px;
+    border: none;
+    background: linear-gradient(45deg, #e91e63, #ff4081);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 550;
+    font-size: 0.8em;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+.reservation-btn:active {
+    transform: translateY(0);
+    filter: brightness(0.95);
+}
+
+.contact-button {
+    padding: 20px 20px;
+    background: transparent;
+    border: none;
+    font-size: 0.8em;
+    font-weight: 550;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.working-hours-info {
+    width: 40%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.working-hours-selector {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.working-hours-selector button {
+    background: transparent;
+    border: 2px solid #e91e63;
+    color: #e91e63;
+    border-radius: 6px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+.working-hours-selector button.active {
+    background: #e91e63;
+    color: #fff;
+}
+
+.working-hours-info ul li.working-time {
+    margin-bottom: 30px;
+}
+
+.working-hours-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.working-hours-info ul li.working-day {
+    font-weight: 550;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+.working-hours-info ul li.working-time {
+    white-space: pre-line;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.time-colon {
+    color: #e91e63;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-inline: 5px;
+}
+
+.working-hours-info ul li {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 1024px) {
+    .working-hours-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .working-hours-image,
+    .working-hours-info {
+        width: 100%;
+    }
+    .working-hours-image {
+        display: inline-block;
+    }
+    .working-hours-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+    .image-overlay {
+        border-radius: 0;
+    }
+    .overlay-content {
+        left: 20px;
+        right: 20px;
+        text-align: center;
+        padding: 0 10px;
+    }
+    .small-rectangle-about,
+    .small-rectangle-features {
+        width: 30px;
+    }
+    .overlay-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .reservation-btn, .contact-button {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    .reservation-text {
+        font-size: 0.8em !important;
+    }
+    .working-hours-header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        margin-bottom: 20px;
+        gap: 0;
+    }
+    .small-rectangle-working-hours {
+        margin: 0 auto 15px;
+    }
+}

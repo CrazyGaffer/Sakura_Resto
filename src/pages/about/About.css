@@ -6,13 +6,11 @@
     text-align: center;
 }
 
-/* Wrapper to control overall width and center content */
 .about-wrapper {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* About-content as a row on larger screens */
 .about-content {
     display: flex;
     align-items: center;
@@ -25,17 +23,15 @@
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-/* Style for the small rectangle above the subtitle */
 .small-rectangle-about {
     width: 40px;
     height: 4px;
     background-color: #e91e63;
 }
 
-/* Styling for the image container */
 .about-image img {
     width: 570px;
     height: 570px;
@@ -43,11 +39,9 @@
     border-radius: 8px;
 }
 
-/* Existing styles */
 .about h2 {
     font-size: 2.5em;
     color: #e91e63;
-    margin-bottom: 30px;
     margin-top: 0;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -61,57 +55,14 @@
     text-align: left;
 }
 
-.feature h3 {
-    padding-bottom: 5px;
-    font-size: 1.2em;
-    font-family: 'Montserrat', sans-serif;
-}
-
 .about p {
-    font-size: 1.1em;
-    color: #333;
+    font-size: 1em;
+    color: gray;
     max-width: 900px;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Feature paragraph styling */
-.feature p {
-    font-size: 1em;
-    color: #555;
-    margin-top: 10px;
-    line-height: 1.5;
-}
-
-.small-rectangle-features {
-    width: 40px;
-    height: 4px;
-    background-color: #e91e63;
-    margin: 0 auto 15px;
-}
-
-.features-title {
-    font-size: 2em;
-    color: #e91e63;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-}
-
-.features {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-    flex-wrap: nowrap;
-}
-
-.feature {
-    margin-top: 40px;
-    flex: 1 1 0;
-    text-align: center;
-}
-
-.features-subtitle,
 .about-subtitle {
     font-size: 1rem;
     color: #333;
@@ -119,290 +70,18 @@
     text-transform: uppercase;
 }
 
-.features-subtitle {
-    margin-bottom: 10px;
-}
-
-.feature-icon {
-    font-size: 3em;
-    color: black;
-    margin-bottom: 10px;
-}
-
-/* Divider styling */
-.divider {
-    width: 100%;
-    margin: 80px auto;
-    border-top: 4px dotted #ccc;
-}
-
-p.features-title {
-    font-size: 0.95em;
-    color: gray;
-    text-transform: none;
-    margin-bottom: 30px;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.5;
-    text-align: center;
-    font-weight: 500;
-}
-
-/* Working Hours Container */
-.working-hours-container {
-    height: 380px;
-    display: flex;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: visible;
-    margin-bottom: 20px;
-}
-
-/* Small rectangle for Working Hours header */
-.small-rectangle-working-hours {
-    width: 40px;
-    height: 4px;
-    background-color: #e91e63;
-    margin: 0;
-}
-
-.working-hours-subtitle {
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Working Hours Image styling */
-.working-hours-image {
-    width: 60%;
-    position: relative;
-}
-
-.working-hours-image img {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-    border-radius: 8px 0 0 8px;
-}
-
-/* Black blur overlay on working hours image */
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    backdrop-filter: blur(2px);
-    border-radius: 8px 0 0 8px;
-}
-
-/* Content over the blurred image aligned to the left */
-.overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 60px;
-    transform: translateY(-50%);
-    color: #fff;
-    text-align: left;
-    z-index: 2;
-}
-
-.overlay-content h2,
-.overlay-content h4 {
-    color: #fff;
-}
-
-.overlay-content h2 {
-    font-size: 2.5em;
-}
-
-.overlay-content h4 {
-    text-transform: uppercase;
-}
-
-/* Working Hours Header styling */
-.working-hours-header {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-}
-
-/* Reservation text styling */
-.reservation-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.0em !important;
-    margin-bottom: 30px !important;
-    color: #fff !important;
-}
-
-/* Overlay buttons styling */
-.overlay-buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.reservation-btn {
-    position: relative;
-    overflow: hidden;
-    padding: 14px 28px;
-    border: none;
-    background: linear-gradient(45deg, #e91e63, #ff4081);
-    color: #fff;
-    cursor: pointer;
-    border-radius: 6px;
-    font-weight: 550;
-    font-size: 0.8em;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: 'Montserrat', sans-serif;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.reservation-btn:hover {
-    transform: translateY(-3px);
-    filter: brightness(1.1);
-}
-
-.reservation-btn:active {
-    transform: translateY(0);
-    filter: brightness(0.95);
-}
-
-.contact-button {
-    padding: 20px 20px;
-    background: transparent;
-    border: none;
-    font-size: 0.8em;
-    font-weight: 550;
-    color: white;
-    cursor: pointer;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    z-index: 2;
-}
-
-/* Working Hours Info styling */
-.working-hours-info {
-    width: 40%;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 0 8px 8px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.working-hours-selector {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.working-hours-selector button {
-    background: transparent;
-    border: 2px solid #e91e63;
-    color: #e91e63;
-    border-radius: 6px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 0.8em;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    transition: background 0.3s, color 0.3s;
-}
-
-.working-hours-selector button.active {
-    background: #e91e63;
-    color: #fff;
-}
-
-.working-hours-info ul li.working-time {
-    margin-bottom: 30px;
-}
-
-.working-hours-info ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.working-hours-info ul li.working-day {
-    font-weight: 550;
-    font-size: 0.8em;
-    text-transform: uppercase;
-}
-
-.working-hours-info ul li.working-time {
-    white-space: pre-line;
-    font-size: 1.3em;
-    font-weight: 700;
-}
-
-.time-colon {
-    color: #e91e63;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding-inline: 5px;
-}
-
-.working-hours-info ul li {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Statistics Section */
-.statistics {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
-    margin-top: 60px;
-}
-
-.statistic {
-    text-align: center;
-}
-
-.statistic p {
-    font-size: 0.8em;
-    margin-top: 10px;
-    font-family: 'Montserrat', sans-serif;
+.about-subtitle {
+    font-size: 1rem;
     color: #333;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    font-weight: 550;
 }
 
-.count {
-    font-size: 3em;
-    font-weight: 600;
-    font-family: Montserrat, sans-serif;
-}
-
-.symbol {
-    color: #e91e63;
-    font-size: 1.5em;
-    vertical-align: top;
-}
-
-/* ScrollLink anchor styling to fix vertical alignment */
-.scroll-link {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-/* Social Icons Section for About */
 .about-socials {
     margin-top: 20px;
     display: flex;
     justify-content: flex-start;
-    gap: 15px;
+    gap: 20px;
 }
 
 .about-socials a {
@@ -415,106 +94,85 @@ p.features-title {
     color: #c2185b;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .about {
-        padding: 50px 15px;
-    }
-    .about-wrapper {
-        padding: 0 15px;
-    }
+.scroll-link {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media (max-width: 1024px) and (min-width: 575px) {
     .about-content {
         flex-direction: column;
+    }
+    .about-content > .about-text {
+        order: -1;
+    }
+    .about-content > .about-image {
+        order: 1;
     }
     .about-image img {
         width: 100%;
         height: auto;
     }
     .about-text {
-        padding: 20px 0;
+        text-align: left;
     }
-    .about h2 {
+    .about-subtitle {
+        font-size: 0.8rem;
+    }
+    .about-text h2,
+    .about-text p {
+        text-align: left;
+    }
+    .about-text h2 {
         font-size: 2em;
     }
-    .about p {
-        font-size: 1em;
+    .about-text p {
+        font-size: 0.95em;
     }
-    .features {
-        flex-wrap: wrap;
+    .about-socials {
+        justify-content: left;
+        gap: 25px;
     }
-    .feature {
-        flex: 0 1 100%;
-        width: 100%;
+    .about {
+        padding: 50px 30px;
     }
-    .divider {
-        width: 100%;
-    }
-    .working-hours-container {
+}
+
+@media (max-width: 574px) {
+    .about-content {
         flex-direction: column;
+    }
+    .about-content > .about-text {
+        order: -1;
+    }
+    .about-content > .about-image {
+        order: 1;
+    }
+    .about-image img {
+        width: 100%;
         height: auto;
     }
-    .working-hours-image,
-    .working-hours-info {
-        width: 100%;
+    .about-text {
+        text-align: left;
     }
-    .working-hours-image {
-        display: inline-block;
+    .about-subtitle {
+        font-size: 0.8rem;
     }
-    .working-hours-image img {
-        display: block;
-        width: 100%;
-        height: auto;
-        border-radius: 0;
+    .about-text h2,
+    .about-text p {
+        text-align: left;
     }
-    .image-overlay {
-        border-radius: 0;
+    .about-text h2 {
+        font-size: 1.7em;
     }
-    .working-hours-info {
-        border-radius: 8px;
-        text-align: center;
+    .about-text p {
+        font-size: 0.95em;
     }
-    .statistics {
-        flex-direction: column;
-        gap: 30px;
+    .about-socials {
+        justify-content: left;
+        gap: 25px;
     }
-    .statistic .count {
-        font-size: 2em;
-    }
-    .statistic p {
-        font-size: 0.8em;
-    }
-    .overlay-content {
-        left: 20px;
-        right: 20px;
-        text-align: center;
-        padding: 0 10px;
-    }
-    .small-rectangle-about,
-    .small-rectangle-features {
-        width: 30px;
-    }
-    .overlay-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    .reservation-btn, .contact-button {
-        width: 100%;
-        max-width: 250px;
-        margin: 0 auto;
-    }
-    .reservation-text {
-        font-size: 0.8em !important;
-    }
-    .working-hours-header {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: auto;
-        margin-bottom: 20px;
-        gap: 0;
-    }
-    .small-rectangle-working-hours {
-        margin: 0 auto 15px;
+    .about {
+        padding: 50px 30px;
     }
 }

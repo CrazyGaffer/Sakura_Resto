@@ -25,13 +25,21 @@ const FeaturesSection = () => {
 
     return (
         <div className="features">
-            {features.map((feature, idx) => (
-                <div className="feature" key={idx}>
-                    {feature.icon}
-                    <h3>{feature.title}</h3>
-                    <p>{feature.description}</p>
-                </div>
-            ))}
+            <div className="features-header">
+                <div className="small-rectangle-features"></div>
+                <h4 className="features-subtitle">{t('about.subheading')}</h4>
+                <h2 className="features-title">{t('about.features.heading')}</h2>
+                <p className="features-title">{t('about.features.subheading')}</p>
+            </div>
+            <div className="features-list">
+                {features.map((feature, idx) => (
+                    <div className="feature" key={idx}>
+                        {feature.icon}
+                        <h3>{feature.title}</h3>
+                        <p>{feature.description}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

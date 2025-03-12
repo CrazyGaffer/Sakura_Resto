@@ -13,10 +13,10 @@ const resources = {
                 contact: "Contact"
             },
             home: {
-                heading: "Experience the Fusion",
-                subheading: "Traditional Japanese Cuisine with a Modern Twist",
-                bookATable: "Book a table",
-                orderNow: "Order Now"
+                heading: "The Time To Taste Of Delicious Food",
+                subheading: "Traditional culinary mastery with a modern twist that celebrates timeless techniques and inspires new flavor experiences",
+                bookATable: "Reservation",
+                orderNow: "Order"
             },
             about: {
                 heading: "Our story",
@@ -96,14 +96,14 @@ const resources = {
                 home: "Avaleht",
                 about: "Meist",
                 menu: "Menüü",
-                events: "Sündmused",
+                events: "Üritused",
                 contact: "Kontakt"
             },
             home: {
-                heading: "Koge sulandumist",
+                heading: "Aeg maitseda maitsvat toitu",
                 subheading: "Traditsiooniline Jaapani köök kaasaegse nüansiga",
-                bookATable: "Broneeri laud",
-                orderNow: "Tellige kohe"
+                bookATable: "Broneeri",
+                orderNow: "Telli"
             },
             about: {
                 heading: "Meie lugu",
@@ -172,7 +172,7 @@ const resources = {
                 home: "Avaleht",
                 menu: "Menüü",
                 about: "Meist",
-                events: "Sündmused",
+                events: "Üritused",
                 rightsReserved: "Kõik õigused kaitstud. Arendatud CrazyGaffer poolt"
             }
         }
@@ -187,7 +187,7 @@ const resources = {
                 contact: "Контакт"
             },
             home: {
-                heading: "Ощутите слияние",
+                heading: "Время попробовать вкусную еду",
                 subheading: "Традиционная японская кухня с современным акцентом",
                 bookATable: "Забронировать",
                 orderNow: "Заказать сейчас"

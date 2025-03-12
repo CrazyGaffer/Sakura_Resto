@@ -1,0 +1,66 @@
+
+.statistics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 120px;
+    margin-top: 60px;
+}
+
+.statistic {
+    text-align: center;
+}
+
+.statistic p {
+    font-size: 0.8em;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 550;
+}
+
+.count {
+    font-size: 3em;
+    font-weight: 600;
+    font-family: Montserrat, sans-serif;
+}
+
+.symbol {
+    color: #e91e63;
+    font-size: 1.5em;
+    vertical-align: top;
+}
+
+@media (min-width: 1025px) {
+    .statistics {
+        flex-wrap: nowrap;
+    }
+}
+
+/* Tablet (2 columns) */
+@media (max-width: 1024px) and (min-width: 575px) {
+    .statistics {
+        gap: 60px;
+    }
+    .statistic {
+        width: calc(50% - 30px);
+    }
+    .count {
+        font-size: 2.5em;
+    }
+}
+
+/* Mobile (1 column) */
+@media (max-width: 574px) {
+    .statistics {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .statistic {
+        width: 100%;
+    }
+    .count {
+        font-size: 2em;
+    }
+}
