@@ -7,6 +7,7 @@ const Header = () => {
     const { t } = useTranslation();
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
     // Retrieve translated nav items
     const navItems = [
@@ -17,7 +18,7 @@ const Header = () => {
         { id: 'footer', label: t('navbar.contact') },
     ];
 
-    const toggleMenu = () => setMenuOpen(prev => !prev);
+    const toggleMenu = () => setMenuOpen((prev) => !prev);
     const closeMenu = () => setMenuOpen(false);
 
     useEffect(() => {
@@ -31,36 +32,80 @@ const Header = () => {
 
     useEffect(() => {
         document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
-        return () => { document.body.style.overflow = 'auto'; };
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
     }, [menuOpen]);
+
+    // Update isMobile state on window resize and reset menu state if not mobile
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 1024) {
+                setIsMobile(true);
+            } else {
+                setIsMobile(false);
+                setMenuOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
         <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="navbar-container">
-                <div className="navbar-title" onClick={() => scroll.scrollToTop({ duration: 300 })}>
+                <div
+                    className="navbar-title"
+                    onClick={() => scroll.scrollToTop({ duration: 300 })}
+                >
                     Sakura Resto
                 </div>
-                <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
-                    <ul>
-                        {navItems.map((item) => (
-                            <li key={item.id}>
-                                <ScrollLink
-                                    to={item.id}
-                                    smooth={true}
-                                    duration={150}
-                                    onClick={closeMenu}
-                                >
-                                    {item.label}
-                                </ScrollLink>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-                <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                </div>
+                {isMobile ? (
+                    <>
+                        <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
+                            <ul>
+                                {navItems.map((item) => (
+                                    <li key={item.id}>
+                                        <ScrollLink
+                                            to={item.id}
+                                            smooth={true}
+                                            duration={150}
+                                            onClick={closeMenu}
+                                        >
+                                            {item.label}
+                                        </ScrollLink>
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>
+                        <div
+                            className={`hamburger ${menuOpen ? 'active' : ''}`}
+                            onClick={toggleMenu}
+                        >
+                            <span className="bar"></span>
+                            <span className="bar"></span>
+                            <span className="bar"></span>
+                        </div>
+                    </>
+                ) : (
+                    // Desktop nav (always visible)
+                    <nav className="nav-menu">
+                        <ul>
+                            {navItems.map((item) => (
+                                <li key={item.id}>
+                                    <ScrollLink
+                                        to={item.id}
+                                        smooth={true}
+                                        duration={150}
+                                    >
+                                        {item.label}
+                                    </ScrollLink>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+                )}
             </div>
         </header>
     );

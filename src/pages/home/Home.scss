@@ -24,7 +24,7 @@ $accent-dark: #2a2a2a;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: 50vh auto;
 
       .image-slider,
       .content-column {
@@ -38,6 +38,9 @@ $accent-dark: #2a2a2a;
   position: relative;
   height: 100%;
   overflow: hidden;
+  background: linear-gradient(45deg, $accent-dark, #3a3a3a);
+  pointer-events: none;
+  user-select: none;
 
   .slide {
     position: absolute;
@@ -48,12 +51,9 @@ $accent-dark: #2a2a2a;
     background-size: cover;
     background-position: center;
     opacity: 0;
-    animation: slideShow 12s infinite;
+    transition: opacity 1s ease, transform 1s ease;
     transform: scale(1.05);
-
-    &:nth-child(1) { animation-delay: 0s; }
-    &:nth-child(2) { animation-delay: 4s; }
-    &:nth-child(3) { animation-delay: 8s; }
+    will-change: transform, opacity;
 
     &::after {
       content: '';
@@ -62,12 +62,35 @@ $accent-dark: #2a2a2a;
       left: 0;
       width: 100%;
       height: 100%;
-      transition: background 0.3s ease;
+      background: rgba(0, 0, 0, 0.3);
     }
 
     @media (max-width: 480px) {
       background-position: center 30%;
     }
+  }
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    min-height: 300px;
+  }
+}
+
+.slider-progress {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 3;
+  pointer-events: none;
+
+  .progress-dot {
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
   }
 }
 
@@ -87,8 +110,9 @@ $accent-dark: #2a2a2a;
 
   @media (max-width: 768px) {
     padding: 3rem 2rem;
-    min-height: 60vh;
+    min-height: 50vh;
     box-shadow: none;
+    background: rgba(255, 255, 255, 0.98);
   }
 
   @media (max-width: 480px) {
@@ -106,12 +130,6 @@ $accent-dark: #2a2a2a;
 
     @media (max-width: 768px) {
       font-size: 1.1rem;
-      margin-bottom: 0.6rem;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 1rem;
-      letter-spacing: 1px;
     }
   }
 
@@ -121,21 +139,13 @@ $accent-dark: #2a2a2a;
     color: $accent-dark;
     margin-bottom: 1.2rem;
     line-height: 1.2;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
     @media (max-width: 1024px) {
       font-size: 2.8rem;
     }
 
     @media (max-width: 768px) {
-      font-size: 2.5rem;
-      line-height: 1.1;
-      margin-bottom: 1rem;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 2rem;
-      margin-bottom: 0.8rem;
+      font-size: 2.2rem;
     }
   }
 
@@ -145,17 +155,9 @@ $accent-dark: #2a2a2a;
     color: rgba($accent-dark, 0.9);
     line-height: 1.6;
     max-width: 480px;
-    margin-bottom: 1.5rem;
 
     @media (max-width: 768px) {
       font-size: 1rem;
-      line-height: 1.5;
-      margin-bottom: 1.2rem;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 0.95rem;
-      line-height: 1.4;
     }
   }
 }
@@ -163,86 +165,51 @@ $accent-dark: #2a2a2a;
 .buttons-container {
   display: flex;
   gap: 1rem;
-  margin-top: 0.5rem;
-  justify-content: flex-start;
-
-  @media (max-width: 768px) {
-    margin-top: 1rem;
-  }
+  margin-top: 1.5rem;
 
   @media (max-width: 480px) {
     flex-direction: column;
-    gap: 0.8rem;
-    margin-top: 1.2rem;
   }
 }
 
 .reserve-button, .secondary-button {
-  width: auto;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 6px;
   font-family: $sans;
   font-weight: 600;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  transition: all 0.3s ease;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  border: none;
   display: inline-flex;
-  justify-content: center;
   align-items: center;
-  flex: 0 1 auto;
-  min-width: 200px;
-  backdrop-filter: blur(2px);
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
 
   @media (max-width: 768px) {
-    padding: 1rem 1.5rem;
-    min-width: 180px;
-    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
   }
 
   @media (max-width: 480px) {
     width: 100%;
-    min-width: auto;
-    padding: 1rem;
-    font-size: 0.85rem;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-                    120deg,
-                    transparent,
-                    rgba(255, 255, 255, 0.3),
-                    transparent
-    );
-    transition: all 0.6s ease;
-  }
-
-  &:hover {
-    transform: translateY(-2px);
-
-    &::before {
-      left: 100%;
-    }
+    padding: 0.8rem;
   }
 }
 
 .reserve-button {
   background: $primary-color;
-  color: $secondary-color;
-  box-shadow: 0 4px 20px rgba($primary-color, 0.3);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba($primary-color, 0.25);
 
   &:hover {
-    box-shadow: 0 6px 25px rgba($primary-color, 0.4);
+    box-shadow: 0 6px 16px rgba($primary-color, 0.35);
   }
 }
 
@@ -250,25 +217,10 @@ $accent-dark: #2a2a2a;
   background: transparent;
   border: 2px solid $primary-color;
   color: $primary-color;
-  box-shadow: 0 4px 15px rgba($primary-color, 0.15);
+  box-shadow: 0 4px 12px rgba($primary-color, 0.1);
 
   &:hover {
-    background: rgba($primary-color, 0.08);
-    box-shadow: 0 6px 20px rgba($primary-color, 0.2);
-  }
-}
-
-@keyframes slideShow {
-  0%, 100% {
-    opacity: 0;
-    transform: scale(1.05);
-  }
-  10%, 33% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  43%, 66% {
-    opacity: 0;
-    transform: scale(1.05);
+    background: rgba($primary-color, 0.05);
+    box-shadow: 0 6px 16px rgba($primary-color, 0.15);
   }
 }

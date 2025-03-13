@@ -1,5 +1,5 @@
 import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './Home.scss';
 import dish1 from '/src/assets/home/dish1.jpg';
 import dish2 from '/src/assets/home/dish2.jpg';
@@ -7,14 +7,26 @@ import dish3 from '/src/assets/home/dish3.jpg';
 
 function Home() {
     const controls = useAnimation();
+    const [activeIndex, setActiveIndex] = useState(0);
     const images = [dish1, dish2, dish3];
 
     useEffect(() => {
         const sequence = async () => {
-            await controls.start({ opacity: 1, y: 0 });
+            try {
+                await controls.start({ opacity: 1, y: 0 });
+            } catch (error) {
+                console.error('Animation error:', error);
+            }
         };
-        sequence();
+        void sequence();
     }, [controls]);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveIndex((prev) => (prev + 1) % images.length);
+        }, 4000);
+        return () => clearInterval(interval);
+    }, [images.length]);
 
     return (
         <section id="home" className="hero">
@@ -29,9 +41,28 @@ function Home() {
                         <div
                             key={index}
                             className="slide"
-                            style={{ backgroundImage: `url(${image})` }}
+                            style={{
+                                backgroundImage: `url(${image})`,
+                                opacity: index === activeIndex ? 1 : 0,
+                                zIndex: index === activeIndex ? 1 : 0
+                            }}
                         />
                     ))}
+                    <div className="slider-progress">
+                        {images.map((_, index) => (
+                            <motion.span
+                                key={index}
+                                className="progress-dot"
+                                animate={{
+                                    width: activeIndex === index ? '24px' : '8px',
+                                    backgroundColor: activeIndex === index
+                                        ? 'rgba(255, 255, 255, 0.9)'
+                                        : 'rgba(255, 255, 255, 0.4)'
+                                }}
+                                transition={{ duration: 0.3 }}
+                            />
+                        ))}
+                    </div>
                 </motion.div>
 
                 <div className="content-column">
@@ -64,7 +95,7 @@ function Home() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Book Table Now
+                            Reservation
                         </motion.a>
                         <motion.button
                             className="secondary-button"
