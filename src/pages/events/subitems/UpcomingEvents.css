@@ -31,14 +31,12 @@
     color: #333333;
 }
 
-/* Embla dot container */
 .embla__dot {
     position: relative;
     width: 1rem;
     height: 1rem;
 }
 
-/* Unselected dot */
 .embla__dot:after {
     content: '';
     position: absolute;
@@ -53,7 +51,7 @@
 .embla__dot--selected:after {
     width: 0.8rem;
     height: 0.8rem;
-    background-color: #333333; /* selected color */
+    background-color: #333333;
 }
 
 .embla__slide img {
@@ -68,5 +66,20 @@
 @media (max-width: 768px) {
     .embla__button {
         display: none;
+    }
+
+    .embla__dot {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+
+    .embla__dot:after {
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+
+    .embla__dot--selected:after {
+        width: 0.6rem;
+        height: 0.6rem;
     }
 }
