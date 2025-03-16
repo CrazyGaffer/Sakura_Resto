@@ -1,6 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+/* Working Hours Container */
+.working-hours-info {
+    width: 35%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Selector Buttons */
+.working-hours-selector {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.working-hours-selector button {
+    background: transparent;
+    border: 2px solid #e91e63;
+    color: #e91e63;
+    border-radius: 8px;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    min-width: 140px;
+    z-index: 1;
+}
+
+/* Remove hover fill effect */
+.working-hours-selector button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #e91e63;
+    z-index: -1;
+}
+
+.working-hours-selector button:hover::before {
+    width: 0;
+}
+
+.working-hours-selector button:hover {
+    color: #e91e63;
+}
+
+/* When active, change text color and animate fill */
+.working-hours-selector button.active {
+    color: #fff;
+}
+.working-hours-selector button.active::before {
+    animation: fillAnim 0.4s forwards;
+}
+
+@keyframes fillAnim {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Schedule Container */
+.schedule-container {
+    position: relative;
+    min-height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.working-hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: both;
+}
+
+.slide-left {
+    animation-name: slideFromLeft;
+}
+
+.slide-right {
+    animation-name: slideFromRight;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.working-day {
+    font-weight: 600;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #444;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.working-time-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.working-time {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #222;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.working-time::after {
+    content: '';
+    display: none;
+}
+
+.time-colon {
+    color: #e91e63;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+@keyframes slideFade {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Original Container Styles */
 .working-hours-container {
-    height: 380px;
+    height: 400px;
     display: flex;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -20,13 +191,13 @@
 }
 
 .working-hours-image {
-    width: 60%;
+    width: 65%;
     position: relative;
 }
 
 .working-hours-image img {
     width: 100%;
-    height: 380px;
+    height: 400px;
     object-fit: cover;
     border-radius: 8px 0 0 8px;
 }
@@ -37,7 +208,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
     border-radius: 8px 0 0 8px;
 }
@@ -54,7 +225,7 @@
 
 .overlay-content h2,
 .overlay-content h4 {
-    color: #fff;
+    color: #fff !important;
 }
 
 .overlay-content h2 {
@@ -127,107 +298,29 @@
     z-index: 2;
 }
 
-.working-hours-info {
-    width: 40%;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 0 8px 8px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.working-hours-selector {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.working-hours-selector button {
-    background: transparent;
-    border: 2px solid #e91e63;
-    color: #e91e63;
-    border-radius: 6px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 0.8em;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    transition: background 0.3s, color 0.3s;
-}
-
-.working-hours-selector button.active {
-    background: #e91e63;
-    color: #fff;
-}
-
-.working-hours-info ul li.working-time {
-    margin-bottom: 30px;
-}
-
-.working-hours-info ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.working-hours-info ul li.working-day {
-    font-weight: 550;
-    font-size: 0.8em;
-    text-transform: uppercase;
-}
-
-.working-hours-info ul li.working-time {
-    white-space: pre-line;
-    font-size: 1.3em;
-    font-weight: 700;
-}
-
-.time-colon {
-    color: #e91e63;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding-inline: 5px;
-}
-
-.working-hours-info ul li {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
-}
-
 @media (max-width: 1024px) {
     .working-hours-container {
         flex-direction: column;
         height: auto;
-        /* Keep full container border-radius and clip children */
         border-radius: 8px;
         overflow: hidden;
     }
     .working-hours-image {
         width: 100%;
         display: inline-block;
-        /* Only top corners rounded */
         border-radius: 8px 8px 0 0;
     }
     .working-hours-image img {
         display: block;
         width: 100%;
         height: auto;
-        /* Only top corners rounded */
         border-radius: 8px 8px 0 0;
     }
     .image-overlay {
-        /* Only top corners rounded */
         border-radius: 8px 8px 0 0;
     }
     .working-hours-info {
         width: 100%;
-        /* Only bottom corners rounded */
         border-radius: 0 0 8px 8px;
     }
     .overlay-content {
@@ -245,7 +338,8 @@
         align-items: center;
         gap: 10px;
     }
-    .reservation-btn, .contact-button {
+    .reservation-btn,
+    .contact-button {
         width: 100%;
         max-width: 250px;
         margin: 0 auto;
@@ -263,5 +357,23 @@
     }
     .small-rectangle-working-hours {
         margin: 0 auto 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .working-hours-selector {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .working-hours-selector button {
+        min-width: 100px;
+        padding: 8px 15px;
+        font-size: 0.75em;
+    }
+    .working-day {
+        font-size: 0.8em;
+    }
+    .working-time {
+        font-size: 1.3em;
     }
 }

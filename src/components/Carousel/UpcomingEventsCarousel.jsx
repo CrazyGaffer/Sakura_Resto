@@ -1,13 +1,14 @@
-import { DotButton, useDotButton } from './CarouselDotButton.jsx'
-import { PrevButton, NextButton, usePrevNextButtons } from './CarouselArrowButtons.jsx'
-import useEmblaCarousel from 'embla-carousel-react'
+import PropTypes from 'prop-types';
+import { DotButton, useDotButton } from './CarouselDotButton.jsx';
+import { PrevButton, NextButton, usePrevNextButtons } from './CarouselArrowButtons.jsx';
+import useEmblaCarousel from 'embla-carousel-react';
 
 const UpcomingEventsCarousel = (props) => {
-    const { slides, options } = props
-    const [emblaRef, emblaApi] = useEmblaCarousel(options)
+    const { slides, options } = props;
+    const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
-    const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
-    const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi)
+    const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
+    const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
 
     return (
         <section className="embla">
@@ -48,7 +49,18 @@ const UpcomingEventsCarousel = (props) => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
+
+UpcomingEventsCarousel.propTypes = {
+    slides: PropTypes.arrayOf(
+        PropTypes.shape({
+            image: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+            description: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+    options: PropTypes.object,
+};
 
 export default UpcomingEventsCarousel;

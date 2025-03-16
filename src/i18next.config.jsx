@@ -48,7 +48,7 @@ const resources = {
                     workingDays_2: "Friday",
                     workingDays_3: "Saturday",
                     workingDays_4: "Sunday",
-                    workingDays_short_1: "Mon - Thu",
+                    workingDays_short_1: "Mon - Fri",
                     workingDays_short_2: "Sat - Sun",
                 },
                 statistics: {

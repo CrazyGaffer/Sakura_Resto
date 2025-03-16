@@ -31,10 +31,11 @@
     color: #333333;
 }
 
+/* Reduced dot sizes */
 .embla__dot {
     position: relative;
-    width: 1rem;
-    height: 1rem;
+    width: 0.8rem;
+    height: 0.8rem;
 }
 
 .embla__dot:after {
@@ -43,14 +44,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 0.6rem;
-    height: 0.6rem;
+    width: 0.5rem;
+    height: 0.5rem;
     background-color: #cccccc;
 }
 
 .embla__dot--selected:after {
-    width: 0.8rem;
-    height: 0.8rem;
+    width: 0.6rem;
+    height: 0.6rem;
     background-color: #333333;
 }
 
@@ -69,8 +70,8 @@
     }
 
     .embla__dot {
-        width: 0.8rem;
-        height: 0.8rem;
+        width: 0.7rem;
+        height: 0.7rem;
     }
 
     .embla__dot:after {
@@ -79,7 +80,7 @@
     }
 
     .embla__dot--selected:after {
-        width: 0.6rem;
-        height: 0.6rem;
+        width: 0.5rem;
+        height: 0.5rem;
     }
 }
