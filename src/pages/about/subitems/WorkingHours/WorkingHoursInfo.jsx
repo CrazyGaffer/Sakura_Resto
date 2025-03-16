@@ -66,7 +66,7 @@ const WorkingHoursInfo = () => {
                             animate="animate"
                             exit="exit"
                             variants={variants}
-                            style={{ width: '100%' }} // Removed absolute positioning
+                            style={{ width: '100%' }}
                         >
                             <li className="working-day">{t('about.workingHours.workingDays_1')}</li>
                             <li className="working-time-container">

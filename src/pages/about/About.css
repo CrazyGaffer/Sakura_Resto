@@ -23,7 +23,6 @@
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    margin-bottom: 10px;
 }
 
 .small-rectangle-about {
@@ -45,6 +44,7 @@
     margin-top: 0;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .about-text h2 {
@@ -60,13 +60,6 @@
     max-width: 900px;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
-}
-
-.about-subtitle {
-    font-size: 1rem;
-    color: #333;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
 }
 
 .about-subtitle {

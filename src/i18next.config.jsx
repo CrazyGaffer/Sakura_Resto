@@ -135,7 +135,7 @@ const resources = {
                     workingDays_2: "Reede",
                     workingDays_3: "Laupäev",
                     workingDays_4: "Pühapäev",
-                    workingDays_short_1: "E - N",
+                    workingDays_short_1: "E - R",
                     workingDays_short_2: "L - P",
                 },
                 statistics: {
@@ -222,7 +222,7 @@ const resources = {
                     workingDays_2: "Пятница",
                     workingDays_3: "Суббота",
                     workingDays_4: "Воскресенье",
-                    workingDays_short_1: "Пн - Чт",
+                    workingDays_short_1: "Пн - Пт",
                     workingDays_short_2: "Сб - Вс",
                 },
                 statistics: {
