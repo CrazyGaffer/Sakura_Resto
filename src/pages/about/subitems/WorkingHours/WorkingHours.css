@@ -38,7 +38,7 @@
     z-index: 1;
 }
 
-/* Remove hover fill effect */
+/* Pseudo-element for fill effect */
 .working-hours-selector button::before {
     content: '';
     position: absolute;
@@ -50,19 +50,26 @@
     z-index: -1;
 }
 
+/* Remove any hover fill change */
 .working-hours-selector button:hover::before {
     width: 0;
 }
-
 .working-hours-selector button:hover {
     color: #e91e63;
 }
 
-/* When active, change text color and animate fill */
+/* When active, change text color */
 .working-hours-selector button.active {
     color: #fff;
 }
-.working-hours-selector button.active::before {
+
+/* Initially active: show fill immediately without animation */
+.working-hours-selector button.active.initial::before {
+    width: 100%;
+}
+
+/* When user has interacted, animate the fill on change */
+.working-hours-selector button.active.user-interacted::before {
     animation: fillAnim 0.4s forwards;
 }
 

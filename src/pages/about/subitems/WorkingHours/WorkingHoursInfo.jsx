@@ -7,18 +7,21 @@ const WorkingHoursInfo = () => {
     const { t } = useTranslation();
     const [activeGroup, setActiveGroup] = useState('monday-friday');
     const [animationDirection, setAnimationDirection] = useState('right');
+    // Initially, no user interaction has occurred.
     const [hasInteracted, setHasInteracted] = useState(false);
 
     const handleGroupChange = (newGroup) => {
+        // Set the animation direction based on the new group.
         const direction = newGroup === 'saturday-sunday' ? 'left' : 'right';
         setAnimationDirection(direction);
+        // Mark that user interaction has occurred.
         if (!hasInteracted) {
             setHasInteracted(true);
         }
         setActiveGroup(newGroup);
     };
 
-    // Define animation variants for enter/exit.
+    // Animation variants for the schedule transitions.
     const variants = {
         initial: {
             opacity: 0,
@@ -43,13 +46,21 @@ const WorkingHoursInfo = () => {
         <div className="working-hours-info">
             <div className="working-hours-selector">
                 <button
-                    className={activeGroup === 'monday-friday' ? 'active' : ''}
+                    className={`${
+                        activeGroup === 'monday-friday'
+                            ? `active ${hasInteracted ? 'user-interacted' : 'initial'}`
+                            : ''
+                    }`}
                     onClick={() => handleGroupChange('monday-friday')}
                 >
                     {t('about.workingHours.workingDays_short_1')}
                 </button>
                 <button
-                    className={activeGroup === 'saturday-sunday' ? 'active' : ''}
+                    className={`${
+                        activeGroup === 'saturday-sunday'
+                            ? `active ${hasInteracted ? 'user-interacted' : 'initial'}`
+                            : ''
+                    }`}
                     onClick={() => handleGroupChange('saturday-sunday')}
                 >
                     {t('about.workingHours.workingDays_short_2')}
@@ -93,7 +104,7 @@ const WorkingHoursInfo = () => {
                             animate="animate"
                             exit="exit"
                             variants={variants}
-                            style={{ width: '100%' }} // Removed absolute positioning
+                            style={{ width: '100%' }}
                         >
                             <li className="working-day">{t('about.workingHours.workingDays_3')}</li>
                             <li className="working-time-container">

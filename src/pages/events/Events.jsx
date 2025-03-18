@@ -26,12 +26,6 @@ function Events() {
                 <Divider/>
 
                 <Packages />
-                <div className="packages-footer">
-                    <p className="packages-contact">
-                        To reserve an event package or for further inquiries, please contact our dedicated team.
-                    </p>
-                    <ContactButton link="https://www.sakuraresto.ee/_files/ugd/87015a_53fe56f6fbc34d07bf076e4ed04f215a.pdf" />
-                </div>
 
                 <Divider/>
 

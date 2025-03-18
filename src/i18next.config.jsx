@@ -1,4 +1,3 @@
-// src/i18n.js
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
@@ -40,8 +39,8 @@ const resources = {
                     }
                 },
                 workingHours: {
-                    heading:"Working Hours",
-                    subheading:"Reserve your table now for an exquisite dining experience!",
+                    heading: "Working Hours",
+                    subheading: "Reserve your table now for an exquisite dining experience!",
                     button_reservation: "Reservation",
                     button_contact: "Contact us",
                     workingDays_1: "Monday to Thursday",
@@ -65,6 +64,22 @@ const resources = {
                 content: "Indulge in our exquisite lunch menu featuring a blend of traditional flavors with a modern twist. Our carefully curated selection highlights seasonal ingredients, innovative culinary techniques, and artful presentations that promise a memorable dining experience. Whether you're craving a hearty dish or a light bite, our lunch menu offers something for every palate in a relaxed, inviting atmosphere.",
                 content_2: "Discover our à la carte selection, where each dish is prepared to order. Enjoy a diverse range of options from timeless classics to innovative culinary creations, all crafted with the freshest ingredients and a creative flair that lets you tailor your meal to your unique taste.",
                 button: "Read more",
+            },
+            events: {
+                heading: "Events",
+                subheading: "Stay updated with our latest events",
+                content: "Join us for exciting events and experiences that celebrate food, culture, and community.",
+                packages: {
+                    title_1: "Basic",
+                    description_1: "Our basic package offers a simple yet delightful experience, perfect for casual gatherings.",
+                    title_2: "Premium",
+                    description_2: "The premium package includes additional features and enhanced services for a truly memorable event.",
+                    title_3: "Luxury",
+                    description_3: "Experience the ultimate in sophistication with bespoke culinary creations and exclusive amenities."
+                },
+                contact_button: {
+                    text: "Contact us"
+                }
             },
             testimonials: {
                 subtitle: "Testimonials",
@@ -153,6 +168,22 @@ const resources = {
                 content_2: "Avasta meie à la carte valik, kus iga roog valmistatakse tellimuse alusel. Naudi mitmekesist valikut alates ajatutest klassikutest kuni innovatiivsete kulinaarsete loominguteni – kõik valmistatud värskimatest koostisosadest ja loomingulise lähenemisega, mis võimaldab sul oma eine vastavalt unikaalsele maitsele kohandada.",
                 button: "Loe rohkem",
             },
+            events: {
+                heading: "Üritused",
+                subheading: "Ole kursis meie viimaste üritustega",
+                content: "Liitu meiega põnevate ürituste ja elamustega, mis tähistavad toitu, kultuuri ja kogukonda.",
+                packages: {
+                    title_1: "Põhiline",
+                    description_1: "Meie põhiline pakett pakub lihtsat, kuid meeldivat kogemust, mis sobib ideaalselt juhuslikeks koosviibimisteks.",
+                    title_2: "Premium",
+                    description_2: "Premium-pakett sisaldab lisafunktsioone ja täiustatud teenuseid, et luua tõeliselt meeldejääv üritus.",
+                    title_3: "Luksus",
+                    description_3: "Koge ülimat rafineeritust kohandatud kulinaarsete loomingute ja eksklusiivsete mugavustega."
+                },
+                contact_button: {
+                    text: "Võta meiega ühendust"
+                }
+            },
             testimonials: {
                 subtitle: "Tagasiside",
                 heading: "Mida meie kliendid ütlevad"
@@ -240,6 +271,22 @@ const resources = {
                 content_2: "Откройте для себя наш ассортимент à la carte, где каждое блюдо готовится по вашему заказу. Наслаждайтесь разнообразием вариантов от вечных классических блюд до инновационных кулинарных творений, все из которых приготовлены из самых свежих ингредиентов с творческим подходом, позволяющим адаптировать ваше блюдо под уникальный вкус.",
                 button: "Читать далее",
             },
+            events: {
+                heading: "События",
+                subheading: "Будьте в курсе наших последних событий",
+                content: "Присоединяйтесь к нам на увлекательных мероприятиях и событиях, посвященных еде, культуре и сообществу.",
+                packages: {
+                    title_1: "Базовый",
+                    description_1: "Наш базовый пакет предлагает простой, но приятный опыт, идеально подходящий для неформальных встреч.",
+                    title_2: "Премиум",
+                    description_2: "Премиум-пакет включает в себя дополнительные функции и улучшенные услуги для поистине запоминающегося мероприятия.",
+                    title_3: "Люкс",
+                    description_3: "Ощутите высшую степень изысканности с индивидуальными кулинарными творениями и эксклюзивными удобствами."
+                },
+                contact_button: {
+                    text: "Свяжитесь с нами"
+                }
+            },
             testimonials: {
                 subtitle: "Отзывы",
                 heading: "Что говорят наши клиенты"
@@ -270,8 +317,8 @@ i18n
     .use(initReactI18next)
     .init({
         resources,
-        lng: "et",
-        fallbackLng: "en",
+        lng: "et", // Default language set to Estonian
+        fallbackLng: "en", // Fallback language set to English
         interpolation: { escapeValue: false }
     })
     .then(() => {
