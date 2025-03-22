@@ -90,8 +90,13 @@ p.packages-title {
     font-weight: 500;
 }
 
+p.packages-contact {
+    max-width: 750px;
+    text-align: left;
+}
+
 .small-rectangle-features {
-    width: 40px;
+    width: 30px;
     height: 4px;
     background-color: #e91e63;
     margin: 0 auto 15px;
@@ -115,6 +120,9 @@ p.packages-title {
     .packages-list {
         flex-direction: column;
         gap: 40px;
+    }
+    p.packages-contact {
+        text-align: center;
     }
 }
 

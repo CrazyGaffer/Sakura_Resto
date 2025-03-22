@@ -1,18 +1,18 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import ReactCountryFlag from 'react-country-flag';
-import i18n from '../i18next.config.jsx'; // adjust the path if necessary
+import i18n from '../i18next.config.jsx';
 import './LanguageSelector.css';
 
 const languages = [
-    { code: 'et', countryCode: 'EE', language: 'EST' },
-    { code: 'en', countryCode: 'GB', language: 'ENG' },
+    { code: 'et', countryCode: 'EE', language: 'ET' },
+    { code: 'en', countryCode: 'GB', language: 'EN' },
     { code: 'ru', countryCode: 'RU', language: 'RU' },
 ];
 
 const LanguageSelector = () => {
     const [open, setOpen] = useState(false);
-    const [selected, setSelected] = useState(i18n.language); // initialize with current language
+    const [selected, setSelected] = useState(i18n.language);
     const dropdownRef = useRef(null);
 
     const toggleDropdown = useCallback(() => {
@@ -48,30 +48,28 @@ const LanguageSelector = () => {
 
     return (
         <div className="custom-language-selector" ref={dropdownRef}>
-            {open && (
-                <ul className="dropdown" role="listbox" aria-label="Select language">
-                    {otherLanguages.map(lang => (
-                        <li
-                            key={lang.code}
-                            onClick={() => handleSelect(lang.code)}
-                            role="option"
-                            aria-selected={selected === lang.code}
-                            tabIndex={0}
-                            onKeyDown={(e) => e.key === 'Enter' && handleSelect(lang.code)}
-                        >
-              <span className="language-label">
-                <ReactCountryFlag
-                    countryCode={lang.countryCode}
-                    svg
-                    style={{ width: '1.5em', height: '1.5em' }}
-                    title={lang.language}
-                />
-                <span className="language-text">{lang.language}</span>
-              </span>
-                        </li>
-                    ))}
-                </ul>
-            )}
+            <ul className={`dropdown ${open ? 'open' : ''}`} role="listbox" aria-label="Select language">
+                {otherLanguages.map(lang => (
+                    <li
+                        key={lang.code}
+                        onClick={() => handleSelect(lang.code)}
+                        role="option"
+                        aria-selected={selected === lang.code}
+                        tabIndex={0}
+                        onKeyDown={(e) => e.key === 'Enter' && handleSelect(lang.code)}
+                    >
+                        <span className="language-label">
+                            <ReactCountryFlag
+                                countryCode={lang.countryCode}
+                                svg
+                                style={{ width: '1.5em', height: '1.5em' }}
+                                title={lang.language}
+                            />
+                            <span className="language-text">{lang.language}</span>
+                        </span>
+                    </li>
+                ))}
+            </ul>
             <div
                 className="selected"
                 onClick={toggleDropdown}
@@ -81,15 +79,15 @@ const LanguageSelector = () => {
                 aria-haspopup="listbox"
                 aria-expanded={open}
             >
-        <span className="language-label">
-          <ReactCountryFlag
-              countryCode={selectedLanguage.countryCode}
-              svg
-              style={{ width: '1.5em', height: '1.5em' }}
-              title={selectedLanguage.language}
-          />
-          <span className="language-text">{selectedLanguage.language}</span>
-        </span>
+                <span className="language-label">
+                    <ReactCountryFlag
+                        countryCode={selectedLanguage.countryCode}
+                        svg
+                        style={{ width: '1.5em', height: '1.5em' }}
+                        title={selectedLanguage.language}
+                    />
+                    <span className="language-text">{selectedLanguage.language}</span>
+                </span>
                 <FaChevronDown className={`chevron ${open ? 'rotate' : ''}`} aria-hidden="true" />
             </div>
         </div>

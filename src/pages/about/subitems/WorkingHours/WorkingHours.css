@@ -176,18 +176,17 @@
     }
 }
 
-/* Original Container Styles */
 .working-hours-container {
     height: 400px;
     display: flex;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: visible;
     margin-bottom: 20px;
 }
 
 .small-rectangle-working-hours {
-    width: 40px;
+    width: 30px;
     height: 4px;
     background-color: #e91e63;
     margin: 0;
@@ -280,7 +279,6 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'Montserrat', sans-serif;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .reservation-btn:hover {
@@ -332,10 +330,15 @@
         border-radius: 0 0 8px 8px;
     }
     .overlay-content {
-        left: 20px;
-        right: 20px;
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, -50%);
         text-align: center;
         padding: 0 10px;
+    }
+    .overlay-content h2 {
+        text-align: center !important;
+        font-size: 2em !important;
     }
     .small-rectangle-about,
     .small-rectangle-features {
@@ -353,7 +356,7 @@
         margin: 0 auto;
     }
     .reservation-text {
-        font-size: 0.8em !important;
+        font-size: 0.95em !important;
     }
     .working-hours-header {
         flex-direction: column;
@@ -383,5 +386,29 @@
     }
     .working-time {
         font-size: 1.3em;
+    }
+}
+
+@media (max-width: 574px) {
+    .overlay-content h2 {
+        font-size: 1.7em !important;
+    }
+    .reservation-text {
+        font-size: 0.95em !important;
+    }
+    .overlay-content {
+        left: 50%;
+        right: auto;
+        width: 90%;
+        max-width: none !important;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .reservation-text {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 auto;
     }
 }

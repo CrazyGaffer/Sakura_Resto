@@ -30,7 +30,7 @@
     filter: brightness(0.95);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
     .packages-footer {
         display: flex;
         flex-direction: column;

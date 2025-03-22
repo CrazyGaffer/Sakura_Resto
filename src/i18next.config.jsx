@@ -75,8 +75,9 @@ const resources = {
                     title_2: "Premium",
                     description_2: "The premium package includes additional features and enhanced services for a truly memorable event.",
                     title_3: "Luxury",
-                    description_3: "Experience the ultimate in sophistication with bespoke culinary creations and exclusive amenities."
+                    description_3: "Experience the ultimate in sophistication with bespoke culinary creations and exclusive amenities.",
                 },
+                contact_text: "To reserve an event package or for further inquiries, please contact our dedicated team.",
                 contact_button: {
                     text: "Contact us"
                 }
@@ -180,6 +181,7 @@ const resources = {
                     title_3: "Luksus",
                     description_3: "Koge ülimat rafineeritust kohandatud kulinaarsete loomingute ja eksklusiivsete mugavustega."
                 },
+                contact_text: "Üritusepaketi broneerimiseks või lisaküsimuste korral võtke palun ühendust meie meeskonnaga.",
                 contact_button: {
                     text: "Võta meiega ühendust"
                 }
@@ -283,6 +285,7 @@ const resources = {
                     title_3: "Люкс",
                     description_3: "Ощутите высшую степень изысканности с индивидуальными кулинарными творениями и эксклюзивными удобствами."
                 },
+                contact_text: "Для бронирования пакета мероприятий или по дополнительным вопросам, пожалуйста, свяжитесь с нашей командой.",
                 contact_button: {
                     text: "Свяжитесь с нами"
                 }

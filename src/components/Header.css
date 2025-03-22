@@ -21,10 +21,9 @@ html {
     font-size: 1rem;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s ease;
+    transition: background 0.1s cubic-bezier(0.4, 0, 0.2, 1);
     padding-left: 3%;
     padding-right: 3%;
-    transform: translateY(0);
 }
 
 .navbar-container {
@@ -36,10 +35,11 @@ html {
     z-index: 11;
 }
 
+/* Logo always stays black */
 .navbar-title {
     font-size: 32px;
     font-weight: 700;
-    color: inherit;
+    color: black;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     cursor: pointer;
@@ -64,7 +64,6 @@ html {
     transition: color 0.3s ease;
 }
 
-/* Single hover color for all states */
 .nav-menu li a:hover,
 .nav-menu li a.active {
     color: #e91e63 !important;
@@ -97,10 +96,27 @@ html {
     transform: translateY(-8px) rotate(-45deg);
 }
 
+/* Scrolled state: white background with dark links and hamburger, no transform applied */
 .navbar.scrolled {
     background: rgba(255, 255, 255, 1) !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
+}
+
+.navbar.scrolled .nav-menu a {
+    color: #333;
+}
+
+.navbar.scrolled .hamburger .bar {
+    background-color: #333;
+}
+
+/* Transparent state (not scrolled): force links and hamburger to be white */
+.navbar:not(.scrolled) .nav-menu a {
+    color: white;
+}
+
+.navbar:not(.scrolled) .hamburger .bar {
+    background-color: white;
 }
 
 @media (max-width: 1024px) {

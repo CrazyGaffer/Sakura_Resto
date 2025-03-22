@@ -76,7 +76,7 @@ const PackagesSection = () => {
             </div>
             <div className="packages-footer">
                 <p className="packages-contact">
-                    To reserve an event package or for further inquiries, please contact our dedicated team.
+                    {t('events.contact_text')}
                 </p>
                 <ContactButton
                     email="info@sakuraresto.ee"
