@@ -63,11 +63,9 @@ const PackagesSection = () => {
         <div className="packages">
             <div className="packages-header">
                 <div className="small-rectangle-features"></div>
-                <h4 className="packages-subtitle">Events</h4>
-                <h2 className="packages-title">Party Packages</h2>
-                <p className="packages-title">
-                    We’ll Handle the Details, You Bring the Fun – Relax, Unwind, and Let Us Create an Unforgettable Celebration
-                </p>
+                <h4 className="packages-subtitle">{t('events.heading')}</h4>
+                <h2 className="packages-title">{t('events.packages.heading')}</h2>
+                <p className="packages-title">{t('events.packages.subheading')}</p>
             </div>
             <div className="packages-list">
                 {packages.map((pkg, idx) => (

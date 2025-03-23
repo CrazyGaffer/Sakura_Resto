@@ -1,7 +1,7 @@
 @use "sass:color";
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
-$serif: 'Cormorant Garamond', serif;
+$serif: 'Montserrat', sans-serif;
 $sans: 'Montserrat', sans-serif;
 $primary-color: #e91e63;
 $secondary-color: #f8f5f2;
@@ -22,7 +22,7 @@ $accent-dark: #2a2a2a;
     .image-slider { order: 2; }
     .content-column { order: 1; }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       grid-template-columns: 1fr;
       grid-template-rows: 50vh auto;
 
@@ -78,7 +78,7 @@ $accent-dark: #2a2a2a;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     height: 50vh;
     min-height: 300px;
   }
@@ -134,7 +134,7 @@ $accent-dark: #2a2a2a;
     padding: 2rem 5%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     padding: 3rem 2rem;
     min-height: 50vh;
     box-shadow: none;
@@ -170,7 +170,7 @@ $accent-dark: #2a2a2a;
 
   .title {
     font-family: $serif;
-    font-size: 3.2rem;
+    font-size: 3.0rem;
     color: $accent-dark;
     margin-bottom: 1.2rem;
     line-height: 1.2;
@@ -219,6 +219,7 @@ $accent-dark: #2a2a2a;
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
+  justify-content: flex-start;
 
   @media (max-width: 480px) {
     flex-direction: column;
@@ -229,8 +230,8 @@ $accent-dark: #2a2a2a;
   }
 }
 
-.reserve-button, .secondary-button {
-  padding: 0.8rem 1.5rem;
+.reserve-button, .order-button {
+  padding: 0.8rem 2rem;
   border-radius: 6px;
   font-family: $sans;
   font-weight: 600;
@@ -243,24 +244,26 @@ $accent-dark: #2a2a2a;
   letter-spacing: 0.5px;
   font-size: 0.9rem;
   white-space: nowrap;
+  min-width: 160px;
+  width: auto;
 
   &:hover {
     transform: translateY(-2px);
   }
 
   @media (max-width: 768px) {
-    padding: 0.7rem 1.2rem;
+    padding: 0.7rem 1.5rem;
     font-size: 0.85rem;
+    min-width: 140px;
   }
 
   @media (max-width: 480px) {
     width: 100%;
-    padding: 0.8rem;
+    min-width: auto;
   }
 
   @media (max-width: 375px) {
     padding: 0.7rem 1rem;
-    font-size: 0.85rem;
   }
 }
 
@@ -275,7 +278,7 @@ $accent-dark: #2a2a2a;
   }
 }
 
-.secondary-button {
+.order-button {
   background: transparent;
   border: 2px solid $primary-color;
   color: $primary-color;

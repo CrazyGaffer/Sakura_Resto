@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* Base About Section Styles */
 .about {
     padding: 100px 30px;
     background-color: #f9f9f9;
@@ -19,7 +18,6 @@
     gap: 50px;
 }
 
-/* Header Styles */
 .about-header {
     display: flex;
     align-items: center;
@@ -33,7 +31,6 @@
     background-color: #e91e63;
 }
 
-/* Image Container Styles */
 .about-image {
     position: relative;
     overflow: hidden;
@@ -47,7 +44,6 @@
     transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* The image now remains static on hover */
 .hover-zoom {
     width: 570px;
     height: 570px;
@@ -57,9 +53,6 @@
     transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* (Hover effects removed) */
-
-/* Text Content Styles */
 .about-text {
     flex: 1;
 }
@@ -202,7 +195,6 @@
     opacity: 1;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .about-content {
         flex-direction: column;
@@ -223,6 +215,12 @@
 
     .about {
         padding: 50px 30px;
+    }
+    .about-subtitle {
+        font-size: 0.8rem;
+    }
+    .about-header {
+        margin-top: 20px;
     }
 }
 
@@ -264,5 +262,11 @@
 
     .about-socials {
         gap: 15px;
+    }
+    .about-subtitle {
+        font-size: 0.8rem;
+    }
+    .about-header {
+        margin: 0;
     }
 }

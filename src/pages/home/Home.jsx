@@ -95,15 +95,18 @@ function Home() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Reservation
+                            Reserve a table
                         </motion.a>
-                        <motion.button
-                            className="secondary-button"
+                        <motion.a
+                            href="https://sakura-restoran.choiceqr.com/online-menu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="order-button"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            View Menu
-                        </motion.button>
+                            Order Takeaway
+                        </motion.a>
                     </motion.div>
                 </div>
             </div>

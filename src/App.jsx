@@ -3,10 +3,11 @@ import Home from './pages/home/Home.jsx';
 import About from './pages/about/About.jsx';
 import Menu from './pages/menu/Menu.jsx';
 import Events from './pages/events/Events.jsx';
+import Testimonials from "./pages/testimonials/Testimonials.jsx";
 import Footer from './components/Footer';
 import LanguageSelector from "./components/LanguageSelector.jsx";
 import './i18next.config.jsx';
-import Testimonials from "./pages/testimonials/Testimonials.jsx";
+import ContactSection from "./pages/contact/ContactSection.jsx";
 
 function App() {
     return (
@@ -16,7 +17,8 @@ function App() {
             <About />
             <Menu />
             <Events />
-            <Testimonials/>
+            <Testimonials />
+            <ContactSection />
             <Footer />
             <LanguageSelector />
         </div>

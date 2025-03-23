@@ -35,7 +35,6 @@ html {
     z-index: 11;
 }
 
-/* Logo always stays black */
 .navbar-title {
     font-size: 32px;
     font-weight: 700;
@@ -96,7 +95,10 @@ html {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Scrolled state: white background with dark links and hamburger, no transform applied */
+.hamburger.active .bar {
+    background-color: #333 !important;
+}
+
 .navbar.scrolled {
     background: rgba(255, 255, 255, 1) !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -110,7 +112,6 @@ html {
     background-color: #333;
 }
 
-/* Transparent state (not scrolled): force links and hamburger to be white */
 .navbar:not(.scrolled) .nav-menu a {
     color: white;
 }

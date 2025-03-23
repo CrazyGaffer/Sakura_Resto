@@ -1,11 +1,7 @@
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-}
 
 .App {
   html, body {
-    width: auto!important;
-    overflow-x: hidden!important;
+    width: auto !important;
+    overflow-x: hidden !important;
   }
 }

@@ -9,13 +9,12 @@ const Header = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
-    // Retrieve translated nav items
     const navItems = [
         { id: 'home', label: t('navbar.home') },
         { id: 'about', label: t('navbar.about') },
         { id: 'menu', label: t('navbar.menu') },
         { id: 'events', label: t('navbar.events') },
-        { id: 'footer', label: t('navbar.contact') },
+        { id: 'contact-section', label: t('navbar.contact') },
     ];
 
     const toggleMenu = () => setMenuOpen((prev) => !prev);
@@ -37,7 +36,6 @@ const Header = () => {
         };
     }, [menuOpen]);
 
-    // Update isMobile state on window resize and reset menu state if not mobile
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth <= 1024) {
@@ -53,7 +51,11 @@ const Header = () => {
     }, []);
 
     return (
-        <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+        <header
+            className={`navbar ${scrolled ? 'scrolled' : ''} ${
+                isMobile && menuOpen ? 'menu-active' : ''
+            }`}
+        >
             <div className="navbar-container">
                 <div
                     className="navbar-title"
@@ -89,7 +91,6 @@ const Header = () => {
                         </div>
                     </>
                 ) : (
-                    // Desktop nav (always visible)
                     <nav className="nav-menu">
                         <ul>
                             {navItems.map((item) => (

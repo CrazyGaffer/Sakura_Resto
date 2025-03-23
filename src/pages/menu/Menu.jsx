@@ -10,23 +10,7 @@ function Menu() {
     return (
         <section id="menu" className="menu">
             <div className="menu-wrapper">
-                <div className="menu-content">
-                    <div className="menu-image">
-                        <img src={menuItem1} alt="Menu" />
-                    </div>
-                    <div className="menu-text">
-                        <div className="menu-header">
-                            <div className="small-rectangle-about"></div>
-                            <h4 className="about-subtitle">{t('menu.subtitle')}</h4>
-                        </div>
-                        <h2>{t('menu.heading')}</h2>
-                        <p>{t('menu.content')}</p>
-                        <MenuButton link="https://www.sakuraresto.ee/_files/ugd/87015a_515e89e16ba04c3f9e58ca65b262e80c.pdf" />
-                    </div>
-                </div>
-
-                <div className="divider"></div>
-
+                
                 <div className="menu-content">
                     <div className="menu-text">
                         <div className="menu-header">
@@ -40,6 +24,24 @@ function Menu() {
                     <div className="menu-image">
                         <img src={menuItem2} alt="Menu" />
                     </div>
+                </div>
+
+                <div className="divider"></div>
+
+                <div className="menu-content">
+                    <div className="menu-image">
+                        <img src={menuItem1} alt="Menu" />
+                    </div>
+                    <div className="menu-text">
+                        <div className="menu-header">
+                            <div className="small-rectangle-about"></div>
+                            <h4 className="about-subtitle">{t('menu.subtitle')}</h4>
+                        </div>
+                        <h2>{t('menu.heading')}</h2>
+                        <p>{t('menu.content')}</p>
+                        <MenuButton link="https://www.sakuraresto.ee/_files/ugd/87015a_515e89e16ba04c3f9e58ca65b262e80c.pdf" />
+                    </div>
+
                 </div>
 
             </div>

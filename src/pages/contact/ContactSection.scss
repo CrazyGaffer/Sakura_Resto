@@ -1,0 +1,195 @@
+
+$primary-color: #e91e63;
+$secondary-color: #2c3e50;
+$text-color: #34495e;
+
+.contact-section {
+  padding: 80px 0;
+  background: linear-gradient(145deg, #f8f9fa 0%, #f1f3f5 100%);
+  font-family: 'Montserrat', sans-serif;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      color: $secondary-color;
+      margin-bottom: 60px;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: $primary-color;
+        margin: 15px auto;
+        border-radius: 2px;
+      }
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 70px;
+      align-items: center;
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        position: relative;
+
+        .info-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 25px;
+          padding-bottom: 35px;
+          position: relative;
+
+          &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 60px;
+            right: 0;
+            height: 1px;
+            background: rgba($secondary-color, 0.1);
+          }
+
+          .icon-container {
+            width: 50px;
+            height: 50px;
+            background-color: rgba($primary-color, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            transform: none;
+            transform-origin: center;
+            will-change: transform;
+
+            .info-icon {
+              font-size: 1.8rem;
+              color: $primary-color;
+              transition: transform 0.3s ease, color 0.3s ease;
+              transform: none;
+              transform-origin: center;
+              will-change: transform;
+            }
+          }
+
+          &:hover .icon-container {
+            background-color: $primary-color;
+            transform: rotate(45deg) scale(1.1);
+          }
+
+          &:hover .icon-container .info-icon {
+            color: white;
+            transform: rotate(-45deg);
+          }
+
+          .info-content {
+            h3 {
+              font-size: 1.4rem;
+              color: $secondary-color;
+              margin-bottom: 10px;
+            }
+
+            p {
+              font-size: 1.05rem;
+              color: $text-color;
+              line-height: 1.6;
+              margin: 0;
+              opacity: 0.95;
+            }
+          }
+        }
+      }
+
+      .map-integration {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+
+        iframe {
+          width: 100%;
+          height: 500px;
+          border: 0;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .contact-layout {
+    gap: 50px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-layout {
+    grid-template-columns: 1fr !important;
+    gap: 50px !important;
+
+    .map-integration iframe {
+      height: 400px !important;
+      border-radius: 10px !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2.5rem !important;
+    margin-bottom: 40px !important;
+  }
+
+  .info-item {
+    gap: 20px !important;
+    padding-bottom: 25px !important;
+
+    &:not(:last-child)::after {
+      left: 50px !important;
+    }
+  }
+
+  .icon-container {
+    width: 45px !important;
+    height: 45px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &:not(:last-child)::after {
+      left: 20% !important;
+      right: 20% !important;
+    }
+
+    .icon-container {
+      margin-bottom: 15px;
+    }
+  }
+
+  .map-integration iframe {
+    height: 300px !important;
+    border-radius: 8px !important;
+  }
+}
