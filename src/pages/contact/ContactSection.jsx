@@ -1,4 +1,5 @@
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
+import './ContactSection.scss';
 
 const ContactSection = () => {
     return (
