@@ -1,11 +1,20 @@
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 import './ContactSection.scss';
+import {useTranslation} from "react-i18next";
 
 const ContactSection = () => {
+    const location = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1900.7053084032038!2d24.75094581621364!3d59.43695528189764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692930c485fa9c3%3A0xd0bb2a8d4e7688d3!2sP%C3%A4rnu%20mnt%2032%2C%2010141%20Tallinn%2C%20Estonia!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus";
+    const { t } = useTranslation();
+
     return (
-        <section className="contact-section">
+        <section id="contact" className="contact-section">
             <div className="container">
-                <h2 className="section-title">Contact</h2>
+                <div className="features-header">
+                    <div className="small-rectangle-features"></div>
+                    <h4 className="features-subtitle">{t('contact.subtitle')}</h4>
+                    <h2 className="features-title">{t('contact.heading')}</h2>
+                    <p className="features-title">{t('contact.subheading')}</p>
+                </div>
 
                 <div className="contact-layout">
                     <div className="contact-info">
@@ -16,9 +25,9 @@ const ContactSection = () => {
                             <div className="info-content">
                                 <h3>Our Location</h3>
                                 <p>
-                                    123 Culinary Avenue<br />
-                                    Gourmet District<br />
-                                    Food City, FC 98765
+                                    Sakura Resto<br />
+                                    Pärnu mnt. 32<br />
+                                    10141 Tallinn
                                 </p>
                             </div>
                         </div>
@@ -30,8 +39,7 @@ const ContactSection = () => {
                             <div className="info-content">
                                 <h3>Email Us</h3>
                                 <p>
-                                    contact@gourmetexperience.com<br />
-                                    reservations@gourmetexperience.com
+                                    info@sakuraresto.ee
                                 </p>
                             </div>
                         </div>
@@ -52,7 +60,7 @@ const ContactSection = () => {
                     <div className="map-integration">
                         <iframe
                             title="Restaurant Location"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0582162880693!2d-122.41941548468102!3d37.77492927975919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064c993ac7d%3A0x9a06f278c0e36dc0!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+                            src={location}
                             frameBorder="0"
                             allowFullScreen=""
                             aria-hidden="false"

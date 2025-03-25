@@ -88,6 +88,11 @@ const resources = {
                 subtitle: "Testimonials",
                 heading: "What Our Clients Say"
             },
+            contact: {
+                heading: "Get in Touch",
+                subheading: "Have a question or need a reservation? We’d love to hear from you!",
+                subtitle: "Contact",
+            },
             footer: {
                 workingHours: "Working Hours",
                 monThu: "Mon-Thu: 11 AM – 11 PM",
@@ -148,7 +153,7 @@ const resources = {
                     heading: "Tööaeg",
                     subheading: "Broneeri oma laud juba täna, et nautida suurepärast söögielamust!",
                     button_reservation: "Broneering",
-                    button_contact: "Kontakt",
+                    button_contact: "Võta ühendust",
                     workingDays_1: "Esmaspäevast neljapäevani",
                     workingDays_2: "Reede",
                     workingDays_3: "Laupäev",
@@ -164,7 +169,7 @@ const resources = {
                 }
             },
             menu: {
-                heading: "Lõunasöögimenüü",
+                heading: "LÕUNAMENÜÜ",
                 heading_2: "À la carte menüü",
                 subtitle: "Menüü",
                 content: "Naudi meie erakordset lõunasöögimenüüd, mis ühendab traditsioonilised maitsed kaasaegse lähenemisega. Meie hoolikalt kureeritud valik toob esile hooajalised koostisosad, innovatiivsed kulinaaria tehnikad ja kunstipärased serveerimised, mis lubavad unustamatut söögikogemust. Olgu su isu täidlase roa või kerge ampsu järele, meie lõunasöögimenüü pakub igale maitsele midagi lõõgastavas ja kutsuvas atmosfääris.",
@@ -200,7 +205,7 @@ const resources = {
                 fri: "R: 11:00 – 00:00",
                 sat: "L: 12:00 – 00:00",
                 sun: "P: 12:00 – 22:00",
-                contact: "Kontakt",
+                contact: "Võta ühendust",
                 email: "info@sakuraresto.ee",
                 phone: "+372 5486 0852",
                 address: "Pärnu mnt 32, Tallinn",

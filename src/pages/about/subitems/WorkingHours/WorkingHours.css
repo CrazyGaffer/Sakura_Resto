@@ -193,6 +193,7 @@
 }
 
 .working-hours-subtitle {
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -249,6 +250,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
+    margin-bottom: 5px;
 }
 
 .reservation-text {
@@ -369,6 +371,9 @@
     .small-rectangle-working-hours {
         margin: 0 auto 15px;
     }
+    .working-hours-subtitle {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -410,5 +415,8 @@
         width: 100% !important;
         max-width: none !important;
         margin: 0 auto;
+    }
+    .working-hours-subtitle {
+        font-size: 0.8rem;
     }
 }

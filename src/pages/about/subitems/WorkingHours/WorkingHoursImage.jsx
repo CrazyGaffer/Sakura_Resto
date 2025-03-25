@@ -36,7 +36,7 @@ const WorkingHoursImage = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => {
-                            scroller.scrollTo('footer', { smooth: true, duration: 150 });
+                            scroller.scrollTo('contact', { smooth: true, duration: 150 });
                         }}
                     >
                         {t('about.workingHours.button_contact')}

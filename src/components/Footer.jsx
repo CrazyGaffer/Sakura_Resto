@@ -66,6 +66,7 @@ function Footer() {
                             <a href="#about">{t('footer.about')}</a>
                             <a href="#menu">{t('footer.menu')}</a>
                             <a href="#events">{t('footer.events')}</a>
+                            <a href="#contact">{t('footer.contact')}</a>
                         </div>
                     </div>
                 </div>

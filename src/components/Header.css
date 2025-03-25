@@ -36,14 +36,35 @@ html {
 }
 
 .navbar-title {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
-    color: black;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
+/* Desktop (>1024px) */
+@media (min-width: 1025px) {
+    .navbar-title {
+        color: black; /* Default title color on desktop is black */
+    }
+    .navbar.scrolled .navbar-title {
+        color: black; /* Remains black when scrolled */
+    }
+}
+
+/* Mobile (≤1024px) */
+@media (max-width: 1024px) {
+    .navbar-title {
+        color: white; /* Default title color on mobile is white */
+    }
+    .navbar.scrolled .navbar-title {
+        color: black; /* Change to black when navbar is scrolled (white background) */
+    }
+}
+
+/* Navigation Menu and Hamburger */
 .nav-menu {
     display: flex;
 }
@@ -57,6 +78,7 @@ html {
 .nav-menu li a {
     text-decoration: none;
     color: inherit;
+    font-size: 0.9em;
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
@@ -83,22 +105,7 @@ html {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-
-.hamburger.active .bar {
-    background-color: #333 !important;
-}
-
+/* Scrolled Navbar */
 .navbar.scrolled {
     background: rgba(255, 255, 255, 1) !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -120,6 +127,20 @@ html {
     background-color: white;
 }
 
+/* Hamburger Active State */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Nav Menu */
 @media (max-width: 1024px) {
     .nav-menu {
         position: fixed;

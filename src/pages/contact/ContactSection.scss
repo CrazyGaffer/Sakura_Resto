@@ -1,35 +1,14 @@
-
 $primary-color: #e91e63;
 $secondary-color: #2c3e50;
 $text-color: #34495e;
 
 .contact-section {
   padding: 80px 0;
-  background: linear-gradient(145deg, #f8f9fa 0%, #f1f3f5 100%);
+  background-color: #f9f9f9;
   font-family: 'Montserrat', sans-serif;
 
   .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-
-    .section-title {
-      text-align: center;
-      font-size: 2.8rem;
-      color: $secondary-color;
-      margin-bottom: 60px;
-      position: relative;
-
-      &::after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 4px;
-        background: $primary-color;
-        margin: 15px auto;
-        border-radius: 2px;
-      }
-    }
 
     .contact-layout {
       display: grid;
@@ -69,7 +48,6 @@ $text-color: #34495e;
             align-items: center;
             justify-content: center;
             transition: transform 0.3s ease, background-color 0.3s ease;
-            transform: none;
             transform-origin: center;
             will-change: transform;
 
@@ -77,7 +55,6 @@ $text-color: #34495e;
               font-size: 1.8rem;
               color: $primary-color;
               transition: transform 0.3s ease, color 0.3s ease;
-              transform: none;
               transform-origin: center;
               will-change: transform;
             }
@@ -135,10 +112,43 @@ $text-color: #34495e;
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .contact-layout {
     grid-template-columns: 1fr !important;
-    gap: 50px !important;
+    text-align: center;
+
+    .contact-info {
+      align-items: center;
+      text-align: center;
+
+      .info-item {
+        align-items: center;
+        flex-direction: column;
+        gap: 20px !important;
+        padding-bottom: 35px !important;
+
+        &:not(:last-child)::after {
+          left: 0 !important;
+          right: 0 !important;
+          width: 60%;
+          margin: 0 auto !important;
+        }
+
+        .icon-container {
+          margin: 0 auto 15px auto;
+        }
+
+        .info-content {
+          width: 100%;
+
+          h3, p {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
 
     .map-integration iframe {
       height: 400px !important;
@@ -158,12 +168,7 @@ $text-color: #34495e;
   }
 
   .info-item {
-    gap: 20px !important;
     padding-bottom: 25px !important;
-
-    &:not(:last-child)::after {
-      left: 50px !important;
-    }
   }
 
   .icon-container {
@@ -173,23 +178,12 @@ $text-color: #34495e;
 }
 
 @media (max-width: 480px) {
-  .info-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    &:not(:last-child)::after {
-      left: 20% !important;
-      right: 20% !important;
-    }
-
-    .icon-container {
-      margin-bottom: 15px;
-    }
-  }
-
   .map-integration iframe {
     height: 300px !important;
     border-radius: 8px !important;
+  }
+
+  .info-item:not(:last-child)::after {
+    width: 80% !important;
   }
 }
