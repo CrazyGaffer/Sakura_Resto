@@ -1,14 +1,13 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import './Home.scss';
-import dish1 from '/src/assets/home/dish1.jpg';
-import dish2 from '/src/assets/home/dish2.jpg';
-import dish3 from '/src/assets/home/dish3.jpg';
+import { useTranslation } from 'react-i18next';
+import dishes from '/src/data/dishes_home_data.js';
 
 function Home() {
     const controls = useAnimation();
     const [activeIndex, setActiveIndex] = useState(0);
-    const images = [dish1, dish2, dish3];
+    const { t } = useTranslation();
 
     useEffect(() => {
         const sequence = async () => {
@@ -23,10 +22,10 @@ function Home() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setActiveIndex((prev) => (prev + 1) % images.length);
+            setActiveIndex((prev) => (prev + 1) % dishes.length);
         }, 4000);
         return () => clearInterval(interval);
-    }, [images.length]);
+    }, []);
 
     return (
         <section id="home" className="hero">
@@ -37,7 +36,7 @@ function Home() {
                     animate={controls}
                     transition={{ duration: 1 }}
                 >
-                    {images.map((image, index) => (
+                    {dishes.map((image, index) => (
                         <div
                             key={index}
                             className="slide"
@@ -49,7 +48,7 @@ function Home() {
                         />
                     ))}
                     <div className="slider-progress">
-                        {images.map((_, index) => (
+                        {dishes.map((_, index) => (
                             <motion.span
                                 key={index}
                                 className="progress-dot"
@@ -72,12 +71,12 @@ function Home() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        <h4 className="subtitle">Experience Fusion Flavors</h4>
+                        <h4 className="subtitle">{t('home.subtitle')}</h4>
                         <h1 className="title">
-                            Sakura Pan-Asian Culinary Adventure
+                            {t('home.heading')}
                         </h1>
                         <p className="description">
-                            A vibrant fusion of Asian traditions meets local ingredients, where bold Thai spices mingle with Japanese precision, Vietnamese freshness, and regional produce.
+                            {t('home.content')}
                         </p>
                     </motion.div>
 
@@ -95,7 +94,7 @@ function Home() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Reserve a table
+                            {t('home.bookATable')}
                         </motion.a>
                         <motion.a
                             href="https://sakura-restoran.choiceqr.com/online-menu"
@@ -105,7 +104,7 @@ function Home() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Order Takeaway
+                            {t('home.orderNow')}
                         </motion.a>
                     </motion.div>
                 </div>

@@ -5,7 +5,7 @@ import FeaturesSection from '../about/subitems/FeaturesSection.jsx';
 import SocialLinks from '../about/subitems/SocialLinks.jsx';
 import './About.css';
 import './subitems/Statistics/Statistics.css';
-import interiorImage from '../../assets/about/interiorImage.jpeg';
+import interior from '../../assets/about/interior.jpg';
 import '/src/components/Divider/Divider.css';
 import '/src/pages/about/subitems/FeatureSection.scss';
 import Divider from "../../components/Divider/Divider.jsx";
@@ -20,7 +20,7 @@ function About() {
                     <div className="about-image">
                         <div className="image-container">
                             <img
-                                src={interiorImage}
+                                src={interior}
                                 alt="About us"
                             />
                         </div>

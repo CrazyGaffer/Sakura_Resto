@@ -12,10 +12,11 @@ const resources = {
                 contact: "Contact"
             },
             home: {
-                heading: "The Time To Taste Of Delicious Food",
-                subheading: "Traditional culinary mastery with a modern twist that celebrates timeless techniques and inspires new flavor experiences",
-                bookATable: "Reservation",
-                orderNow: "Order"
+                heading: "Sakura Pan-Asian Culinary Adventure",
+                subtitle: "Experience Fusion Flavors",
+                content: "A vibrant fusion of Asian traditions meets local ingredients, where bold Thai spices mingle with Japanese precision, Vietnamese freshness, and regional produce.",
+                bookATable: "Reserve a Table",
+                orderNow: "Order Takeaway"
             },
             about: {
                 heading: "Our story",
@@ -123,8 +124,9 @@ const resources = {
                 contact: "Võta ühendust"
             },
             home: {
-                heading: "Aeg maitseda maitsvat toitu",
-                subheading: "Traditsiooniline Jaapani köök kaasaegse nüansiga",
+                heading: "Sakura pan-Aasia kulinaarne seiklus",
+                subtitle: "Koge fusioonmaitseid",
+                content: "Elav Aasia traditsioonide fusioon kohtab kohalikke koostisosi, kus julged Tai vürtsid segunevad Jaapani täpsusega, Vietnami värskusega ja piirkonna toodetega.",
                 bookATable: "Broneeri",
                 orderNow: "Telli"
             },
@@ -229,8 +231,9 @@ const resources = {
                 contact: "Контакт"
             },
             home: {
-                heading: "Время попробовать вкусную еду",
-                subheading: "Традиционная японская кухня с современным акцентом",
+                heading: "Сакура Пан-Азиатское Кулинарное Приключение",
+                subtitle: "Открой для себя фьюжн-вкусы",
+                content: "Яркое сочетание азиатских традиций и местных ингредиентов, где смелые тайские специи гармонируют с японской точностью, свежестью вьетнамской кухни и региональными продуктами.",
                 bookATable: "Забронировать",
                 orderNow: "Заказать сейчас"
             },
