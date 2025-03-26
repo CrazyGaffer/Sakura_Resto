@@ -44,27 +44,38 @@ html {
     transition: color 0.3s ease;
 }
 
-/* Desktop (>1024px) */
 @media (min-width: 1025px) {
     .navbar-title {
-        color: black; /* Default title color on desktop is black */
+        color: black;
     }
     .navbar.scrolled .navbar-title {
-        color: black; /* Remains black when scrolled */
+        color: black;
     }
 }
 
-/* Mobile (≤1024px) */
 @media (max-width: 1024px) {
-    .navbar-title {
-        color: white; /* Default title color on mobile is white */
+
+    .navbar:not(.scrolled):not(.menu-active) .hamburger .bar,
+    .navbar:not(.scrolled):not(.menu-active) .navbar-title {
+        color: white;
     }
-    .navbar.scrolled .navbar-title {
-        color: black; /* Change to black when navbar is scrolled (white background) */
+
+    .navbar.scrolled .hamburger .bar,
+    .navbar.scrolled .navbar-title,
+    .navbar.menu-active .hamburger .bar,
+    .navbar.menu-active .navbar-title {
+        color: #333 !important;
+    }
+
+    .navbar.menu-active .hamburger.active .bar {
+        background-color: #333 !important;
     }
 }
 
-/* Navigation Menu and Hamburger */
+.hamburger .bar {
+    transition: all 0.3s ease;
+}
+
 .nav-menu {
     display: flex;
 }
@@ -105,7 +116,6 @@ html {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Scrolled Navbar */
 .navbar.scrolled {
     background: rgba(255, 255, 255, 1) !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -127,7 +137,6 @@ html {
     background-color: white;
 }
 
-/* Hamburger Active State */
 .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -140,7 +149,6 @@ html {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Mobile Nav Menu */
 @media (max-width: 1024px) {
     .nav-menu {
         position: fixed;

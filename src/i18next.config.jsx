@@ -12,9 +12,9 @@ const resources = {
                 contact: "Contact"
             },
             home: {
-                heading: "Sakura Pan-Asian Culinary Adventure",
+                heading: "NOT JUST ANOTHER JAPANESE RESTAURANT",
                 subtitle: "Experience Fusion Flavors",
-                content: "A vibrant fusion of Asian traditions meets local ingredients, where bold Thai spices mingle with Japanese precision, Vietnamese freshness, and regional produce.",
+                content: "While our inspiration draws from various Asian influences, we pride ourselves on being much more than just a japanese restaurant. Our culinary artisans weave together a rich tapestry of flavors, celebrating the diversity of asia and european culinary traditions, to create a truly unique dinning experience.",
                 bookATable: "Reserve a Table",
                 orderNow: "Order Takeaway"
             },
@@ -124,9 +124,9 @@ const resources = {
                 contact: "Võta ühendust"
             },
             home: {
-                heading: "Sakura pan-Aasia kulinaarne seiklus",
+                heading: "MITTE LIHTSALT JAAPANI RESTORAN",
                 subtitle: "Koge fusioonmaitseid",
-                content: "Elav Aasia traditsioonide fusioon kohtab kohalikke koostisosi, kus julged Tai vürtsid segunevad Jaapani täpsusega, Vietnami värskusega ja piirkonna toodetega.",
+                content: "Kuigi meie inspiratsioon ammutab mõjutusi erinevatest Aasia köökidest, oleme uhked, et oleme palju enamat kui lihtsalt jaapani restoran. Meie kulinaariameistrid põimivad rikkaliku maitsete kanga, tähistades nii Aasia kui ka Euroopa kulinaarseid traditsioone, et luua tõeliselt ainulaadset einestamiskogemus.",
                 bookATable: "Broneeri",
                 orderNow: "Telli"
             },
@@ -231,9 +231,9 @@ const resources = {
                 contact: "Контакт"
             },
             home: {
-                heading: "Сакура Пан-Азиатское Кулинарное Приключение",
+                heading: "НЕ ПРОСТО ЯПОНСКИЙ РЕСТОРАН",
                 subtitle: "Открой для себя фьюжн-вкусы",
-                content: "Яркое сочетание азиатских традиций и местных ингредиентов, где смелые тайские специи гармонируют с японской точностью, свежестью вьетнамской кухни и региональными продуктами.",
+                content: "Несмотря на то, что источником вдохновения для нас служат различные Азиатские влияния, мы гордимся тем, что являемся не просто японским рестораном. Наши мастера кулинарного искусства обьединяют богатую смесь вкусов, которая отражает азиатские и европейские кулинарные влияния.",
                 bookATable: "Забронировать",
                 orderNow: "Заказать сейчас"
             },

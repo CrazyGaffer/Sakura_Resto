@@ -53,7 +53,7 @@ const Header = () => {
     return (
         <header
             className={`navbar ${scrolled ? 'scrolled' : ''} ${
-                isMobile && menuOpen ? 'menu-active' : ''
+                menuOpen ? 'menu-active' : ''
             }`}
         >
             <div className="navbar-container">

@@ -176,7 +176,7 @@ $accent-dark: #2a2a2a;
     line-height: 1.2;
 
     @media (max-width: 1024px) {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
     }
 
     @media (max-width: 768px) {
@@ -195,10 +195,10 @@ $accent-dark: #2a2a2a;
 
   .description {
     font-family: $sans;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     color: rgba($accent-dark, 0.9);
     line-height: 1.6;
-    max-width: 480px;
+    max-width: 600px;
 
     @media (max-width: 768px) {
       font-size: 1rem;
