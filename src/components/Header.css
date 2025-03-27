@@ -54,7 +54,6 @@ html {
 }
 
 @media (max-width: 1024px) {
-
     .navbar:not(.scrolled):not(.menu-active) .hamburger .bar,
     .navbar:not(.scrolled):not(.menu-active) .navbar-title {
         color: white;
@@ -72,8 +71,53 @@ html {
     }
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 12;
+}
+
 .hamburger .bar {
-    transition: all 0.3s ease;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(0) rotate(0);
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .nav-menu a {
+    color: #333;
+}
+
+.navbar.scrolled .hamburger .bar {
+    background-color: #333;
+}
+
+.navbar:not(.scrolled) .nav-menu a {
+    color: white;
+}
+
+.navbar:not(.scrolled) .hamburger .bar {
+    background-color: white;
 }
 
 .nav-menu {
@@ -101,54 +145,6 @@ html {
     color: #e91e63 !important;
 }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-    z-index: 12;
-}
-
-.hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.navbar.scrolled {
-    background: rgba(255, 255, 255, 1) !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar.scrolled .nav-menu a {
-    color: #333;
-}
-
-.navbar.scrolled .hamburger .bar {
-    background-color: #333;
-}
-
-.navbar:not(.scrolled) .nav-menu a {
-    color: white;
-}
-
-.navbar:not(.scrolled) .hamburger .bar {
-    background-color: white;
-}
-
-.hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-
 @media (max-width: 1024px) {
     .nav-menu {
         position: fixed;
@@ -164,11 +160,13 @@ html {
         padding: 0 20px;
         z-index: 10;
         transform: translateY(-100%);
-        transition: transform 0.3s ease-in-out;
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
     .nav-menu.active {
         transform: translateY(0);
+        opacity: 1;
     }
 
     .navbar-title {
@@ -185,6 +183,30 @@ html {
         padding: 12px 20px;
     }
 
+    /* Slower, complex animation for mobile links */
+    .nav-menu ul li {
+        opacity: 0;
+        transform: translateX(-100%) rotate(-15deg);
+    }
+    .nav-menu.active ul li {
+        animation: complexLinkAnimation 0.5s forwards;
+    }
+    .nav-menu.active ul li:nth-child(1) {
+        animation-delay: 0.15s;
+    }
+    .nav-menu.active ul li:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    .nav-menu.active ul li:nth-child(3) {
+        animation-delay: 0.25s;
+    }
+    .nav-menu.active ul li:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+    .nav-menu.active ul li:nth-child(5) {
+        animation-delay: 0.35s;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -192,5 +214,21 @@ html {
     .navbar {
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+/* Keyframes for the slower, complex link animation */
+@keyframes complexLinkAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) rotate(-15deg);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(10px) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
     }
 }

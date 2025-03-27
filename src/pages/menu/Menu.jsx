@@ -1,6 +1,6 @@
 import './Menu.css';
-import menuItem1 from "../../assets/menu/menuItem1.jpeg";
-import menuItem2 from "../../assets/menu/menuItem2.jpeg";
+import item_2 from "/src/assets/menu/item_2.jpg";
+import menuItem2 from "/src/assets/menu/menuItem1.jpeg";
 import { useTranslation } from "react-i18next";
 import MenuButton from "../menu/subitems/MenuButton.jsx";
 
@@ -31,7 +31,7 @@ function Menu() {
                     <div className="about-image">
                         <div className="image-container">
                             <img
-                                src={menuItem1}
+                                src={item_2}
                                 alt="About us"
                             />
                         </div>
