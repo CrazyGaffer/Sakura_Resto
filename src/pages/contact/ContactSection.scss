@@ -3,12 +3,13 @@ $secondary-color: #2c3e50;
 $text-color: #34495e;
 
 .contact-section {
-  padding: 80px 0;
+  padding: 100px 30px;
   background-color: #f9f9f9;
   font-family: 'Montserrat', sans-serif;
 
   .container {
     max-width: 1200px;
+    text-align: center;
 
     .contact-layout {
       display: grid;
@@ -71,6 +72,7 @@ $text-color: #34495e;
           }
 
           .info-content {
+            text-align: left;
             h3 {
               font-size: 1.4rem;
               color: $secondary-color;
@@ -158,9 +160,6 @@ $text-color: #34495e;
 }
 
 @media (max-width: 768px) {
-  .contact-section {
-    padding: 60px 0;
-  }
 
   .section-title {
     font-size: 2.5rem !important;

@@ -86,4 +86,7 @@ p.events-title {
     p.events-title {
         font-size: 0.9em;
     }
+    .features-header {
+        margin: 0;
+    }
 }

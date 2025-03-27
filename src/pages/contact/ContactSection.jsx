@@ -9,7 +9,7 @@ const ContactSection = () => {
     return (
         <section id="contact" className="contact-section">
             <div className="container">
-                <div className="features-header">
+                <div className="contact-header">
                     <div className="small-rectangle-features"></div>
                     <h4 className="features-subtitle">{t('contact.subtitle')}</h4>
                     <h2 className="features-title">{t('contact.heading')}</h2>

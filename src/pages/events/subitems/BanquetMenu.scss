@@ -1,0 +1,103 @@
+
+.banquet-menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #f7f7f7;
+  font-family: Montserrat, sans-serif;
+}
+
+.packages-header {
+  flex: 0 0 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .small-rectangle-features {
+    width: 50px;
+    height: 4px;
+    background-color: #e91e63;
+    margin: 0 auto 1rem;
+  }
+
+  .packages-subtitle {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+
+  h2.packages-menu-title {
+    margin-bottom: 5px;
+    font-size: 2.5em !important;
+    text-transform: uppercase;
+    text-align: center;
+    color: #e91e63 !important;
+  }
+
+  p.packages-menu-title {
+    font-size: 1em;
+    color: gray;
+    text-transform: none;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 500;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.banquet-menu-card {
+  flex: 1 1 300px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banquet-menu-card h2 {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-size: 1.2rem !important;
+  text-align: left;
+  font-weight: 650;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.banquet-menu-card h2 .price {
+  font-size: 1.1rem;
+  font-weight: 650;
+  color: #e91e63;
+}
+
+.banquet-menu-card .menu-section {
+  margin-bottom: 2rem;
+}
+
+.banquet-menu-card .menu-section h3 {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 650;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.banquet-menu-card .menu-section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+  margin: 0;
+  color: gray;
+}
+
+.banquet-menu-card .menu-section ul li {
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}

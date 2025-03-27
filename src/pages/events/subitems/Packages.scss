@@ -67,27 +67,21 @@
 
 h2.packages-title {
     margin-bottom: 5px;
-    font-size: 2.5em;
+    font-size: 2.5em !important;
     text-transform: uppercase;
     text-align: center;
-}
-
-.packages-title {
-    font-size: 2em;
-    color: #e91e63;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
+    color: #e91e63 !important;
 }
 
 p.packages-title {
-    font-size: 1em;
-    color: gray;
+    font-size: 1em !important;
+    color: gray !important;
     text-transform: none;
     margin-bottom: 70px;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     text-align: center;
-    font-weight: 500;
+    font-weight: 500 !important;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;

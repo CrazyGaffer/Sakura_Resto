@@ -2,6 +2,7 @@ import './Events.css';
 import {useTranslation} from "react-i18next";
 import Packages from "./subitems/Packages.jsx";
 import Divider from "../../components/Divider/Divider.jsx";
+import BanquetMenu from "./subitems/BanquetMenu.jsx";
 
 function Events() {
     const { t } = useTranslation();
@@ -22,6 +23,8 @@ function Events() {
 
                 <Divider/>
                 <Packages />
+                <Divider />
+                <BanquetMenu/>
 
             </div>
         </section>
