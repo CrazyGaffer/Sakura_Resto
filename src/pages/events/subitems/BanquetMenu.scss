@@ -4,7 +4,7 @@
   gap: 2rem;
   background-color: #f7f7f7;
   font-family: Montserrat, sans-serif;
-  align-items: flex-start; // Ensures each card only takes up the height it needs
+  align-items: flex-start;
 }
 
 .packages-header {
@@ -34,6 +34,18 @@
     color: #e91e63 !important;
   }
 
+  @media (max-width: 1024px) and (min-width: 575px) {
+    h2.packages-menu-title {
+      font-size: 2em !important;
+    }
+    .packages-subtitle {
+      font-size: 0.8rem;
+    }
+    p.packages-menu-title {
+      font-size: 0.95em !important;
+    }
+  }
+
   p.packages-menu-title {
     font-size: 1em;
     color: gray;
@@ -55,8 +67,13 @@
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  // Optionally, you can also add:
-  // align-self: flex-start;
+}
+
+/* Media query: transform two columns into one when width is 1024px or less */
+@media (max-width: 1024px) {
+  .banquet-menu-card {
+    flex: 1 1 100%;
+  }
 }
 
 .banquet-menu-card h2 {
