@@ -15,64 +15,68 @@ $text-color: #34495e;
       display: grid;
       grid-template-columns: 1fr 1.5fr;
       gap: 70px;
-      align-items: center;
+      align-items: start;
+
+      .left-column {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .icon-container {
+        width: 50px;
+        height: 50px;
+        background-color: rgba($primary-color, 0.1);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+
+        .info-icon {
+          font-size: 1.8rem;
+          color: $primary-color;
+          transition: transform 0.3s ease, color 0.3s ease;
+        }
+      }
+
+      .info-item:hover .icon-container,
+      .parking-info:hover .icon-container {
+        background-color: $primary-color;
+        transform: rotate(45deg) scale(1.1);
+
+        .info-icon {
+          color: white;
+          transform: rotate(-45deg);
+        }
+      }
 
       .contact-info {
         display: flex;
         flex-direction: column;
-        gap: 35px;
-        position: relative;
+        gap: 30px;
 
         .info-item {
           display: flex;
           align-items: flex-start;
           gap: 25px;
-          padding-bottom: 35px;
+          padding: 25px;
           position: relative;
 
           &:not(:last-child)::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -15px;
             left: 60px;
             right: 0;
             height: 1px;
             background: rgba($secondary-color, 0.1);
           }
 
-          .icon-container {
-            width: 50px;
-            height: 50px;
-            background-color: rgba($primary-color, 0.1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-            transform-origin: center;
-            will-change: transform;
-
-            .info-icon {
-              font-size: 1.8rem;
-              color: $primary-color;
-              transition: transform 0.3s ease, color 0.3s ease;
-              transform-origin: center;
-              will-change: transform;
-            }
-          }
-
-          &:hover .icon-container {
-            background-color: $primary-color;
-            transform: rotate(45deg) scale(1.1);
-          }
-
-          &:hover .icon-container .info-icon {
-            color: white;
-            transform: rotate(-45deg);
-          }
-
           .info-content {
+            flex: 1;
             text-align: left;
+
             h3 {
               font-size: 1.4rem;
               color: $secondary-color;
@@ -84,29 +88,58 @@ $text-color: #34495e;
               color: $text-color;
               line-height: 1.6;
               margin: 0;
-              opacity: 0.95;
+
+              &.address-text {
+                white-space: pre-line;
+              }
             }
+          }
+        }
+      }
+
+      .parking-info {
+        display: flex;
+        gap: 25px;
+        padding: 25px;
+        background: rgba($primary-color, 0.05);
+        border-radius: 12px;
+        border: 1px solid rgba($primary-color, 0.1);
+        align-items: flex-start;
+
+        .content {
+          flex: 1;
+          text-align: left;
+
+          h3 {
+            font-size: 1.4rem;
+            color: $secondary-color;
+            margin-bottom: 10px;
+          }
+
+          .parking-description {
+            font-size: 1rem;
+            color: $text-color;
+            line-height: 1.6;
           }
         }
       }
 
       .map-integration {
         height: 100%;
-        position: relative;
-        overflow: hidden;
         border-radius: 12px;
+        overflow: hidden;
 
         iframe {
           width: 100%;
-          height: 500px;
+          height: 580px;
           border: 0;
-          border-radius: 12px;
         }
       }
     }
   }
 }
 
+// Responsive styles
 @media (max-width: 1200px) {
   .contact-layout {
     gap: 50px !important;
@@ -116,72 +149,87 @@ $text-color: #34495e;
 @media (max-width: 1024px) {
   .contact-layout {
     grid-template-columns: 1fr !important;
-    text-align: center;
 
-    .contact-info {
+    .left-column {
+      gap: 30px !important;
+    }
+
+    .contact-info,
+    .parking-info {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .info-item {
+      flex-direction: column;
+      align-items: center !important;
+      text-align: center;
+      padding: 25px !important;
+
+      &:not(:last-child)::after {
+        left: 50% !important;
+        transform: translateX(-50%);
+        width: 80% !important;
+      }
+
+      .info-content {
+        text-align: center !important;
+      }
+
+      .icon-container {
+        margin-bottom: 15px;
+      }
+    }
+
+    .parking-info {
+      flex-direction: column;
       align-items: center;
       text-align: center;
 
-      .info-item {
-        align-items: center;
-        flex-direction: column;
-        gap: 20px !important;
-        padding-bottom: 35px !important;
+      .icon-container {
+        margin: 0 auto 15px auto;
+      }
 
-        &:not(:last-child)::after {
-          left: 0 !important;
-          right: 0 !important;
-          width: 60%;
-          margin: 0 auto !important;
-        }
-
-        .icon-container {
-          margin: 0 auto 15px auto;
-        }
-
-        .info-content {
-          width: 100%;
-
-          h3, p {
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-          }
-        }
+      .content {
+        text-align: center !important;
+        width: 100%;
       }
     }
 
     .map-integration iframe {
       height: 400px !important;
-      border-radius: 10px !important;
+      margin-top: 30px;
     }
   }
 }
 
 @media (max-width: 768px) {
-
-  .section-title {
-    font-size: 2.5rem !important;
-    margin-bottom: 40px !important;
-  }
-
   .info-item {
-    padding-bottom: 25px !important;
-  }
+    padding: 20px !important;
 
-  .icon-container {
-    width: 45px !important;
-    height: 45px !important;
+    &:not(:last-child)::after {
+      bottom: -10px !important;
+    }
   }
 }
 
 @media (max-width: 480px) {
-  .map-integration iframe {
-    height: 300px !important;
-    border-radius: 8px !important;
+  .contact-section {
+    padding: 60px 15px;
   }
 
-  .info-item:not(:last-child)::after {
-    width: 80% !important;
+  .parking-info {
+    padding: 20px !important;
+  }
+
+  .info-item {
+    gap: 15px !important;
+    padding: 20px !important;
+  }
+
+  .map-integration iframe {
+    height: 300px !important;
   }
 }

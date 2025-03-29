@@ -92,7 +92,23 @@ const resources = {
             contact: {
                 heading: "Get in Touch",
                 subheading: "Have a question or need a reservation? We’d love to hear from you!",
-                subtitle: "Contact",
+                subtitle: "Contact Us",
+                location: {
+                    title: "Our Location",
+                    address: "Sakura Resto \n Pärnu mnt. 32 \n 10141 Tallinn"
+                },
+                email: {
+                    title: "Email Us",
+                    address: "info@sakuraresto.ee"
+                },
+                phone: {
+                    title: "Call Us",
+                    number: "+372 5486 0852"
+                }
+            },
+            parking: {
+                title: "Customer Parking",
+                description: "Alusta läbi Snabb'i rakenduse parkimist X6 Pärnu mnt 43A parklas ning saad automaatselt -15% soodustust."
             },
             footer: {
                 workingHours: "Working Hours",
