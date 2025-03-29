@@ -40,8 +40,7 @@ $text-color: #34495e;
         }
       }
 
-      .info-item:hover .icon-container,
-      .parking-info:hover .icon-container {
+      .info-item:hover .icon-container {
         background-color: $primary-color;
         transform: rotate(45deg) scale(1.1);
 
@@ -91,35 +90,56 @@ $text-color: #34495e;
 
               &.address-text {
                 white-space: pre-line;
+                margin: 0;
+                position: relative;
+                padding-left: 28px;
+
+                &::before {
+                  content: '📍';
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                }
+              }
+            }
+
+            .parking-details {
+              background: rgba($primary-color, 0.08);
+              border-left: 4px solid $primary-color;
+              padding: 15px;
+              border-radius: 8px;
+              margin-top: 10px;
+              animation: slideIn 0.5s ease;
+
+              p {
+                font-size: 0.95rem;
+                color: darken($text-color, 10%);
+                margin: 0;
+
+                strong {
+                  color: $primary-color;
+                  font-weight: 600;
+                }
               }
             }
           }
-        }
-      }
 
-      .parking-info {
-        display: flex;
-        gap: 25px;
-        padding: 25px;
-        background: rgba($primary-color, 0.05);
-        border-radius: 12px;
-        border: 1px solid rgba($primary-color, 0.1);
-        align-items: flex-start;
+          &.location-item {
+            .icon-container {
+              background-color: rgba($primary-color, 0.1);
 
-        .content {
-          flex: 1;
-          text-align: left;
+              .info-icon {
+                color: $primary-color;
+              }
+            }
 
-          h3 {
-            font-size: 1.4rem;
-            color: $secondary-color;
-            margin-bottom: 10px;
-          }
+            &:hover .icon-container {
+              background-color: $primary-color;
 
-          .parking-description {
-            font-size: 1rem;
-            color: $text-color;
-            line-height: 1.6;
+              .info-icon {
+                color: white;
+              }
+            }
           }
         }
       }
@@ -128,6 +148,8 @@ $text-color: #34495e;
         height: 100%;
         border-radius: 12px;
         overflow: hidden;
+        box-shadow: 0 15px 25px rgba(0,0,0,0.08);
+        border: 1px solid rgba(0,0,0,0.05);
 
         iframe {
           width: 100%;
@@ -136,6 +158,17 @@ $text-color: #34495e;
         }
       }
     }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -154,12 +187,10 @@ $text-color: #34495e;
       gap: 30px !important;
     }
 
-    .contact-info,
-    .parking-info {
+    .contact-info {
       width: 100%;
       max-width: 600px;
       margin: 0 auto;
-      text-align: center;
     }
 
     .info-item {
@@ -176,25 +207,18 @@ $text-color: #34495e;
 
       .info-content {
         text-align: center !important;
+
+        .address-text {
+          padding-left: 0 !important;
+
+          &::before {
+            display: none;
+          }
+        }
       }
 
       .icon-container {
         margin-bottom: 15px;
-      }
-    }
-
-    .parking-info {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-
-      .icon-container {
-        margin: 0 auto 15px auto;
-      }
-
-      .content {
-        text-align: center !important;
-        width: 100%;
       }
     }
 
@@ -218,10 +242,6 @@ $text-color: #34495e;
 @media (max-width: 480px) {
   .contact-section {
     padding: 60px 15px;
-  }
-
-  .parking-info {
-    padding: 20px !important;
   }
 
   .info-item {

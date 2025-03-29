@@ -108,7 +108,7 @@ const resources = {
             },
             parking: {
                 title: "Customer Parking",
-                description: "Alusta läbi Snabb'i rakenduse parkimist X6 Pärnu mnt 43A parklas ning saad automaatselt -15% soodustust."
+                description: "Alusta parkimist X6 Pärnu mnt 43A parklas Snabb'i rakenduse kaudu ning sisesta promokood SAKURA15, et saada automaatselt 15% soodustust."
             },
             footer: {
                 workingHours: "Working Hours",
