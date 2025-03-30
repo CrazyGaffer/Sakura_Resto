@@ -217,7 +217,6 @@ html {
     }
 }
 
-/* Keyframes for the slower, complex link animation */
 @keyframes complexLinkAnimation {
     0% {
         opacity: 0;

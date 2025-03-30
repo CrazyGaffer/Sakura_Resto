@@ -2,7 +2,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import './Home.scss';
 import { useTranslation } from 'react-i18next';
-import dishes from '/src/data/dishes_home_data.js';
+import dishes from '/src/data/images_home_data.js';
 
 function Home() {
     const controls = useAnimation();

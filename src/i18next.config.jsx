@@ -108,7 +108,7 @@ const resources = {
             },
             parking: {
                 title: "Customer Parking",
-                description: "Alusta parkimist X6 Pärnu mnt 43A parklas Snabb'i rakenduse kaudu ning sisesta promokood SAKURA15, et saada automaatselt 15% soodustust."
+                description: "Start parking at X6 Pärnu mnt 43A using the Snabb app and enter the promo code SAKURA15 to automatically receive a 15% discount."
             },
             footer: {
                 workingHours: "Working Hours",
@@ -217,6 +217,27 @@ const resources = {
                 subtitle: "Tagasiside",
                 heading: "Mida meie kliendid ütlevad"
             },
+            contact: {
+                heading: "Võta ühendust",
+                subheading: "Kas sul on küsimus või vajad broneeringut? Meil oleks hea meel sinust kuulda!",
+                subtitle: "Võta meiega ühendust",
+                location: {
+                    title: "Meie asukoht",
+                    address: "Sakura Resto \n Pärnu mnt. 32 \n 10141 Tallinn"
+                },
+                email: {
+                    title: "Kirjuta meile",
+                    address: "info@sakuraresto.ee"
+                },
+                phone: {
+                    title: "Helista meile",
+                    number: "+372 5486 0852"
+                }
+            },
+            parking: {
+                title: "Kliendi parkimine",
+                description: "Alusta parkimist X6 Pärnu mnt 43A parklas Snabb'i rakenduse kaudu ning sisesta promokood SAKURA15, et saada automaatselt 15% soodustust."
+            },
             footer: {
                 workingHours: "Tööaeg",
                 monThu: "E-N: 11:00 – 23:00",
@@ -323,6 +344,27 @@ const resources = {
             testimonials: {
                 subtitle: "Отзывы",
                 heading: "Что говорят наши клиенты"
+            },
+            contact: {
+                heading: "Свяжитесь с нами",
+                subheading: "Есть вопрос или нужна бронь? Мы будем рады услышать вас!",
+                subtitle: "Свяжитесь с нами",
+                location: {
+                    title: "Наше местоположение",
+                    address: "Sakura Resto \n Pärnu mnt. 32 \n 10141 Tallinn"
+                },
+                email: {
+                    title: "Напишите нам",
+                    address: "info@sakuraresto.ee"
+                },
+                phone: {
+                    title: "Позвоните нам",
+                    number: "+372 5486 0852"
+                }
+            },
+            parking: {
+                title: "Парковка для клиентов",
+                description: "Начните парковку на X6 Pärnu mnt 43A через приложение Snabb и введите промокод SAKURA15, чтобы автоматически получить 15% скидку."
             },
             footer: {
                 workingHours: "Режим работы",

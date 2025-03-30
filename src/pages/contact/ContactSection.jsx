@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaCar } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 import './ContactSection.scss';
 import { useTranslation } from "react-i18next";
 
