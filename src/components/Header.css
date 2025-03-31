@@ -183,7 +183,6 @@ html {
         padding: 12px 20px;
     }
 
-    /* Slower, complex animation for mobile links */
     .nav-menu ul li {
         opacity: 0;
         transform: translateX(-100%) rotate(-15deg);

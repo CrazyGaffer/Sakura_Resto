@@ -126,7 +126,7 @@ const resources = {
                 menu: "Menu",
                 about: "About",
                 events: "Events",
-                rightsReserved: "All rights reserved. Developed by CrazyGaffer"
+                rightsReserved: "All rights reserved | Developed by CrazyGaffer"
             }
         }
     },
@@ -254,7 +254,7 @@ const resources = {
                 menu: "Menüü",
                 about: "Meist",
                 events: "Üritused",
-                rightsReserved: "Kõik õigused kaitstud. Arendatud CrazyGaffer poolt"
+                rightsReserved: "Kõik õigused kaitstud | Developed by CrazyGaffer"
             }
         }
     },
@@ -382,7 +382,7 @@ const resources = {
                 menu: "Меню",
                 about: "О нас",
                 events: "События",
-                rightsReserved: "Все права защищены. Разработано CrazyGaffer"
+                rightsReserved: "Все права защищены | Developed by CrazyGaffer"
             }
         }
     }
