@@ -18,5 +18,9 @@ export const testimonialsData = [
     {
         text: "A true masterpiece of event planning – creative, elegant, and flawlessly executed.",
         author: "- Emily Davis"
+    },
+    {
+        text: "Aitäh! Väga hea sushi oli, tulen ka järgmine kord kui võimalus tekib. Päikest ☀️",
+        author: "- Mark"
     }
 ];

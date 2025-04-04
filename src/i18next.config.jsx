@@ -83,7 +83,11 @@ const resources = {
                 contact_text: "To reserve an event package or for further inquiries, please contact our dedicated team.",
                 contact_button: {
                     text: "Contact us"
-                }
+                },
+                banquet_menu: {
+                    heading: "Banquet Menu",
+                    subheading: "An Exceptional Banquet for Extraordinary Celebrations – We’ve Got Every Detail Covered",
+                },
             },
             testimonials: {
                 subtitle: "Testimonials",
@@ -211,6 +215,10 @@ const resources = {
                 contact_text: "Üritusepaketi broneerimiseks või lisaküsimuste korral võtke palun ühendust meie meeskonnaga.",
                 contact_button: {
                     text: "Võta meiega ühendust"
+                },
+                banquet_menu: {
+                    heading: "Banketimenüü",
+                    subheading: "Erakordne bankett erakordseteks tähistusteks – hoolitseme iga detaili eest",
                 }
             },
             testimonials: {
@@ -339,7 +347,11 @@ const resources = {
                 contact_text: "Для бронирования пакета мероприятий или по дополнительным вопросам, пожалуйста, свяжитесь с нашей командой.",
                 contact_button: {
                     text: "Свяжитесь с нами"
-                }
+                },
+                banquet_menu: {
+                    heading: "Банкетное меню",
+                    subheading: "Исключительный банкет для незабываемых торжеств – мы позаботились о каждой детали",
+                },
             },
             testimonials: {
                 subtitle: "Отзывы",
