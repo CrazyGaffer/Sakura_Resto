@@ -2,7 +2,7 @@ import './Events.css';
 import {useTranslation} from "react-i18next";
 import Packages from "./subitems/Packages.jsx";
 import Divider from "../../components/Divider/Divider.jsx";
-import BanquetMenu from "./subitems/BanquetMenu.jsx";
+import BanquetMenu from "./subitems/banquet/BanquetMenu.jsx";
 
 function Events() {
     const { t } = useTranslation();

@@ -87,6 +87,113 @@ const resources = {
                 banquet_menu: {
                     heading: "Banquet Menu",
                     subheading: "An Exceptional Banquet for Extraordinary Celebrations – We’ve Got Every Detail Covered",
+                    menu_nr1: "MENU NR1",
+                    menu_nr2: "MENU NR2",
+                    drinks_title: "Drinks",
+                    salads_title: "Salads",
+                    appetizers_title: "Appetizers",
+                    mains_title: "MAIN COURSES",
+                    sushi_title: "Sushi",
+                    desserts_title: "Desserts",
+                    serving_note: "All dishes are served at the same time and are all for sharing",
+                    serving_note_2: "Appetizers are served at the same time and are all for sharing. Main course and dessert is served personally by pre-order",
+                    dishes: {
+                        pankoChickenSalad: {
+                            name: "panko chicken salad",
+                            subtitle: "salad with crispy chicken and parmesan cheese"
+                        },
+                        prawnCrunch: {
+                            name: "PRAWN CRUNCH",
+                            subtitle: "crispy fried prawns with salad, teriyaki and kimchi mayo"
+                        },
+                        krupuk: {
+                            name: "KRUPUK",
+                            subtitle: "airy prawn chips with wasabi sauce"
+                        },
+                        gyoza: {
+                            name: "GYOZA",
+                            subtitle: "japanese dumplings with chicken"
+                        },
+                        californiaSushi: {
+                            name: "CALIFORNIA SUSHI",
+                            subtitle: "snowcrab, avocado, cucumber, white sesame"
+                        },
+                        philadelphiaSushi: {
+                            name: "PHILADELPHIA SUSHI",
+                            subtitle: "cream cheese, salmon, cucumber, white sesame"
+                        },
+                        prawnMakiSushi: {
+                            name: "PRAWN MAKI SUSHI",
+                            subtitle: "tempura prawns, spicy sauce, cream cheese, cucumber, masago"
+                        }
+                    },
+                    menu_nr2_dishes: {
+                        dynamiteChicken: {
+                            name: "DYNAMITE CHICKEN",
+                            subtitle: "Crispy chicken with dynamite sauce"
+                        },
+                        prawnCrunch: {
+                            name: "PRAWN CRUNCH",
+                            subtitle: "Crispy fried prawns with salad, teriyaki and kimchi mayo"
+                        },
+                        parmigianoSarada: {
+                            name: "PARMIGIANO SARADA",
+                            subtitle: "Green salad with avocado and edamame, parmigiano and wasabi sauce"
+                        },
+                        salmonBite: {
+                            name: "SALMON BITE",
+                            subtitle: "Bruschetta with salted salmon tar tar and cream cheese"
+                        },
+                        snowcrabCornSalad: {
+                            name: "SNOWCRAB AND CORN SALAD",
+                            subtitle: "Salad with rice, corn, cucumber and snowcrab"
+                        },
+                        sushiAppetizer: {
+                            name: "SUSHI",
+                            subtitle: "Sushi assortment with salmon, snowcrab and prawns"
+                        },
+                        // MAIN COURSES
+                        ribs: {
+                            name: "RIBS",
+                            subtitle: "Teriyaki pork ribs with fries"
+                        },
+                        prawns: {
+                            name: "PRAWNS",
+                            subtitle: "Fresh salad with garlic prawns"
+                        },
+                        salmonMain: {
+                            name: "SALMON",
+                            subtitle: "Fried salmon fillet, avocado cream and sushi rice"
+                        },
+                        veganPoke: {
+                            name: "VEGAN POKE",
+                            subtitle: "Sushi rice, lettuce, vegetables, beans, sauces and crispy tofu"
+                        },
+                        sushiMain: {
+                            name: "SUSHI",
+                            subtitle: "Philadelphia sushi with fresh salmon and salmon nigiri"
+                        },
+                        // DESSERTS
+                        mochi: {
+                            name: "MOCHI",
+                            subtitle: "Japanese Rice Cake"
+                        },
+                        macha: {
+                            name: "MACHA",
+                            subtitle: "Green Tea Flavor"
+                        },
+                        kook: {
+                            name: "KOOK",
+                            subtitle: "Traditional Korean Cookie"
+                        },
+                        // DRINKS
+                        kannuvesi: {
+                            name: "KANNUVESI"
+                        },
+                        alcohol: {
+                            name: "ALCOHOL ON AGREEMENT"
+                        }
+                    }
                 },
             },
             testimonials: {
@@ -219,6 +326,46 @@ const resources = {
                 banquet_menu: {
                     heading: "Banketimenüü",
                     subheading: "Erakordne bankett erakordseteks tähistusteks – hoolitseme iga detaili eest",
+                    menu_nr1: "MENÜÜ NR1",
+                    menu_nr2: "MENÜÜ NR2",
+                    salads_title: "SALATID",
+                    drinks_title: "JOOGID",
+                    mains_title: "PEAROAD",
+                    appetizers_title: "EELROAD",
+                    sushi_title: "Sushi",
+                    desserts_title: "MAGUSTOIT",
+                    serving_note: "Kõik road serveeritakse samal ajal ja need kõik on jagamiseks",
+                    serving_note_2: "Eelroad serveeritakse samal ajal ja need kõik on jagamiseks. Pearooga ja magustoit serveeritakse personaalselt ettetellimisel",
+                    dishes: {
+                        pankoChickenSalad: {
+                            name: "salat krõbe kana ja parmesani juustuga",
+                            subtitle: "salat koos krõbeda kana ja parmesani juustuga"
+                        },
+                        prawnCrunch: {
+                            name: "KRÕBEDAD KREVETID SALATIGA",
+                            subtitle: "krõbeda praetud krevetid salati, teriyaki ja kimchi majojaga"
+                        },
+                        krupuk: {
+                            name: "KRUPUK",
+                            subtitle: "õhulised krevetikrõpsud wasabi kastmega"
+                        },
+                        gyoza: {
+                            name: "GYOZA",
+                            subtitle: "jaapani pelmeenid kanaga"
+                        },
+                        californiaSushi: {
+                            name: "CALIFORNIA SUSHI",
+                            subtitle: "lumekrabi, avokaado, kurk, valge seesam"
+                        },
+                        philadelphiaSushi: {
+                            name: "PHILADELPHIA SUSHI",
+                            subtitle: "toorjuust, lõhe, kurk, valge seesam"
+                        },
+                        prawnMakiSushi: {
+                            name: "PRAWN MAKI SUSHI",
+                            subtitle: "tempura krevetid, terav kaste, toorjuust, kurk, masago"
+                        }
+                    },
                 }
             },
             testimonials: {
@@ -351,6 +498,43 @@ const resources = {
                 banquet_menu: {
                     heading: "Банкетное меню",
                     subheading: "Исключительный банкет для незабываемых торжеств – мы позаботились о каждой детали",
+                    serving_note: "Все блюда подаются одновременно и предназначены для совместного употребления",
+                    salads_title: "Салаты",
+                    drinks_title: "Напитки",
+                    sushi_title: "Суши",
+                    mains_title: "Основные блюда",
+                    appetizers_title: "Закуски",
+                    desserts_title: "Десерты",
+                    dishes: {
+                        pankoChickenSalad: {
+                            name: "PANKO CHICKEN SALAD",
+                            subtitle: "салат с хрустящей курицей и пармезаном"
+                        },
+                        prawnCrunch: {
+                            name: "PRAWN CRUNCH",
+                            subtitle: "хрустящие креветки с салатом, соусом терияки и кимчи майо"
+                        },
+                        krupuk: {
+                            name: "KRUPUK",
+                            subtitle: "воздушные креветочные чипсы с соусом васаби"
+                        },
+                        gyoza: {
+                            name: "GYOZA",
+                            subtitle: "японские пельмени с курицей"
+                        },
+                        californiaSushi: {
+                            name: "CALIFORNIA SUSHI",
+                            subtitle: "снежный краб, авокадо, огурец, белый кунжут"
+                        },
+                        philadelphiaSushi: {
+                            name: "PHILADELPHIA SUSHI",
+                            subtitle: "крем-сыр, лосось, огурец, белый кунжут"
+                        },
+                        prawnMakiSushi: {
+                            name: "PRAWN MAKI SUSHI",
+                            subtitle: "темпура креветки, острый соус, крем-сыр, огурец, масагo"
+                        }
+                    },
                 },
             },
             testimonials: {
