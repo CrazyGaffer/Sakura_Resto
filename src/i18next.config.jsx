@@ -328,6 +328,7 @@ const resources = {
                     subheading: "Erakordne bankett erakordseteks tähistusteks – hoolitseme iga detaili eest",
                     menu_nr1: "MENÜÜ NR1",
                     menu_nr2: "MENÜÜ NR2",
+                    menu_nr2_selector: "NR2",
                     salads_title: "SALATID",
                     drinks_title: "JOOGID",
                     mains_title: "PEAROAD",

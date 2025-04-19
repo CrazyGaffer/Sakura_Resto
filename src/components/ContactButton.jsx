@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../pages/events/subitems/ContactButton.css';
+import '../pages/events/ContactButton.css';
 import { useTranslation } from 'react-i18next';
 
 const ContactButton = ({ email, subject, body }) => {

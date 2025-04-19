@@ -1,24 +1,26 @@
 @use "sass:color";
 
+// Brand colors
 $primary-color: #e91e63;
-$secondary-color: #2c3e50;
-$text-color: #34495e;
+$gray: #888;
+$gray-light: #f2f2f2;
+$detail-medium-contrast: color.scale($gray, $lightness: 40%);
 
 .banquet-menu-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
   font-family: Montserrat, sans-serif;
-  align-items: flex-start;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: auto;
 
+  // HEADER
   .packages-header {
     flex: 0 0 100%;
     text-align: center;
     margin-bottom: 2rem;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 
     .small-rectangle-features {
       width: 50px;
@@ -42,51 +44,142 @@ $text-color: #34495e;
       text-align: center;
       color: $primary-color !important;
       letter-spacing: -1px;
+
+      @media (max-width: 1024px) and (min-width: 575px) {
+        & {
+          font-size: 2em !important;
+        }
+      }
+
+      @media (max-width: 575px) {
+        & {
+          font-size: 1.7em !important;
+        }
+      }
     }
 
     p.packages-menu-title {
       font-size: 1em;
       color: gray;
-      text-transform: none;
-      font-family: 'Montserrat', sans-serif;
       line-height: 1.5;
       text-align: center;
       font-weight: 500;
       max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto;
     }
   }
 
-  .banquet-menu-card {
+  // Tabs interface
+  .tabs {
+    .tab-list {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      gap: 0.5rem;
+
+      .tab {
+        background: $gray-light;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 10px;
+        color: $gray;
+        transition: background 0.2s ease, color 0.2s ease;
+
+        &.active {
+          background: $primary-color;
+          color: white;
+        }
+      }
+    }
+
+    .tab-panels {
+      width: 100%;
+
+      .tab-panel {
+        animation: fadeIn 0.3s ease;
+      }
+    }
+  }
+
+  // Duo layout
+  .banquet-menu-duo {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .banquet-menu-card-wrapper {
     flex: 1 1 300px;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 600px;
+  }
+
+  // Card styling
+  .banquet-menu-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin: auto;
+    width: 100%;
+    max-width: 700px;
 
     h2 {
-      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       text-transform: uppercase;
-      font-size: 1.2rem !important;
-      text-align: left;
+      font-size: 1.2rem;
       font-weight: 650;
       color: #333;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       border-bottom: 1px solid #ddd;
       padding-bottom: 1rem;
-      flex-wrap: wrap;
+      margin-bottom: 2rem;
 
       .price {
-        font-size: 1.1rem;
-        font-weight: 650;
         color: $primary-color;
+        font-size: 1rem;
+        font-weight: 650;
         white-space: nowrap;
-        margin-left: 1rem;
+      }
+    }
+
+    .menu-section {
+      margin-bottom: 1.5rem;
+
+      h3 {
+        text-transform: uppercase;
+        font-weight: 650;
+        color: #555;
+        margin-bottom: 0.5rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 0.5rem;
+          line-height: 1.4;
+
+          .product-name,
+          .product-subtitle {
+            display: block;
+            word-break: break-word;
+          }
+
+          .product-name {
+            font-weight: 600;
+          }
+
+          .product-subtitle {
+            font-size: 0.9rem;
+            color: $gray;
+          }
+        }
       }
     }
 
@@ -95,150 +188,49 @@ $text-color: #34495e;
       border-left: 4px solid $primary-color;
       padding: 1.5rem;
       border-radius: 8px;
-      margin: 2rem 0;
-      position: relative;
+      margin-top: 1.5rem;
 
-      .serving-notice {
-        .serving-description {
-          font-size: 0.90rem;
-          color: color.scale($text-color, $lightness: -10%);
-          line-height: 1.6;
-          margin: 0;
-          text-align: left;
-          font-weight: 400;
-        }
-      }
-
-      @media (max-width: 768px) {
-        padding: 1rem;
-        margin: 1.5rem 0;
-
-        .serving-notice .serving-description {
-          font-size: 0.85rem;
-        }
-      }
-    }
-
-    .menu-section {
-      margin-bottom: 2rem;
-
-      h3 {
-        margin-bottom: 0.5rem;
-        text-transform: uppercase;
-        font-weight: 650;
-        font-size: 1.2rem;
-        color: #555;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-        font-size: 0.9rem;
+      .serving-description {
         margin: 0;
-        color: gray;
-
-        li {
-          margin-bottom: 0.4rem;
-          line-height: 1.4;
-        }
-
-        .product-name {
-          font-weight: 600;
-          color: #555;
-          text-transform: uppercase;
-          display: block;
-        }
-
-        .product-subtitle {
-          display: block;
-          font-size: 0.85rem;
-          text-transform: capitalize;
-        }
-      }
-    }
-
-    @media (min-width: 1025px) {
-      flex: 1 1 calc(50% - 1rem);
-      max-width: 600px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    .banquet-menu-card {
-      flex: 1 1 100%;
-      max-width: 600px;
-      margin: 0 auto;
-
-      h2 {
-        font-size: 1.1rem !important;
-      }
-    }
-
-    .packages-header {
-      h2.packages-menu-title {
-        font-size: 2em !important;
-      }
-      .packages-subtitle {
-        font-size: 0.8rem;
-      }
-      p.packages-menu-title {
-        font-size: 0.95em !important;
+        font-size: 0.9rem;
+        color: color.scale($gray, $lightness: -10%);
+        line-height: 1.6;
       }
     }
   }
 
-  @media (max-width: 768px) {
-    padding: 1rem;
+  // Footer
+  .packages-footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
 
-    .banquet-menu-card {
-      padding: 1.5rem;
-      max-width: 100%;
-
-      h2 {
-        font-size: 1rem !important;
-        flex-direction: row;
-        align-items: center;
-
-        .price {
-          font-size: 0.9rem;
-          margin-left: auto;
-        }
-      }
+    .packages-contact {
+      color: $detail-medium-contrast;
+      margin-bottom: 1rem;
     }
   }
+}
 
-  @media (max-width: 480px) {
-    .banquet-menu-card {
-      padding: 1rem;
-      max-width: 100%;
+// Fade‑in animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-      h2 {
-        flex-direction: column;
-        align-items: flex-start;
-
-        .price {
-          margin-left: 0;
-          margin-top: 0.5rem;
-        }
-      }
-
-      .menu-section {
-        margin-bottom: 1.5rem;
-
-        h3 {
-          font-size: 1rem;
-        }
-
-        ul li {
-          font-size: 0.85rem;
-        }
-      }
-    }
-
-    .packages-header {
-      h2.packages-menu-title {
-        font-size: 1.8em !important;
-      }
-    }
+// Responsive tweaks
+@media (max-width: 600px) {
+  .tabs .tab-list .tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .banquet-menu-duo {
+    flex-direction: column;
   }
 }

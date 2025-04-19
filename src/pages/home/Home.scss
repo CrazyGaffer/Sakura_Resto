@@ -1,14 +1,15 @@
 @use "sass:color";
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
-$serif: 'Montserrat', sans-serif;
-$sans: 'Montserrat', sans-serif;
-$primary-color: #e91e63;
+$serif:           'Montserrat', sans-serif;
+$sans:            'Montserrat', sans-serif;
+$primary-color:   #e91e63;
 $secondary-color: #f8f5f2;
-$text-dark: #3a3a3a;
-$accent-dark: #2a2a2a;
+$text-dark:       #3a3a3a;
+$accent-dark:     #2a2a2a;
 
 .hero {
+  /* full‑screen on desktop/tablet */
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -27,18 +28,27 @@ $accent-dark: #2a2a2a;
       grid-template-rows: 50vh auto;
 
       .image-slider,
-      .content-column {
-        order: initial;
-      }
+      .content-column { order: initial; }
+    }
+
+    @media (max-width: 768px) {
+      grid-template-rows: 45vh auto;
+      gap: 0;
     }
 
     @media (max-width: 480px) {
-      grid-template-rows: 45vh auto;
+      grid-template-rows: 40vh auto;
     }
 
     @media (max-width: 375px) {
-      grid-template-rows: 40vh auto;
+      grid-template-rows: 35vh auto;
     }
+  }
+
+  /* allow content to grow on small screens so buttons stay visible */
+  @media (max-width: 768px) {
+    height: auto;
+    overflow: visible;
   }
 }
 
@@ -46,16 +56,13 @@ $accent-dark: #2a2a2a;
   position: relative;
   height: 100%;
   overflow: hidden;
-  background: linear-gradient(45deg, $accent-dark, #3a3a3a);
+  background: linear-gradient(45deg, $accent-dark, $text-dark);
   pointer-events: none;
   user-select: none;
 
   .slide {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-size: cover;
     background-position: center;
     opacity: 0;
@@ -66,57 +73,26 @@ $accent-dark: #2a2a2a;
     &::after {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       background: rgba(0, 0, 0, 0.3);
-    }
-
-    @media (max-width: 480px) {
-      background-position: center 30%;
     }
   }
 
   @media (max-width: 1024px) {
     height: 50vh;
-    min-height: 300px;
+    min-height: 280px;
   }
-
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     height: 45vh;
-    min-height: 250px;
+    min-height: 240px;
   }
-
-  @media (max-width: 375px) {
+  @media (max-width: 480px) {
     height: 40vh;
-    min-height: 220px;
+    min-height: 200px;
   }
-}
-
-.slider-progress {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.5rem;
-  z-index: 3;
-  pointer-events: none;
-
-  .progress-dot {
-    height: 4px;
-    border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0.4);
-    transition: all 0.3s ease;
-  }
-
   @media (max-width: 375px) {
-    bottom: 0.5rem;
-
-    .progress-dot {
-      height: 3px;
-    }
+    height: 35vh;
+    min-height: 180px;
   }
 }
 
@@ -124,93 +100,61 @@ $accent-dark: #2a2a2a;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem 8%;
+  padding: 3rem 8%;
   position: relative;
   z-index: 2;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
 
   @media (max-width: 1024px) {
-    padding: 2rem 5%;
-  }
-
-  @media (max-width: 1024px) {
-    padding: 3rem 2rem;
-    min-height: 50vh;
+    padding: 2.5rem 6%;
+    background: rgba(255, 255, 255, 0.97);
     box-shadow: none;
-    background: rgba(255, 255, 255, 0.98);
+  }
+  @media (max-width: 768px) {
+    padding: 2rem 4%;
   }
 
+  /* center all text under 480px */
   @media (max-width: 480px) {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 3%;
+    text-align: center;
   }
-
   @media (max-width: 375px) {
-    padding: 1.5rem 1rem;
+    padding: 1rem 2%;
   }
 }
 
 .hero-content {
   .subtitle {
     font-family: $sans;
-    font-size: 1.2rem;
-    color: color.adjust($primary-color);
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: $primary-color;
     letter-spacing: 2px;
-    margin-bottom: 0.8rem;
-
-    @media (max-width: 768px) {
-      font-size: 1.1rem;
-    }
-
-    @media (max-width: 375px) {
-      font-size: 1rem;
-      margin-bottom: 0.6rem;
-    }
+    margin-bottom: 1rem;
   }
 
   .title {
     font-family: $serif;
-    font-size: 3.0rem;
+    font-size: clamp(1.8rem, 6vw, 3.2rem);
     color: $accent-dark;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     line-height: 1.2;
-
-    @media (max-width: 1024px) {
-      font-size: 2.5rem;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 2.2rem;
-    }
-
-    @media (max-width: 375px) {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    @media (max-width: 320px) {
-      font-size: 1.7rem;
-    }
   }
 
   .description {
     font-family: $sans;
-    font-size: 1.0rem;
+    font-size: 1rem;               // fixed size
     color: rgba($accent-dark, 0.9);
     line-height: 1.6;
-    max-width: 600px;
+    max-width: 80%;
+    margin-bottom: 1.5rem;         // left-aligned on large screens
 
-    @media (max-width: 768px) {
-      font-size: 1rem;
+    @media (max-width: 480px) {
+      margin: 0 auto 1.5rem;       // center on small screens
     }
-
     @media (max-width: 375px) {
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 320px) {
-      font-size: 0.9rem;
+      font-size: 0.95rem;          // slight shrink on narrowest screens
     }
   }
 }
@@ -223,53 +167,45 @@ $accent-dark: #2a2a2a;
 
   @media (max-width: 480px) {
     flex-direction: column;
-  }
-
-  @media (max-width: 375px) {
+    align-items: center;
     margin-top: 1.2rem;
   }
 }
 
-.reserve-button, .order-button {
+.reserve-button,
+.order-button {
   padding: 0.8rem 2rem;
   border-radius: 6px;
   font-family: $sans;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
   white-space: nowrap;
   min-width: 160px;
-  width: auto;
 
   &:hover {
     transform: translateY(-2px);
   }
 
-  @media (max-width: 768px) {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.85rem;
-    min-width: 140px;
-  }
-
   @media (max-width: 480px) {
-    width: 100%;
+    width: 90%;
     min-width: auto;
-  }
-
-  @media (max-width: 375px) {
     padding: 0.7rem 1rem;
+  }
+  @media (max-width: 375px) {
+    padding: 0.6rem 0.8rem;
   }
 }
 
 .reserve-button {
   background: $primary-color;
-  color: white;
+  color: #fff;
   border: none;
   box-shadow: 0 4px 12px rgba($primary-color, 0.25);
 
