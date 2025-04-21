@@ -89,6 +89,7 @@ const resources = {
                     subheading: "An Exceptional Banquet for Extraordinary Celebrations – We’ve Got Every Detail Covered",
                     menu_nr1: "MENU NR1",
                     menu_nr2: "MENU NR2",
+                    menu_nr3: "MENU NR3",
                     drinks_title: "Drinks",
                     salads_title: "Salads",
                     appetizers_title: "Appetizers",
@@ -97,6 +98,7 @@ const resources = {
                     desserts_title: "Desserts",
                     serving_note: "All dishes are served at the same time and are all for sharing",
                     serving_note_2: "Appetizers are served at the same time and are all for sharing. Main course and dessert is served personally by pre-order",
+                    serving_note_3: "Appetizers are served at the same time and are all for sharing. Main course and dessert is served personally by pre-order",
                     dishes: {
                         pankoChickenSalad: {
                             name: "panko chicken salad",
@@ -187,6 +189,66 @@ const resources = {
                             subtitle: "Traditional Korean Cookie"
                         },
                         // DRINKS
+                        kannuvesi: {
+                            name: "KANNUVESI"
+                        },
+                        alcohol: {
+                            name: "ALCOHOL ON AGREEMENT"
+                        }
+                    },
+                    menu_nr3_dishes: {
+                        tataki: {
+                            name: "TATAKI",
+                            subtitle: "flamed salmon/tuna slices with spicy ponzu"
+                        },
+                        edamame: {
+                            name: "EDAMAME",
+                            subtitle: "steamed soybeans with sea salt"
+                        },
+                        wasabiPrawns: {
+                            name: "WASABI PRAWNS",
+                            subtitle: "crispy tempura prawns in creamy wasabi sauce"
+                        },
+                        nigiriSelection: {
+                            name: "NIGIRI SELECTION",
+                            subtitle: "nigiri on chef's choice"
+                        },
+                        sashimi: {
+                            name: "SASHIMI",
+                            subtitle: "salmon, tuna, eel"
+                        },
+                        spiderSushi: {
+                            name: "SPIDER SUSHI",
+                            subtitle: "soft shell crab, green onion, cucumber, masago, salad, wasabi sauce"
+                        },
+                        ribs: {
+                            name: "RIBS",
+                            subtitle: "teriyaki pork ribs with fries"
+                        },
+                        prawnsMain: {
+                            name: "PRAWNS",
+                            subtitle: "fresh salad with garlic prawns"
+                        },
+                        salmon: {
+                            name: "SALMON",
+                            subtitle: "fried salmon fillet, avocado cream and sushi rice"
+                        },
+                        veganPoke: {
+                            name: "VEGAN POKE",
+                            subtitle: "sushi rice, lettuce, vegetables, beans, sauces and crispy tofu"
+                        },
+                        mochi: {
+                            name: "MOCHI",
+                            subtitle: "japanese dessert made from a sweet pounded rice dough wrapped around ice cream"
+                        },
+                        macha: {
+                            name: "MACHA",
+                            subtitle: "green tea mousse cake with caramel and cookies"
+                        },
+                        kook: {
+                            name: "KOOK",
+                            subtitle: "cake order on agreement"
+                        },
                         kannuvesi: {
                             name: "KANNUVESI"
                         },
@@ -328,6 +390,7 @@ const resources = {
                     subheading: "Erakordne bankett erakordseteks tähistusteks – hoolitseme iga detaili eest",
                     menu_nr1: "MENÜÜ NR1",
                     menu_nr2: "MENÜÜ NR2",
+                    menu_nr3: "MENÜÜ NR3",
                     menu_nr2_selector: "NR2",
                     salads_title: "SALATID",
                     drinks_title: "JOOGID",
@@ -337,6 +400,7 @@ const resources = {
                     desserts_title: "MAGUSTOIT",
                     serving_note: "Kõik road serveeritakse samal ajal ja need kõik on jagamiseks",
                     serving_note_2: "Eelroad serveeritakse samal ajal ja need kõik on jagamiseks. Pearooga ja magustoit serveeritakse personaalselt ettetellimisel",
+                    serving_note_3: "Eelroad serveeritakse samal ajal ja need kõik on jagamiseks. Pearooga ja magustoit serveeritakse personaalselt ettetellimisel",
                     dishes: {
                         pankoChickenSalad: {
                             name: "salat krõbe kana ja parmesani juustuga",
@@ -367,6 +431,66 @@ const resources = {
                             subtitle: "tempura krevetid, terav kaste, toorjuust, kurk, masago"
                         }
                     },
+                    menu_nr3_dishes: {
+                        tataki: {
+                            name: "TATAKI",
+                            subtitle: "põletatud lõhe/tuunikala viilud vürtsika ponzu kastmega"
+                        },
+                        edamame: {
+                            name: "EDAMAME",
+                            subtitle: "aurutatud sojaoad meresoolaga"
+                        },
+                        wasabiPrawns: {
+                            name: "WASABI PRAWNS",
+                            subtitle: "krõbedad tempura krevetid koorese wasabikastmes"
+                        },
+                        nigiriSelection: {
+                            name: "NIGIRI SELECTION",
+                            subtitle: "nigiri koka valikul"
+                        },
+                        sashimi: {
+                            name: "SASHIMI",
+                            subtitle: "lõhe, tuunikala, angerjas"
+                        },
+                        spiderSushi: {
+                            name: "SPIDER SUSHI",
+                            subtitle: "pehme kestaga krabi, roheline sibul, kurk, masago, salat, wasabi kaste"
+                        },
+                        ribs: {
+                            name: "RIBS",
+                            subtitle: "teriyaki searibid friikartuliga"
+                        },
+                        prawnsMain: {
+                            name: "PRAWNS",
+                            subtitle: "värske salat küüslaugu krevetidega"
+                        },
+                        salmon: {
+                            name: "SALMON",
+                            subtitle: "praetud lõhefilee, avokaado kreem ja sushi riis"
+                        },
+                        veganPoke: {
+                            name: "VEGAN POKE",
+                            subtitle: "sushi riis, värske salat, köögiviljad, oad, kastmed ja krõbe tofu"
+                        },
+                        mochi: {
+                            name: "MOCHI",
+                            subtitle: "jaapani magustoit, mis on valmistatud magusast tambitud riisitaignast, mis on mahitud jäätise ümber"
+                        },
+                        macha: {
+                            name: "MACHA",
+                            subtitle: "rohelise tee‑mousse kook karamelli ja küpsistega"
+                        },
+                        kook: {
+                            name: "KOOK",
+                            subtitle: "koogi tellimine kokkuleppel"
+                        },
+                        kannuvesi: {
+                            name: "KANNUVESI"
+                        },
+                        alcohol: {
+                            name: "ALKOHOL KOKKULEPPEL"
+                        }
+                    }
                 }
             },
             testimonials: {
@@ -500,12 +624,17 @@ const resources = {
                     heading: "Банкетное меню",
                     subheading: "Исключительный банкет для незабываемых торжеств – мы позаботились о каждой детали",
                     serving_note: "Все блюда подаются одновременно и предназначены для совместного употребления",
+                    serving_note_2: "Закуски подаются одновременно и предназначены для совместного употребления. Основное блюдо и десерт подаются индивидуально по предварительному заказу",
+                    serving_note_3: "Закуски подаются одновременно и предназначены для совместного употребления. Основное блюдо и десерт подаются индивидуально по предварительному заказу",
                     salads_title: "Салаты",
                     drinks_title: "Напитки",
                     sushi_title: "Суши",
                     mains_title: "Основные блюда",
                     appetizers_title: "Закуски",
                     desserts_title: "Десерты",
+                    menu_nr1: "МЕНЮ NR1",
+                    menu_nr2: "МЕНЮ NR2",
+                    menu_nr3: "МЕНЮ NR3",
                     dishes: {
                         pankoChickenSalad: {
                             name: "PANKO CHICKEN SALAD",
@@ -536,6 +665,66 @@ const resources = {
                             subtitle: "темпура креветки, острый соус, крем-сыр, огурец, масагo"
                         }
                     },
+                    menu_nr3_dishes: {
+                        tataki: {
+                            name: "TATAKI",
+                            subtitle: "обожженные ломтики лосося/тунца с острым соусом понзу"
+                        },
+                        edamame: {
+                            name: "EDAMAME",
+                            subtitle: "соевые бобы на пару с морской солью"
+                        },
+                        wasabiPrawns: {
+                            name: "WASABI PRAWNS",
+                            subtitle: "хрустящие креветки темпура в кремово-васаби соусе"
+                        },
+                        nigiriSelection: {
+                            name: "NIGIRI SELECTION",
+                            subtitle: "нигири на выбор повара"
+                        },
+                        sashimi: {
+                            name: "SASHIMI",
+                            subtitle: "лосось, тунец, угорь"
+                        },
+                        spiderSushi: {
+                            name: "SPIDER SUSHI",
+                            subtitle: "краб в мягком панцире, зеленый лук, огурец, масаго, салат, васаби соус"
+                        },
+                        ribs: {
+                            name: "RIBS",
+                            subtitle: "свиные ребра терияки с картошкой фри"
+                        },
+                        prawnsMain: {
+                            name: "PRAWNS",
+                            subtitle: "свежий салат с чесночными креветками"
+                        },
+                        salmon: {
+                            name: "SALMON",
+                            subtitle: "обжаренное филе лосося, авокадо кремом и суши рис"
+                        },
+                        veganPoke: {
+                            name: "VEGAN POKE",
+                            subtitle: "суши рис, салат, овощи, бобы, соусы и хрустящий тофу"
+                        },
+                        mochi: {
+                            name: "MOCHI",
+                            subtitle: "японский десерт из сладкого рисового теста, в которое обернуто мороженое"
+                        },
+                        macha: {
+                            name: "MACHA",
+                            subtitle: "муссовый торт из зеленого чая с карамелью и печеньем"
+                        },
+                        kook: {
+                            name: "KOOK",
+                            subtitle: "заказ торта по договоренности"
+                        },
+                        kannuvesi: {
+                            name: "KANNUVESI"
+                        },
+                        alcohol: {
+                            name: "ALCOHOL ON AGREEMENT"
+                        }
+                    }
                 },
             },
             testimonials: {

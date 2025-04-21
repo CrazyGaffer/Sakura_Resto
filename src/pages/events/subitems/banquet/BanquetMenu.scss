@@ -46,15 +46,11 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
       letter-spacing: -1px;
 
       @media (max-width: 1024px) and (min-width: 575px) {
-        & {
-          font-size: 2em !important;
-        }
+        font-size: 2em !important;
       }
 
       @media (max-width: 575px) {
-        & {
-          font-size: 1.7em !important;
-        }
+        font-size: 1.7em !important;
       }
     }
 
@@ -131,6 +127,7 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;                  // allow wrap on narrow layouts
       text-transform: uppercase;
       font-size: 1.2rem;
       font-weight: 650;
@@ -140,6 +137,7 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
       margin-bottom: 2rem;
 
       .price {
+        margin-left: auto;             // push price to the right
         color: $primary-color;
         font-size: 1rem;
         font-weight: 650;
@@ -173,10 +171,13 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
 
           .product-name {
             font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
           }
 
           .product-subtitle {
-            font-size: 0.9rem;
+            text-transform: capitalize;
+            font-size: 0.85rem;
             color: $gray;
           }
         }
@@ -193,6 +194,7 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
       .serving-description {
         margin: 0;
         font-size: 0.9rem;
+        text-align: left;
         color: color.scale($gray, $lightness: -10%);
         line-height: 1.6;
       }
@@ -232,5 +234,34 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
   }
   .banquet-menu-duo {
     flex-direction: column;
+  }
+}
+
+// ——— Only for very small screens: stack title/number and price ———
+@media (max-width: 575px) {
+  .banquet-menu-card {
+    h2 {
+      flex-direction: column;        // stack the two flex children
+      align-items: flex-start;
+      font-size: 1rem;               // optional: slightly smaller
+      line-height: 1.2;
+    }
+    /* each child becomes its own column */
+    h2 > .menu-label,
+    h2 > .price {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    /* add spacing above the price */
+    h2 > .price {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;            // optional: shrink price
+    }
+    /* small tweak for the menu-number under the label */
+    h2 > .menu-label .menu-number {
+      margin-top: 0.25rem;
+      font-size: 0.9em;
+    }
   }
 }

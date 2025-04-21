@@ -3,6 +3,7 @@ import './BanquetMenu.scss';
 import { useTranslation } from 'react-i18next';
 import MenuNR1 from './MenuNR1.jsx';
 import MenuNR2 from './MenuNR2.jsx';
+import MenuNR3 from './MenuNR3.jsx';
 import ContactButton from '../../../../components/ContactButton.jsx';
 
 const BanquetMenu = () => {
@@ -23,52 +24,9 @@ const BanquetMenu = () => {
             ),
         },
         {
-            key: 'group30',
-            title: '30+ Persons (€50pp)',
-            content: (
-                <div className="banquet-menu-card">
-                    <h2>
-                        MENU 30+ PERSONS <span className="price">€50 / per person</span>
-                    </h2>
-                    <div className="menu-section">
-                        <h3>APPETIZERS</h3>
-                        <ul>
-                            <li>Vietnamese fresh spring rolls with peanut sauce</li>
-                            <li>Thai fish cakes with sweet chili sauce</li>
-                            <li>Tom kha gai soup (coconut chicken soup)</li>
-                            <li>Crispy wontons with minced pork and shrimp</li>
-                        </ul>
-                    </div>
-                    <div className="menu-section">
-                        <h3>MAIN COURSES</h3>
-                        <ul>
-                            <li>Massaman curry with beef and potatoes</li>
-                            <li>Pineapple fried rice with shrimp and cashews</li>
-                            <li>Pad see ew noodles with chicken and Chinese broccoli</li>
-                            <li>Stir-fried mixed vegetables in oyster sauce</li>
-                            <li>Crispy pork belly with holy basil</li>
-                            <li>Steamed sea bass with lime and garlic</li>
-                        </ul>
-                    </div>
-                    <div className="menu-section">
-                        <h3>SIDES</h3>
-                        <ul>
-                            <li>Jasmine rice</li>
-                            <li>Sticky rice</li>
-                            <li>Pickled vegetables</li>
-                        </ul>
-                    </div>
-                    <div className="menu-section">
-                        <h3>DESSERT</h3>
-                        <ul>
-                            <li>Mango sticky rice</li>
-                            <li>Thai tea crème brûlée</li>
-                            <li>Assorted tropical fruit platter</li>
-                            <li>Coconut tapioca pudding</li>
-                        </ul>
-                    </div>
-                </div>
-            ),
+            key: 'nr3',
+            title: `${t('events.banquet_menu.menu_nr3')}`,
+            content: <MenuNR3 />,
         },
     ];
 
@@ -85,7 +43,7 @@ const BanquetMenu = () => {
 
             <div className="tabs">
                 <div className="tab-list">
-                    {menus.map((m) => (
+                    {menus.map(m => (
                         <button
                             key={m.key}
                             className={m.key === active ? 'tab active' : 'tab'}
@@ -97,7 +55,7 @@ const BanquetMenu = () => {
                 </div>
                 <div className="tab-panels">
                     {menus.map(
-                        (m) =>
+                        m =>
                             m.key === active && (
                                 <div key={m.key} className="tab-panel">
                                     {m.content}
