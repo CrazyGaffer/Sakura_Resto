@@ -7,7 +7,7 @@ const MenuNR3 = () => {
     return (
         <div className="banquet-menu-card">
             <h2>
-                {t('events.banquet_menu.menu_nr3')} <span className="price">€61 / per person</span>
+                {t('events.banquet_menu.menu_nr3')} <span className="price">€61 / {t('events.banquet_menu.price')}</span>
             </h2>
 
             <div className="menu-section">

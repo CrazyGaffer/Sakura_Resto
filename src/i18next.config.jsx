@@ -89,7 +89,9 @@ const resources = {
                     subheading: "An Exceptional Banquet for Extraordinary Celebrations – We’ve Got Every Detail Covered",
                     menu_nr1: "MENU NR1",
                     menu_nr2: "MENU NR2",
+                    menu_nr2_selector: "NR2",
                     menu_nr3: "MENU NR3",
+                    price: "Per person",
                     drinks_title: "Drinks",
                     salads_title: "Salads",
                     appetizers_title: "Appetizers",
@@ -392,6 +394,7 @@ const resources = {
                     menu_nr2: "MENÜÜ NR2",
                     menu_nr3: "MENÜÜ NR3",
                     menu_nr2_selector: "NR2",
+                    price: "INIMESE KOHTA",
                     salads_title: "SALATID",
                     drinks_title: "JOOGID",
                     mains_title: "PEAROAD",
@@ -634,11 +637,13 @@ const resources = {
                     desserts_title: "Десерты",
                     menu_nr1: "МЕНЮ NR1",
                     menu_nr2: "МЕНЮ NR2",
+                    menu_nr2_selector: "NR2",
                     menu_nr3: "МЕНЮ NR3",
+                    price: "НА ЧЕЛОВЕКА",
                     dishes: {
                         pankoChickenSalad: {
                             name: "PANKO CHICKEN SALAD",
-                            subtitle: "салат с хрустящей курицей и пармезаном"
+                            subtitle: "Cалат с хрустящей курицей и пармезаном"
                         },
                         prawnCrunch: {
                             name: "PRAWN CRUNCH",

@@ -15,7 +15,7 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
   max-width: 1400px;
   margin: auto;
 
-  // HEADER
+  // HEADER (unchanged)
   .packages-header {
     flex: 0 0 100%;
     text-align: center;
@@ -65,28 +65,55 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
     }
   }
 
-  // Tabs interface
+  // Enhanced Tabs interface
   .tabs {
+    width: 100%;
+
     .tab-list {
       display: flex;
       justify-content: center;
-      margin-bottom: 1.5rem;
-      gap: 0.5rem;
+      margin-bottom: 2rem;
+      gap: 1.5rem;
+      position: relative;
 
       .tab {
-        background: $gray-light;
+        background: transparent;
         border: none;
         padding: 0.75rem 1.5rem;
-        margin-bottom: 1rem;
-        font-size: 1rem;
+        font-size: 1.1rem;
         cursor: pointer;
-        border-radius: 10px;
-        color: $gray;
-        transition: background 0.2s ease, color 0.2s ease;
+        color: color.scale($gray, $lightness: 10%);
+        position: relative;
+        transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        border-radius: 4px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background-color: $primary-color;
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          color: $primary-color;
+        }
 
         &.active {
-          background: $primary-color;
-          color: white;
+          color: $primary-color;
+          /* Instant weight change */
+          font-weight: 600;
+
+          &::after {
+            transform: scaleX(1);
+          }
         }
       }
     }
@@ -100,7 +127,7 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
     }
   }
 
-  // Duo layout
+  // Rest of the existing styles remain exactly the same
   .banquet-menu-duo {
     display: flex;
     gap: 2rem;
@@ -113,7 +140,6 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
     max-width: 600px;
   }
 
-  // Card styling
   .banquet-menu-card {
     background: #fff;
     border-radius: 12px;
@@ -127,7 +153,7 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;                  // allow wrap on narrow layouts
+      flex-wrap: wrap;
       text-transform: uppercase;
       font-size: 1.2rem;
       font-weight: 650;
@@ -137,7 +163,7 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
       margin-bottom: 2rem;
 
       .price {
-        margin-left: auto;             // push price to the right
+        margin-left: auto;
         color: $primary-color;
         font-size: 1rem;
         font-weight: 650;
@@ -176,7 +202,6 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
           }
 
           .product-subtitle {
-            text-transform: capitalize;
             font-size: 0.85rem;
             color: $gray;
           }
@@ -201,7 +226,6 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
     }
   }
 
-  // Footer
   .packages-footer {
     width: 100%;
     text-align: center;
@@ -214,7 +238,6 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
   }
 }
 
-// Fade‑in animation
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -226,39 +249,34 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
   }
 }
 
-// Responsive tweaks
 @media (max-width: 600px) {
   .tabs .tab-list .tab {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
   }
   .banquet-menu-duo {
     flex-direction: column;
   }
 }
 
-// ——— Only for very small screens: stack title/number and price ———
 @media (max-width: 575px) {
   .banquet-menu-card {
     h2 {
-      flex-direction: column;        // stack the two flex children
+      flex-direction: column;
       align-items: flex-start;
-      font-size: 1rem;               // optional: slightly smaller
+      font-size: 1rem;
       line-height: 1.2;
     }
-    /* each child becomes its own column */
     h2 > .menu-label,
     h2 > .price {
       display: flex;
       flex-direction: column;
       width: 100%;
     }
-    /* add spacing above the price */
     h2 > .price {
       margin-top: 0.5rem;
-      font-size: 0.85rem;            // optional: shrink price
+      font-size: 0.85rem;
     }
-    /* small tweak for the menu-number under the label */
     h2 > .menu-label .menu-number {
       margin-top: 0.25rem;
       font-size: 0.9em;
