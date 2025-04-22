@@ -1,0 +1,232 @@
+{
+  "navbar": {
+    "home": "Avaleht",
+    "about": "Meist",
+    "menu": "Menüü",
+    "events": "Üritused",
+    "contact": "Võta ühendust"
+  },
+  "home": {
+    "heading": "MITTE LIHTSALT JAAPANI RESTORAN",
+    "subtitle": "Koge fusioonmaitseid",
+    "content": "Kuigi meie inspiratsioon ammutab mõjutusi erinevatest Aasia köökidest, oleme uhked, et oleme palju enamat kui lihtsalt jaapani restoran. Meie kulinaariameistrid põimivad rikkaliku maitsete kanga, tähistades nii Aasia kui ka Euroopa kulinaarseid traditsioone, et luua tõeliselt ainulaadset einestamiskogemus.",
+    "bookATable": "Broneeri",
+    "orderNow": "Telli"
+  },
+  "about": {
+    "heading": "Meie lugu",
+    "subtitle": "Meist",
+    "subheading": "Omadused",
+    "content": "Koge Pan-Aasia kulinaaria traditsioonide ja kaasaegse stiili sulandumist, kus iga roog räägib mitmekesisest pärandist ja uuendusest. Meie filosoofia hõlmab ajaproovitud tehnikaid, mida ümber mõeldakse, et äratada teie meeli, segades autentsed maitsed kogu Aasias ning pakkudes loomingulisi esitusi. Hoolikalt valitud hooajalised koostisosad ja peenelt viimistletud detailid tagavad, et iga suutäis oleks sama meeldejääv kui õrn. Astu kulinaarsele teekonnale, mis ühendab traditsiooni ja kaasaegset innovatsiooni, pakkudes nautimist nii maitsemeelt kui ka silma.",
+    "features": {
+      "heading": "Miks inimesed meid valivad?",
+      "subheading": "Erakordne teenindus ja detailidele pühendumus, mis teeb kogu erinevuse!",
+      "freshFlavors": {
+        "title": "Värsked maitsed",
+        "description": "Kasutame hooajalisi koostisosi, et luua autentse maitsega roogasid."
+      },
+      "artisanCraft": {
+        "title": "Käsitöö kunst",
+        "description": "Roogades ühenduvad traditsioonilised tehnikad ja uuenduslik esitlus."
+      },
+      "culturalHarmony": {
+        "title": "Kultuuriline harmoonia",
+        "description": "Koge Aasia kultuuride harmoonilist kooslust igas suutäies."
+      }
+    },
+    "workingHours": {
+      "heading": "Tööaeg",
+      "subheading": "Broneeri oma laud juba täna, et nautida suurepärast söögielamust!",
+      "button_reservation": "Broneering",
+      "button_contact": "Võta ühendust",
+      "workingDays_1": "Esmaspäevast neljapäevani",
+      "workingDays_2": "Reede",
+      "workingDays_3": "Laupäev",
+      "workingDays_4": "Pühapäev",
+      "workingDays_short_1": "E - R",
+      "workingDays_short_2": "L - P"
+    },
+    "statistics": {
+      "heading_customers": "Päevased külastajad",
+      "heading_deliveries": "Kuu kohaletoimetamised",
+      "heading_feedback": "Positiivne tagasiside",
+      "heading_awards": "Auhinnad ja tunnustused"
+    }
+  },
+  "menu": {
+    "heading": "LÕUNAMENÜÜ",
+    "heading_2": "À la carte menüü",
+    "subtitle": "Menüü",
+    "content": "Naudi meie erakordset lõunasöögimenüüd, mis ühendab traditsioonilised maitsed kaasaegse lähenemisega. Meie hoolikalt kureeritud valik toob esile hooajalised koostisosad, innovatiivsed kulinaaria tehnikad ja kunstipärased serveerimised, mis lubavad unustamatut söögikogemust. Olgu su isu täidlase roa või kerge ampsu järele, meie lõunasöögimenüü pakub igale maitsele midagi lõõgastavas ja kutsuvas atmosfääris.",
+    "content_2": "Avasta meie à la carte valik, kus iga roog valmistatakse tellimuse alusel. Naudi mitmekesist valikut alates ajatutest klassikutest kuni innovatiivsete kulinaarsete loominguteni – kõik valmistatud värskimatest koostisosadest ja loomingulise lähenemisega, mis võimaldab sul oma eine vastavalt unikaalsele maitsele kohandada.",
+    "button": "Vaata menüüd"
+  },
+  "events": {
+    "heading": "Üritused",
+    "title": "Muuda oma üritus unustamatuks",
+    "content": "Korralda oma privaatüritus meie juures ning lase meie kogenud meeskonnal luua atmosfäär, mis ületab su ootusi. Olgu tegemist intiimse koosviibimise või suurejoonelise tähistamisega – meil on sulle sobivaim lahendus.",
+    "packages": {
+      "heading": "Peopaketid",
+      "subheading": "Meie hoolitseme detailide eest, sina naudi pidu – lõõgastu ning lase meil korraldada unustamatu tähistamine",
+      "title_1": "Põhiline",
+      "description_1": "Meie põhiline pakett pakub lihtsat, kuid meeldivat kogemust, mis sobib ideaalselt juhuslikeks koosviibimisteks.",
+      "title_2": "Premium",
+      "description_2": "Premium-pakett sisaldab lisafunktsioone ja täiustatud teenuseid, et luua tõeliselt meeldejääv üritus.",
+      "title_3": "Luksus",
+      "description_3": "Koge ülimat rafineeritust kohandatud kulinaarsete loomingute ja eksklusiivsete mugavustega."
+    },
+    "contact_text": "Üritusepaketi broneerimiseks või lisaküsimuste korral võtke palun ühendust meie meeskonnaga.",
+    "contact_button": { "text": "Võta meiega ühendust" },
+    "banquet_menu": {
+      "heading": "Banketimenüü",
+      "subheading": "Erakordne bankett erakordseteks tähistusteks – hoolitseme iga detaili eest",
+      "menu_nr1": "MENÜÜ NR1",
+      "menu_nr2": "MENÜÜ NR2",
+      "menu_nr2_selector": "NR2",
+      "menu_nr3": "MENÜÜ NR3",
+      "price": "INIMESE KOHTA",
+      "drinks_title": "JOOGID",
+      "salads_title": "SALATID",
+      "appetizers_title": "EELROAD",
+      "mains_title": "PEAROAD",
+      "sushi_title": "Sushi",
+      "desserts_title": "MAGUSTOIT",
+      "serving_note": "Kõik road serveeritakse samal ajal ja need kõik on jagamiseks",
+      "serving_note_2": "Eelroad serveeritakse samal ajal ja need kõik on jagamiseks. Pearooga ja magustoit serveeritakse personaalselt ettetellimisel",
+      "serving_note_3": "Eelroad serveeritakse samal ajal ja need kõik on jagamiseks. Pearooga ja magustoit serveeritakse personaalselt ettetellimisel",
+      "dishes": {
+        "pankoChickenSalad": {
+          "name": "salat krõbe kana ja parmesani juustuga",
+          "subtitle": "Salat koos krõbeda kana ja parmesani juustuga"
+        },
+        "prawnCrunch": {
+          "name": "KRÕBEDAD KREVETID SALATIGA",
+          "subtitle": "Krõbeda praetud krevetid salati, teriyaki ja kimchi majojaga"
+        },
+        "krupuk": {
+          "name": "KRUPUK",
+          "subtitle": "Õhulised krevetikrõpsud wasabi kastmega"
+        },
+        "gyoza": {
+          "name": "GYOZA",
+          "subtitle": "Jaapani pelmeenid kanaga"
+        },
+        "californiaSushi": {
+          "name": "CALIFORNIA SUSHI",
+          "subtitle": "Lumekrabi, avokaado, kurk, valge seesam"
+        },
+        "philadelphiaSushi": {
+          "name": "PHILADELPHIA SUSHI",
+          "subtitle": "Toorjuust, lõhe, kurk, valge seesam"
+        },
+        "prawnMakiSushi": {
+          "name": "PRAWN MAKI SUSHI",
+          "subtitle": "Tempura krevetid, terav kaste, toorjuust, kurk, masago"
+        }
+      },
+      "menu_nr3_dishes": {
+        "tataki": {
+          "name": "TATAKI",
+          "subtitle": "Põletatud lõhe/tuunikala viilud vürtsika ponzu kastmega"
+        },
+        "edamame": {
+          "name": "EDAMAME",
+          "subtitle": "Aurutatud sojaoad meresoolaga"
+        },
+        "wasabiPrawns": {
+          "name": "WASABI PRAWNS",
+          "subtitle": "Krõbedad tempura krevetid koorese wasabikastmes"
+        },
+        "nigiriSelection": {
+          "name": "NIGIRI SELECTION",
+          "subtitle": "Nigiri koka valikul"
+        },
+        "sashimi": {
+          "name": "SASHIMI",
+          "subtitle": "Lõhe, tuunikala, angerjas"
+        },
+        "spiderSushi": {
+          "name": "SPIDER SUSHI",
+          "subtitle": "Pehme kestaga krabi, roheline sibul, kurk, masago, salat, wasabi kaste"
+        },
+        "ribs": {
+          "name": "RIBS",
+          "subtitle": "Teriyaki searibid friikartuliga"
+        },
+        "prawnsMain": {
+          "name": "PRAWNS",
+          "subtitle": "Värske salat küüslaugu krevetidega"
+        },
+        "salmon": {
+          "name": "SALMON",
+          "subtitle": "Praetud lõhefilee, avokaado kreem ja sushi riis"
+        },
+        "veganPoke": {
+          "name": "VEGAN POKE",
+          "subtitle": "Sushi riis, värske salat, köögiviljad, oad, kastmed ja krõbe tofu"
+        },
+        "mochi": {
+          "name": "MOCHI",
+          "subtitle": "Jaapani magustoit, mis on valmistatud magusast tambitud riisitaignast, mis on mahitud jäätise ümber"
+        },
+        "macha": {
+          "name": "MACHA",
+          "subtitle": "Rohelise tee‑mousse kook karamelli ja küpsistega"
+        },
+        "kook": {
+          "name": "KOOK",
+          "subtitle": "Koogi tellimine kokkuleppel"
+        },
+        "kannuvesi": {
+          "name": "KANNUVESI"
+        },
+        "alcohol": {
+          "name": "ALKOHOL KOKKULEPPEL"
+        }
+      }
+    }
+  },
+  "testimonials": {
+    "subtitle": "Tagasiside",
+    "heading": "Mida meie kliendid ütlevad"
+  },
+  "contact": {
+    "heading": "Võta ühendust",
+    "subheading": "Kas sul on küsimus või vajad broneeringut? Meil oleks hea meel sinust kuulda!",
+    "subtitle": "Võta meiega ühendust",
+    "location": {
+      "title": "Meie asukoht",
+      "address": "Sakura Resto\nPärnu mnt. 32\n10141 Tallinn"
+    },
+    "email": {
+      "title": "Kirjuta meile",
+      "address": "info@sakuraresto.ee"
+    },
+    "phone": {
+      "title": "Helista meile",
+      "number": "+372 5486 0852"
+    }
+  },
+  "parking": {
+    "title": "Kliendi parkimine",
+    "description": "Alusta parkimist X6 Pärnu mnt 43A parklas Snabb'i rakenduse kaudu ning sisesta promokood SAKURA15, et saada automaatselt 15% soodustust."
+  },
+  "footer": {
+    "workingHours": "Tööaeg",
+    "monThu": "E-N: 11:00 – 23:00",
+    "fri": "R: 11:00 – 00:00",
+    "sat": "L: 12:00 – 00:00",
+    "sun": "P: 12:00 – 22:00",
+    "contact": "Võta ühendust",
+    "email": "info@sakuraresto.ee",
+    "phone": "+372 5486 0852",
+    "address": "Pärnu mnt 32, Tallinn",
+    "followUs": "Jälgi meid",
+    "quickLinks": "Kiirlinkid",
+    "home": "Avaleht",
+    "menu": "Menüü",
+    "about": "Meist",
+    "events": "Üritused",
+    "rightsReserved": "Kõik õigused kaitstud | Developed by CrazyGaffer"
+  }
+}

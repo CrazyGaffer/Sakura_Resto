@@ -308,3 +308,14 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
     }
   }
 }
+
+@media (min-width: 576px) {
+  .banquet-menu-card {
+    .shared-experience-banner {
+      .serving-description {
+        align-items: flex-start;
+        text-align: left;
+      }
+    }
+  }
+}

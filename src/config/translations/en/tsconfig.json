@@ -1,0 +1,298 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "menu": "Menu",
+    "events": "Events",
+    "contact": "Contact"
+  },
+  "home": {
+    "heading": "NOT JUST ANOTHER JAPANESE RESTAURANT",
+    "subtitle": "Experience Fusion Flavors",
+    "content": "While our inspiration draws from various Asian influences, we pride ourselves on being much more than just a japanese restaurant. Our culinary artisans weave together a rich tapestry of flavors, celebrating the diversity of asia and european culinary traditions, to create a truly unique dinning experience.",
+    "bookATable": "Reserve a Table",
+    "orderNow": "Order Takeaway"
+  },
+  "about": {
+    "heading": "Our story",
+    "subheading": "Features",
+    "subtitle": "About us",
+    "content": "Experience the fusion of Pan-Asian culinary traditions with modern flair, where each dish tells a story of diverse heritage and innovation. Our philosophy embraces time-honored techniques reimagined to awaken your senses, blending authentic flavors from across Asia with inventive presentations. Carefully selected seasonal ingredients and refined details ensure every bite is as memorable as it is exquisite. Embark on a culinary journey that unites tradition with contemporary innovation to delight both the palate and the eye.",
+    "features": {
+      "heading": "Why people choose us?",
+      "subheading": "Exceptional service and attention to detail that makes all the difference!",
+      "freshFlavors": {
+        "title": "Fresh Flavors",
+        "description": "We use seasonal ingredients to create dishes full of authentic taste."
+      },
+      "artisanCraft": {
+        "title": "Artisan Craft",
+        "description": "Our dishes blend traditional techniques with innovative presentation."
+      },
+      "culturalHarmony": {
+        "title": "Cultural Harmony",
+        "description": "Experience a harmonious blend of Asian cultures in every bite."
+      }
+    },
+    "workingHours": {
+      "heading": "Working Hours",
+      "subheading": "Reserve your table now for an exquisite dining experience!",
+      "button_reservation": "Reservation",
+      "button_contact": "Contact us",
+      "workingDays_1": "Monday to Thursday",
+      "workingDays_2": "Friday",
+      "workingDays_3": "Saturday",
+      "workingDays_4": "Sunday",
+      "workingDays_short_1": "Mon - Fri",
+      "workingDays_short_2": "Sat - Sun"
+    },
+    "statistics": {
+      "heading_customers": "Visitors Daily",
+      "heading_deliveries": "Deliveries Monthly",
+      "heading_feedback": "Positive Feedback",
+      "heading_awards": "Awards & Honors"
+    }
+  },
+  "menu": {
+    "heading": "Lunch Menu",
+    "heading_2": "À LA CARTE MENU",
+    "subtitle": "Menu",
+    "content": "Indulge in our exquisite lunch menu featuring a blend of traditional flavors with a modern twist. Our carefully curated selection highlights seasonal ingredients, innovative culinary techniques, and artful presentations that promise a memorable dining experience. Whether you're craving a hearty dish or a light bite, our lunch menu offers something for every palate in a relaxed, inviting atmosphere.",
+    "content_2": "Discover our à la carte selection, where each dish is prepared to order. Enjoy a diverse range of options from timeless classics to innovative culinary creations, all crafted with the freshest ingredients and a creative flair that lets you tailor your meal to your unique taste.",
+    "button": "See Menu"
+  },
+  "events": {
+    "heading": "Events",
+    "title": "Make Your Event Unforgettable",
+    "content": "Host your private event with us and let our experienced team create an atmosphere that exceeds your expectations. Whether it’s an intimate gathering or a grand celebration, we have the perfect setting for you.",
+    "packages": {
+      "heading": "Party Packages",
+      "subheading": "We’ll Handle the Details, You Bring the Fun – Relax, Unwind, and Let Us Create an Unforgettable Celebration",
+      "title_1": "Basic",
+      "description_1": "Our basic package offers a simple yet delightful experience, perfect for casual gatherings.",
+      "title_2": "Premium",
+      "description_2": "The premium package includes additional features and enhanced services for a truly memorable event.",
+      "title_3": "Luxury",
+      "description_3": "Experience the ultimate in sophistication with bespoke culinary creations and exclusive amenities."
+    },
+    "contact_text": "To reserve an event package or for further inquiries, please contact our dedicated team.",
+    "contact_button": {
+      "text": "Contact us"
+    },
+    "banquet_menu": {
+      "heading": "Banquet Menu",
+      "subheading": "An Exceptional Banquet for Extraordinary Celebrations – We’ve Got Every Detail Covered",
+      "menu_nr1": "MENU NR1",
+      "menu_nr2": "MENU NR2",
+      "menu_nr2_selector": "NR2",
+      "menu_nr3": "MENU NR3",
+      "price": "Per person",
+      "drinks_title": "Drinks",
+      "salads_title": "Salads",
+      "appetizers_title": "Appetizers",
+      "mains_title": "MAIN COURSES",
+      "sushi_title": "Sushi",
+      "desserts_title": "Desserts",
+      "serving_note": "All dishes are served at the same time and are all for sharing",
+      "serving_note_2": "Appetizers are served at the same time and are all for sharing. Main course and dessert is served personally by pre-order",
+      "serving_note_3": "Appetizers are served at the same time and are all for sharing. Main course and dessert is served personally by pre-order",
+      "dishes": {
+        "pankoChickenSalad": {
+          "name": "panko chicken salad",
+          "subtitle": "Salad with crispy chicken and parmesan cheese"
+        },
+        "prawnCrunch": {
+          "name": "PRAWN CRUNCH",
+          "subtitle": "Crispy fried prawns with salad, teriyaki and kimchi mayo"
+        },
+        "krupuk": {
+          "name": "KRUPUK",
+          "subtitle": "Airy prawn chips with wasabi sauce"
+        },
+        "gyoza": {
+          "name": "GYOZA",
+          "subtitle": "Japanese dumplings with chicken"
+        },
+        "californiaSushi": {
+          "name": "CALIFORNIA SUSHI",
+          "subtitle": "Snowcrab, avocado, cucumber, white sesame"
+        },
+        "philadelphiaSushi": {
+          "name": "PHILADELPHIA SUSHI",
+          "subtitle": "Cream cheese, salmon, cucumber, white sesame"
+        },
+        "prawnMakiSushi": {
+          "name": "PRAWN MAKI SUSHI",
+          "subtitle": "Tempura prawns, spicy sauce, cream cheese, cucumber, masago"
+        }
+      },
+      "menu_nr2_dishes": {
+        "dynamiteChicken": {
+          "name": "DYNAMITE CHICKEN",
+          "subtitle": "Crispy chicken with dynamite sauce"
+        },
+        "prawnCrunch": {
+          "name": "PRAWN CRUNCH",
+          "subtitle": "Crispy fried prawns with salad, teriyaki and kimchi mayo"
+        },
+        "parmigianoSarada": {
+          "name": "PARMIGIANO SARADA",
+          "subtitle": "Green salad with avocado and edamame, parmigiano and wasabi sauce"
+        },
+        "salmonBite": {
+          "name": "SALMON BITE",
+          "subtitle": "Bruschetta with salted salmon tar tar and cream cheese"
+        },
+        "snowcrabCornSalad": {
+          "name": "SNOWCRAB AND CORN SALAD",
+          "subtitle": "Salad with rice, corn, cucumber and snowcrab"
+        },
+        "sushiAppetizer": {
+          "name": "SUSHI",
+          "subtitle": "Sushi assortment with salmon, snowcrab and prawns"
+        },
+        "ribs": {
+          "name": "RIBS",
+          "subtitle": "Teriyaki pork ribs with fries"
+        },
+        "prawns": {
+          "name": "PRAWNS",
+          "subtitle": "Fresh salad with garlic prawns"
+        },
+        "salmonMain": {
+          "name": "SALMON",
+          "subtitle": "Fried salmon fillet, avocado cream and sushi rice"
+        },
+        "veganPoke": {
+          "name": "VEGAN POKE",
+          "subtitle": "Sushi rice, lettuce, vegetables, beans, sauces and crispy tofu"
+        },
+        "sushiMain": {
+          "name": "SUSHI",
+          "subtitle": "Philadelphia sushi with fresh salmon and salmon nigiri"
+        },
+        "mochi": {
+          "name": "MOCHI",
+          "subtitle": "Japanese Rice Cake"
+        },
+        "macha": {
+          "name": "MACHA",
+          "subtitle": "Green Tea Flavor"
+        },
+        "kook": {
+          "name": "KOOK",
+          "subtitle": "Traditional Korean Cookie"
+        },
+        "kannuvesi": {
+          "name": "KANNUVESI"
+        },
+        "alcohol": {
+          "name": "ALCOHOL ON AGREEMENT"
+        }
+      },
+      "menu_nr3_dishes": {
+        "tataki": {
+          "name": "TATAKI",
+          "subtitle": "Flamed salmon/tuna slices with spicy ponzu"
+        },
+        "edamame": {
+          "name": "EDAMAME",
+          "subtitle": "Steamed soybeans with sea salt"
+        },
+        "wasabiPrawns": {
+          "name": "WASABI PRAWNS",
+          "subtitle": "Crispy tempura prawns in creamy wasabi sauce"
+        },
+        "nigiriSelection": {
+          "name": "NIGIRI SELECTION",
+          "subtitle": "Nigiri on chef's choice"
+        },
+        "sashimi": {
+          "name": "SASHIMI",
+          "subtitle": "Salmon, tuna, eel"
+        },
+        "spiderSushi": {
+          "name": "SPIDER SUSHI",
+          "subtitle": "Soft shell crab, green onion, cucumber, masago, salad, wasabi sauce"
+        },
+        "ribs": {
+          "name": "RIBS",
+          "subtitle": "Teriyaki pork ribs with fries"
+        },
+        "prawnsMain": {
+          "name": "PRAWNS",
+          "subtitle": "Fresh salad with garlic prawns"
+        },
+        "salmon": {
+          "name": "SALMON",
+          "subtitle": "Fried salmon fillet, avocado cream and sushi rice"
+        },
+        "veganPoke": {
+          "name": "VEGAN POKE",
+          "subtitle": "Sushi rice, lettuce, vegetables, beans, sauces and crispy tofu"
+        },
+        "mochi": {
+          "name": "MOCHI",
+          "subtitle": "Japanese dessert made from a sweet pounded rice dough wrapped around ice cream"
+        },
+        "macha": {
+          "name": "MACHA",
+          "subtitle": "Green tea mousse cake with caramel and cookies"
+        },
+        "kook": {
+          "name": "KOOK",
+          "subtitle": "Cake order on agreement"
+        },
+        "kannuvesi": {
+          "name": "KANNUVESI"
+        },
+        "alcohol": {
+          "name": "ALCOHOL ON AGREEMENT"
+        }
+      }
+    }
+  },
+  "testimonials": {
+    "subtitle": "Testimonials",
+    "heading": "What Our Clients Say"
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "subheading": "Have a question or need a reservation? We’d love to hear from you!",
+    "subtitle": "Contact Us",
+    "location": {
+      "title": "Our Location",
+      "address": "Sakura Resto\nPärnu mnt. 32\n10141 Tallinn"
+    },
+    "email": {
+      "title": "Email Us",
+      "address": "info@sakuraresto.ee"
+    },
+    "phone": {
+      "title": "Call Us",
+      "number": "+372 5486 0852"
+    }
+  },
+  "parking": {
+    "title": "Customer Parking",
+    "description": "Start parking at X6 Pärnu mnt 43A using the Snabb app and enter the promo code SAKURA15 to automatically receive a 15% discount."
+  },
+  "footer": {
+    "workingHours": "Working Hours",
+    "monThu": "Mon-Thu: 11 AM – 11 PM",
+    "fri": "Fri: 11 AM – 12 AM",
+    "sat": "Sat: 12 PM – 12 AM",
+    "sun": "Sun: 12 PM – 10 PM",
+    "contact": "Contact",
+    "email": "info@sakuraresto.ee",
+    "phone": "+372 5486 0852",
+    "address": "Pärnu mnt 32, Tallinn",
+    "followUs": "Follow Us",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "menu": "Menu",
+    "about": "About",
+    "events": "Events",
+    "rightsReserved": "All rights reserved | Developed by CrazyGaffer"
+  }
+}
