@@ -206,23 +206,27 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
 
     .shared-experience-banner {
       background: rgba($primary-color, 0.08);
-      border-left: 4px solid $primary-color;
-      padding: 1.5rem;
+      border: 2px solid $primary-color;
       border-radius: 8px;
-      margin-top: 1.5rem;
+      padding: 1.5rem;
+      position: relative;
+      margin: 2rem 0;
 
       .serving-description {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
         margin: 0;
-        font-size: 0.9rem;
-        text-align: left;
-        color: color.scale($gray, $lightness: -10%);
-        line-height: 1.6;
 
         .notice-label {
-          font-size: 1.1rem;      // label size
-          color: $primary-color;  // label color
-          font-weight: 700;       // label weight
-          margin-right: 0 !important; // no gap after label
+          background: $primary-color;
+          color: white;
+          font-weight: 700;
+          padding: 0.3em 0.6em;
+          border-radius: 4px;
+          margin-right: 0;
+          font-size: 0.9em;
+          line-height: 1.4;
         }
       }
     }
