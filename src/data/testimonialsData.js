@@ -1,26 +1,26 @@
 export const testimonialsData = [
     {
-        text: "The event was a hit! Every detail was flawlessly executed, and the atmosphere was just perfect.",
-        author: "- John Doe"
+        text: "Phenomenal sushi; fresh clean and well balanced rolls. Soy sauce and wasabi were great as well which seems hard to find in the Nordic and Baltic countries. Good location, and servers were nice and friendly. Went early for lunch. It was packed by 12:15. Prices are very reasonable, especially for the quality and quantity of fish in each roll. 10/10 recommend going. I’ll be back for dinner!",
+        author: "- Peter Farsai"
     },
     {
-        text: "Our celebration exceeded all expectations. The service and quality were top-notch.",
-        author: "- Jane Smith"
+        text: "I came to have some lunch, the location was great and atmosphere good. The restaurant was clean and service friendly.",
+        author: "- I K"
     },
     {
-        text: "I couldn’t have asked for a more memorable experience. Every moment was beautifully orchestrated.",
-        author: "- Sarah Lee"
+        text: "This restaurant is pretty good. We went there for the dinner. The food, including Sushi, is very delicous. The waitress is very nice and friendly.",
+        author: "- James L"
     },
     {
-        text: "From start to finish, the team delivered excellence. Our guests are still talking about it!",
-        author: "- Mark Johnson"
+        text: "Food was amazing! Value for money. The lighting could have been slightly darker for better atmosphere but all in all a great experience.",
+        author: "- Jaakko Timonen"
     },
     {
-        text: "A true masterpiece of event planning – creative, elegant, and flawlessly executed.",
-        author: "- Emily Davis"
+        text: "Nice place, good service and tasty food!",
+        author: "- John Malkovich"
     },
     {
-        text: "Aitäh! Väga hea sushi oli, tulen ka järgmine kord kui võimalus tekib. Päikest ☀️",
-        author: "- Mark"
+        text: "Amazing place! Great food and very friendly staff!!! Love going there for lunch, highly recommended!😊😊😊",
+        author: "- Erika Babjak"
     }
 ];

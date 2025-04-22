@@ -96,11 +96,17 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
           height: 2px;
           background-color: $primary-color;
           transform: scaleX(0);
-          transition: transform 0.3s ease;
+          opacity: 0;
+          transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
         &:hover {
           color: $primary-color;
+        }
+
+        &:not(.active):hover::after {
+          transform: scaleX(1);
+          opacity: 0.5;
         }
 
         &.active {
@@ -109,6 +115,7 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
 
           &::after {
             transform: scaleX(1);
+            opacity: 1;
           }
         }
       }
@@ -224,7 +231,6 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
           font-weight: 700;
           padding: 0.3em 0.6em;
           border-radius: 4px;
-          margin-right: 0;
           font-size: 0.9em;
           line-height: 1.4;
         }
@@ -283,9 +289,22 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
       margin-top: 0.5rem;
       font-size: 0.85rem;
     }
-    h2 > .menu-label .menu-number {
-      margin-top: 0.25rem;
-      font-size: 0.9em;
+    .shared-experience-banner {
+      padding: 1rem;
+      margin: 1.5rem 0;
+
+      .serving-description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+
+        .notice-label {
+          margin: 0 auto;
+          font-size: 0.8em;
+          padding: 0.25em 0.5em;
+        }
+      }
     }
   }
 }
