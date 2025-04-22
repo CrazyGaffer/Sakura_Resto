@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import './BanquetMenu.scss';
+import ServingNotice from "./ServingNotice.jsx";
 
 const MenuNR3 = () => {
     const { t } = useTranslation();
@@ -154,13 +155,7 @@ const MenuNR3 = () => {
                 </ul>
             </div>
 
-            <div className="shared-experience-banner">
-                <div className="serving-notice">
-                    <p className="serving-description">
-                        {t('events.banquet_menu.serving_note_3')}
-                    </p>
-                </div>
-            </div>
+            <ServingNotice messageKey="events.banquet_menu.serving_note_3" />
         </div>
     );
 };

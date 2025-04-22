@@ -1,6 +1,5 @@
 @use "sass:color";
 
-// Brand colors
 $primary-color: #e91e63;
 $gray: #888;
 $gray-light: #f2f2f2;
@@ -15,7 +14,6 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
   max-width: 1400px;
   margin: auto;
 
-  // HEADER (unchanged)
   .packages-header {
     flex: 0 0 100%;
     text-align: center;
@@ -65,7 +63,6 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
     }
   }
 
-  // Enhanced Tabs interface
   .tabs {
     width: 100%;
 
@@ -108,7 +105,6 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
 
         &.active {
           color: $primary-color;
-          /* Instant weight change */
           font-weight: 600;
 
           &::after {
@@ -127,7 +123,6 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
     }
   }
 
-  // Rest of the existing styles remain exactly the same
   .banquet-menu-duo {
     display: flex;
     gap: 2rem;
@@ -222,6 +217,13 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
         text-align: left;
         color: color.scale($gray, $lightness: -10%);
         line-height: 1.6;
+
+        .notice-label {
+          font-size: 1.1rem;      // label size
+          color: $primary-color;  // label color
+          font-weight: 700;       // label weight
+          margin-right: 0 !important; // no gap after label
+        }
       }
     }
   }

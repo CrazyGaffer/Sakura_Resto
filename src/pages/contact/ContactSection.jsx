@@ -1,9 +1,10 @@
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 import './ContactSection.scss';
 import { useTranslation } from "react-i18next";
+import {GOOGLE_MAP_EMBED_URL} from "../../config/mapConfig.js";
 
 const ContactSection = () => {
-    const location = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1900.7053084032038!2d24.75094581621364!3d59.43695528189764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692930c485fa9c3%3A0xd0bb2a8d4e7688d3!2sP%C3%A4rnu%20mnt%2032%2C%2010141%20Tallinn%2C%20Estonia!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus";
+    const location = GOOGLE_MAP_EMBED_URL;
     const { t } = useTranslation();
 
     const highlightText = (text) => {

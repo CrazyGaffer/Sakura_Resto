@@ -104,31 +104,31 @@ const resources = {
                     dishes: {
                         pankoChickenSalad: {
                             name: "panko chicken salad",
-                            subtitle: "salad with crispy chicken and parmesan cheese"
+                            subtitle: "Salad with crispy chicken and parmesan cheese"
                         },
                         prawnCrunch: {
                             name: "PRAWN CRUNCH",
-                            subtitle: "crispy fried prawns with salad, teriyaki and kimchi mayo"
+                            subtitle: "Crispy fried prawns with salad, teriyaki and kimchi mayo"
                         },
                         krupuk: {
                             name: "KRUPUK",
-                            subtitle: "airy prawn chips with wasabi sauce"
+                            subtitle: "Airy prawn chips with wasabi sauce"
                         },
                         gyoza: {
                             name: "GYOZA",
-                            subtitle: "japanese dumplings with chicken"
+                            subtitle: "Japanese dumplings with chicken"
                         },
                         californiaSushi: {
                             name: "CALIFORNIA SUSHI",
-                            subtitle: "snowcrab, avocado, cucumber, white sesame"
+                            subtitle: "Snowcrab, avocado, cucumber, white sesame"
                         },
                         philadelphiaSushi: {
                             name: "PHILADELPHIA SUSHI",
-                            subtitle: "cream cheese, salmon, cucumber, white sesame"
+                            subtitle: "Cream cheese, salmon, cucumber, white sesame"
                         },
                         prawnMakiSushi: {
                             name: "PRAWN MAKI SUSHI",
-                            subtitle: "tempura prawns, spicy sauce, cream cheese, cucumber, masago"
+                            subtitle: "Tempura prawns, spicy sauce, cream cheese, cucumber, masago"
                         }
                     },
                     menu_nr2_dishes: {
@@ -201,55 +201,55 @@ const resources = {
                     menu_nr3_dishes: {
                         tataki: {
                             name: "TATAKI",
-                            subtitle: "flamed salmon/tuna slices with spicy ponzu"
+                            subtitle: "Flamed salmon/tuna slices with spicy ponzu"
                         },
                         edamame: {
                             name: "EDAMAME",
-                            subtitle: "steamed soybeans with sea salt"
+                            subtitle: "Steamed soybeans with sea salt"
                         },
                         wasabiPrawns: {
                             name: "WASABI PRAWNS",
-                            subtitle: "crispy tempura prawns in creamy wasabi sauce"
+                            subtitle: "Crispy tempura prawns in creamy wasabi sauce"
                         },
                         nigiriSelection: {
                             name: "NIGIRI SELECTION",
-                            subtitle: "nigiri on chef's choice"
+                            subtitle: "Nigiri on chef's choice"
                         },
                         sashimi: {
                             name: "SASHIMI",
-                            subtitle: "salmon, tuna, eel"
+                            subtitle: "Salmon, tuna, eel"
                         },
                         spiderSushi: {
                             name: "SPIDER SUSHI",
-                            subtitle: "soft shell crab, green onion, cucumber, masago, salad, wasabi sauce"
+                            subtitle: "Soft shell crab, green onion, cucumber, masago, salad, wasabi sauce"
                         },
                         ribs: {
                             name: "RIBS",
-                            subtitle: "teriyaki pork ribs with fries"
+                            subtitle: "Teriyaki pork ribs with fries"
                         },
                         prawnsMain: {
                             name: "PRAWNS",
-                            subtitle: "fresh salad with garlic prawns"
+                            subtitle: "Fresh salad with garlic prawns"
                         },
                         salmon: {
                             name: "SALMON",
-                            subtitle: "fried salmon fillet, avocado cream and sushi rice"
+                            subtitle: "Fried salmon fillet, avocado cream and sushi rice"
                         },
                         veganPoke: {
                             name: "VEGAN POKE",
-                            subtitle: "sushi rice, lettuce, vegetables, beans, sauces and crispy tofu"
+                            subtitle: "Sushi rice, lettuce, vegetables, beans, sauces and crispy tofu"
                         },
                         mochi: {
                             name: "MOCHI",
-                            subtitle: "japanese dessert made from a sweet pounded rice dough wrapped around ice cream"
+                            subtitle: "Japanese dessert made from a sweet pounded rice dough wrapped around ice cream"
                         },
                         macha: {
                             name: "MACHA",
-                            subtitle: "green tea mousse cake with caramel and cookies"
+                            subtitle: "Green tea mousse cake with caramel and cookies"
                         },
                         kook: {
                             name: "KOOK",
-                            subtitle: "cake order on agreement"
+                            subtitle: "Cake order on agreement"
                         },
                         kannuvesi: {
                             name: "KANNUVESI"
@@ -407,85 +407,149 @@ const resources = {
                     dishes: {
                         pankoChickenSalad: {
                             name: "salat krõbe kana ja parmesani juustuga",
-                            subtitle: "salat koos krõbeda kana ja parmesani juustuga"
+                            subtitle: "Salat koos krõbeda kana ja parmesani juustuga"
                         },
                         prawnCrunch: {
                             name: "KRÕBEDAD KREVETID SALATIGA",
-                            subtitle: "krõbeda praetud krevetid salati, teriyaki ja kimchi majojaga"
+                            subtitle: "Krõbeda praetud krevetid salati, teriyaki ja kimchi majojaga"
                         },
                         krupuk: {
                             name: "KRUPUK",
-                            subtitle: "õhulised krevetikrõpsud wasabi kastmega"
+                            subtitle: "Õhulised krevetikrõpsud wasabi kastmega"
                         },
                         gyoza: {
                             name: "GYOZA",
-                            subtitle: "jaapani pelmeenid kanaga"
+                            subtitle: "Jaapani pelmeenid kanaga"
                         },
                         californiaSushi: {
                             name: "CALIFORNIA SUSHI",
-                            subtitle: "lumekrabi, avokaado, kurk, valge seesam"
+                            subtitle: "Lumekrabi, avokaado, kurk, valge seesam"
                         },
                         philadelphiaSushi: {
                             name: "PHILADELPHIA SUSHI",
-                            subtitle: "toorjuust, lõhe, kurk, valge seesam"
+                            subtitle: "Toorjuust, lõhe, kurk, valge seesam"
                         },
                         prawnMakiSushi: {
                             name: "PRAWN MAKI SUSHI",
-                            subtitle: "tempura krevetid, terav kaste, toorjuust, kurk, masago"
+                            subtitle: "Tempura krevetid, terav kaste, toorjuust, kurk, masago"
+                        }
+                    },
+                    menu_nr2_dishes: {
+                        dynamiteChicken: {
+                            name: "DYNAMITE CHICKEN",
+                            subtitle: "Krõbekana terava kastmega"
+                        },
+                        prawnCrunch: {
+                            name: "PRAWN CRUNCH",
+                            subtitle: "Krõbedad krevetid salati, teriyaki ja kimchi majojaga"
+                        },
+                        parmigianoSarada: {
+                            name: "PARMIGIANO SARADA",
+                            subtitle: "Roheline salat, avokaado ja sojaoad maitsestatud parmesani ja wasabi kastmega"
+                        },
+                        salmonBite: {
+                            name: "SALMON BITE",
+                            subtitle: "Bruschetta soolalõhe tar tar ja toorjuustuga"
+                        },
+                        snowcrabCornSalad: {
+                            name: "SNOWCRAB AND CORN SALAD",
+                            subtitle: "Salat riisi, maisi, kurgi ja lumekrabiga"
+                        },
+                        sushiAppetizer: {
+                            name: "SUSHI",
+                            subtitle: "Sushi assortii lõhe, lumekrabi ja krevetidega"
+                        },
+                        ribs: {
+                            name: "RIBS",
+                            subtitle: "Teriyaki searibid friikartuliga"
+                        },
+                        prawns: {
+                            name: "PRAWNS",
+                            subtitle: "Värske salat küüslaugu krevetidega"
+                        },
+                        salmonMain: {
+                            name: "SALMON",
+                            subtitle: "Praetud lõhefilee, avokaado kreem ja sushi riis"
+                        },
+                        veganPoke: {
+                            name: "VEGAN POKE",
+                            subtitle: "Sushi riis, värske salat, köögiviljad, oad, kastmed ja krõbe tofu"
+                        },
+                        sushiMain: {
+                            name: "SUSHI",
+                            subtitle: "Philadelphia sushi värske lõhega ja lõhe nigiri"
+                        },
+                        mochi: {
+                            name: "MOCHI",
+                            subtitle: "Jaapani magustoit, mis on valmistatud magusast tambitud riisitaignast, mis on mahitud jäätise ümber"
+                        },
+                        macha: {
+                            name: "MACHA",
+                            subtitle: "Rohelise tee‑mousse kook karamelli ja küpsistega"
+                        },
+                        kook: {
+                            name: "KOOK",
+                            subtitle: "Koogi tellimine kokkuleppel"
+                        },
+                        kannuvesi: {
+                            name: "KANNUVESI"
+                        },
+                        alcohol: {
+                            name: "ALCOHOL ON AGREEMENT"
                         }
                     },
                     menu_nr3_dishes: {
                         tataki: {
                             name: "TATAKI",
-                            subtitle: "põletatud lõhe/tuunikala viilud vürtsika ponzu kastmega"
+                            subtitle: "Põletatud lõhe/tuunikala viilud vürtsika ponzu kastmega"
                         },
                         edamame: {
                             name: "EDAMAME",
-                            subtitle: "aurutatud sojaoad meresoolaga"
+                            subtitle: "Aurutatud sojaoad meresoolaga"
                         },
                         wasabiPrawns: {
                             name: "WASABI PRAWNS",
-                            subtitle: "krõbedad tempura krevetid koorese wasabikastmes"
+                            subtitle: "Krõbedad tempura krevetid koorese wasabikastmes"
                         },
                         nigiriSelection: {
                             name: "NIGIRI SELECTION",
-                            subtitle: "nigiri koka valikul"
+                            subtitle: "Nigiri koka valikul"
                         },
                         sashimi: {
                             name: "SASHIMI",
-                            subtitle: "lõhe, tuunikala, angerjas"
+                            subtitle: "Lõhe, tuunikala, angerjas"
                         },
                         spiderSushi: {
                             name: "SPIDER SUSHI",
-                            subtitle: "pehme kestaga krabi, roheline sibul, kurk, masago, salat, wasabi kaste"
+                            subtitle: "Pehme kestaga krabi, roheline sibul, kurk, masago, salat, wasabi kaste"
                         },
                         ribs: {
                             name: "RIBS",
-                            subtitle: "teriyaki searibid friikartuliga"
+                            subtitle: "Teriyaki searibid friikartuliga"
                         },
                         prawnsMain: {
                             name: "PRAWNS",
-                            subtitle: "värske salat küüslaugu krevetidega"
+                            subtitle: "Värske salat küüslaugu krevetidega"
                         },
                         salmon: {
                             name: "SALMON",
-                            subtitle: "praetud lõhefilee, avokaado kreem ja sushi riis"
+                            subtitle: "Praetud lõhefilee, avokaado kreem ja sushi riis"
                         },
                         veganPoke: {
                             name: "VEGAN POKE",
-                            subtitle: "sushi riis, värske salat, köögiviljad, oad, kastmed ja krõbe tofu"
+                            subtitle: "Sushi riis, värske salat, köögiviljad, oad, kastmed ja krõbe tofu"
                         },
                         mochi: {
                             name: "MOCHI",
-                            subtitle: "jaapani magustoit, mis on valmistatud magusast tambitud riisitaignast, mis on mahitud jäätise ümber"
+                            subtitle: "Jaapani magustoit, mis on valmistatud magusast tambitud riisitaignast, mis on mahitud jäätise ümber"
                         },
                         macha: {
                             name: "MACHA",
-                            subtitle: "rohelise tee‑mousse kook karamelli ja küpsistega"
+                            subtitle: "Rohelise tee‑mousse kook karamelli ja küpsistega"
                         },
                         kook: {
                             name: "KOOK",
-                            subtitle: "koogi tellimine kokkuleppel"
+                            subtitle: "Koogi tellimine kokkuleppel"
                         },
                         kannuvesi: {
                             name: "KANNUVESI"
@@ -643,85 +707,89 @@ const resources = {
                     dishes: {
                         pankoChickenSalad: {
                             name: "PANKO CHICKEN SALAD",
-                            subtitle: "Cалат с хрустящей курицей и пармезаном"
+                            subtitle: "Салат с хрустящей курицей и пармезаном"
                         },
                         prawnCrunch: {
                             name: "PRAWN CRUNCH",
-                            subtitle: "хрустящие креветки с салатом, соусом терияки и кимчи майо"
+                            subtitle: "Хрустящие креветки с салатом, соусом терияки и кимчи майо"
                         },
                         krupuk: {
                             name: "KRUPUK",
-                            subtitle: "воздушные креветочные чипсы с соусом васаби"
+                            subtitle: "Воздушные креветочные чипсы с соусом васаби"
                         },
                         gyoza: {
                             name: "GYOZA",
-                            subtitle: "японские пельмени с курицей"
+                            subtitle: "Японские пельмени с курицей"
                         },
                         californiaSushi: {
                             name: "CALIFORNIA SUSHI",
-                            subtitle: "снежный краб, авокадо, огурец, белый кунжут"
+                            subtitle: "Снежный краб, авокадо, огурец, белый кунжут"
                         },
                         philadelphiaSushi: {
                             name: "PHILADELPHIA SUSHI",
-                            subtitle: "крем-сыр, лосось, огурец, белый кунжут"
+                            subtitle: "Крем-сыр, лосось, огурец, белый кунжут"
                         },
                         prawnMakiSushi: {
                             name: "PRAWN MAKI SUSHI",
-                            subtitle: "темпура креветки, острый соус, крем-сыр, огурец, масагo"
+                            subtitle: "Темпура креветки, острый соус, крем-сыр, огурец, масаго"
                         }
                     },
-                    menu_nr3_dishes: {
-                        tataki: {
-                            name: "TATAKI",
-                            subtitle: "обожженные ломтики лосося/тунца с острым соусом понзу"
+                    menu_nr2_dishes: {
+                        dynamiteChicken: {
+                            name: "DYNAMITE CHICKEN",
+                            subtitle: "Хрустящая курица с соусом динамит"
                         },
-                        edamame: {
-                            name: "EDAMAME",
-                            subtitle: "соевые бобы на пару с морской солью"
+                        prawnCrunch: {
+                            name: "PRAWN CRUNCH",
+                            subtitle: "Хрустящие креветки с салатом, соусом терияки и кимчи майо"
                         },
-                        wasabiPrawns: {
-                            name: "WASABI PRAWNS",
-                            subtitle: "хрустящие креветки темпура в кремово-васаби соусе"
+                        parmigianoSarada: {
+                            name: "PARMIGIANO SARADA",
+                            subtitle: "Зеленый салат, авокадо, бобы эдамаме с сыром пармезан и васаби соусом"
                         },
-                        nigiriSelection: {
-                            name: "NIGIRI SELECTION",
-                            subtitle: "нигири на выбор повара"
+                        salmonBite: {
+                            name: "SALMON BITE",
+                            subtitle: "Брускетта с соленым лососем тар тар и сливочным сыром"
                         },
-                        sashimi: {
-                            name: "SASHIMI",
-                            subtitle: "лосось, тунец, угорь"
+                        snowcrabCornSalad: {
+                            name: "SNOWCRAB AND CORN SALAD",
+                            subtitle: "Салат с рисом, кукурузой, огурцом и снежным крабом"
                         },
-                        spiderSushi: {
-                            name: "SPIDER SUSHI",
-                            subtitle: "краб в мягком панцире, зеленый лук, огурец, масаго, салат, васаби соус"
+                        sushiAppetizer: {
+                            name: "SUSHI",
+                            subtitle: "Ассорти суши с лососем, снежным крабом и креветками"
                         },
                         ribs: {
                             name: "RIBS",
-                            subtitle: "свиные ребра терияки с картошкой фри"
+                            subtitle: "Свиные ребра терияки с картошкой фри"
                         },
-                        prawnsMain: {
+                        prawns: {
                             name: "PRAWNS",
-                            subtitle: "свежий салат с чесночными креветками"
+                            subtitle: "Свежий салат с чесночными креветками"
                         },
-                        salmon: {
+                        salmonMain: {
                             name: "SALMON",
-                            subtitle: "обжаренное филе лосося, авокадо кремом и суши рис"
+                            subtitle: "Обжаренное филе лосося, авокадо кремом и суши рисом"
                         },
                         veganPoke: {
                             name: "VEGAN POKE",
-                            subtitle: "суши рис, салат, овощи, бобы, соусы и хрустящий тофу"
+                            subtitle: "Суши рис, салат, овощи, бобы, соусы и хрустящий тофу"
+                        },
+                        sushiMain: {
+                            name: "SUSHI",
+                            subtitle: "Филадельфия суши со свежим лососем и нигири с лососем"
                         },
                         mochi: {
                             name: "MOCHI",
-                            subtitle: "японский десерт из сладкого рисового теста, в которое обернуто мороженое"
+                            subtitle: "Японский десерт из сладкого рисового теста, обернутый вокруг мороженого"
                         },
                         macha: {
                             name: "MACHA",
-                            subtitle: "муссовый торт из зеленого чая с карамелью и печеньем"
+                            subtitle: "Муссовый торт из зеленого чая с карамелью и печеньем"
                         },
                         kook: {
                             name: "KOOK",
-                            subtitle: "заказ торта по договоренности"
+                            subtitle: "Заказ торта по договоренности"
                         },
                         kannuvesi: {
                             name: "KANNUVESI"
@@ -729,7 +797,67 @@ const resources = {
                         alcohol: {
                             name: "ALCOHOL ON AGREEMENT"
                         }
-                    }
+                    },
+                    menu_nr3_dishes: {
+                        tataki: {
+                            name: "TATAKI",
+                            subtitle: "Обожженные ломтики лосося/тунца с острым соусом понзу"
+                        },
+                        edamame: {
+                            name: "EDAMAME",
+                            subtitle: "Соевые бобы на пару с морской солью"
+                        },
+                        wasabiPrawns: {
+                            name: "WASABI PRAWNS",
+                            subtitle: "Хрустящие креветки темпура в кремово-васаби соусе"
+                        },
+                        nigiriSelection: {
+                            name: "NIGIRI SELECTION",
+                            subtitle: "Нигири на выбор повара"
+                        },
+                        sashimi: {
+                            name: "SASHIMI",
+                            subtitle: "Лосось, тунец, угорь"
+                        },
+                        spiderSushi: {
+                            name: "SPIDER SUSHI",
+                            subtitle: "Краб в мягком панцире, зеленый лук, огурец, масаго, салат, васаби соус"
+                        },
+                        ribs: {
+                            name: "RIBS",
+                            subtitle: "Свиные ребра терияки с картошкой фри"
+                        },
+                        prawnsMain: {
+                            name: "PRAWNS",
+                            subtitle: "Свежий салат с чесночными креветками"
+                        },
+                        salmon: {
+                            name: "SALMON",
+                            subtitle: "Обжаренное филе лосося, авокадо кремом и суши рис"
+                        },
+                        veganPoke: {
+                            name: "VEGAN POKE",
+                            subtitle: "Суши рис, салат, овощи, бобы, соусы и хрустящий тофу"
+                        },
+                        mochi: {
+                            name: "MOCHI",
+                            subtitle: "Японский десерт из сладкого рисового теста, в которое обернуто мороженое"
+                        },
+                        macha: {
+                            name: "MACHA",
+                            subtitle: "Муссовый торт из зеленого чая с карамелью и печеньем"
+                        },
+                        kook: {
+                            name: "KOOK",
+                            subtitle: "Заказ торта по договоренности"
+                        },
+                        kannuvesi: {
+                            name: "KANNUVESI"
+                        },
+                        alcohol: {
+                            name: "ALCOHOL ON AGREEMENT"
+                        }
+                    },
                 },
             },
             testimonials: {

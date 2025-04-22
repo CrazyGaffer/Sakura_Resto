@@ -1,34 +1,22 @@
-import PropTypes from 'prop-types';
+import { Link as ScrollLink } from 'react-scroll';
 import '../pages/events/ContactButton.css';
 import { useTranslation } from 'react-i18next';
 
-const ContactButton = ({ email, subject, body }) => {
+const ContactButton = () => {
     const { t } = useTranslation();
-
-    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     return (
         <div className="contact-button-container">
-            <a
-                href={mailtoLink}
+            <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={150}
                 className="contact-read-more-button"
             >
                 {t('events.contact_button.text')}
-            </a>
+            </ScrollLink>
         </div>
     );
-};
-
-ContactButton.propTypes = {
-    email: PropTypes.string,
-    subject: PropTypes.string,
-    body: PropTypes.string,
-};
-
-ContactButton.defaultProps = {
-    email: 'info@sakuraresto.ee',
-    subject: 'I would like to know more about the packages',
-    body: 'I would like to order some package.',
 };
 
 export default ContactButton;
