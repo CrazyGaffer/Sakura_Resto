@@ -6,7 +6,7 @@ $gray-light: #f2f2f2;
 $detail-medium-contrast: color.scale($gray, $lightness: 40%);
 
 .banquet-menu-container {
-  font-family: Montserrat, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +46,6 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
       @media (max-width: 1024px) and (min-width: 575px) {
         font-size: 2em !important;
       }
-
       @media (max-width: 575px) {
         font-size: 1.7em !important;
       }
@@ -103,16 +102,13 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
         &:hover {
           color: $primary-color;
         }
-
         &:not(.active):hover::after {
           transform: scaleX(1);
           opacity: 0.5;
         }
-
         &.active {
           color: $primary-color;
           font-weight: 600;
-
           &::after {
             transform: scaleX(1);
             opacity: 1;
@@ -245,7 +241,7 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
 
     .packages-contact {
       color: $detail-medium-contrast;
-      margin-bottom: 1rem;
+      white-space: normal;
     }
   }
 }
@@ -317,5 +313,12 @@ $detail-medium-contrast: color.scale($gray, $lightness: 40%);
         text-align: left;
       }
     }
+  }
+}
+
+@media (min-width: 1025px) {
+  .packages-contact {
+    max-width: 750px;
+    text-align: left;
   }
 }

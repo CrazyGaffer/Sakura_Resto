@@ -15,12 +15,12 @@ const MenuNR1 = () => {
                 <h3>{t('events.banquet_menu.salads_title')}</h3>
                 <ul>
                     <li>
-            <span className="product-name">
-              {t('events.banquet_menu.dishes.pankoChickenSalad.name')}
-            </span>
+                        <span className="product-name">
+                            {t('events.banquet_menu.dishes.pankoChickenSalad.name')}
+                        </span>
                         <span className="product-subtitle">
-              {t('events.banquet_menu.dishes.pankoChickenSalad.subtitle')}
-            </span>
+                            {t('events.banquet_menu.dishes.pankoChickenSalad.subtitle')}
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -29,28 +29,28 @@ const MenuNR1 = () => {
                 <h3>{t('events.banquet_menu.appetizers_title')}</h3>
                 <ul>
                     <li>
-            <span className="product-name">
-              {t('events.banquet_menu.dishes.prawnCrunch.name')}
-            </span>
+                        <span className="product-name">
+                            {t('events.banquet_menu.dishes.prawnCrunch.name')}
+                        </span>
                         <span className="product-subtitle">
-              {t('events.banquet_menu.dishes.prawnCrunch.subtitle')}
-            </span>
+                            {t('events.banquet_menu.dishes.prawnCrunch.subtitle')}
+                        </span>
                     </li>
                     <li>
-            <span className="product-name">
-              {t('events.banquet_menu.dishes.krupuk.name')}
-            </span>
+                        <span className="product-name">
+                            {t('events.banquet_menu.dishes.krupuk.name')}
+                        </span>
                         <span className="product-subtitle">
-              {t('events.banquet_menu.dishes.krupuk.subtitle')}
-            </span>
+                            {t('events.banquet_menu.dishes.krupuk.subtitle')}
+                        </span>
                     </li>
                     <li>
-            <span className="product-name">
-              {t('events.banquet_menu.dishes.gyoza.name')}
-            </span>
+                        <span className="product-name">
+                            {t('events.banquet_menu.dishes.gyoza.name')}
+                        </span>
                         <span className="product-subtitle">
-              {t('events.banquet_menu.dishes.gyoza.subtitle')}
-            </span>
+                            {t('events.banquet_menu.dishes.gyoza.subtitle')}
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -59,28 +59,28 @@ const MenuNR1 = () => {
                 <h3>{t('events.banquet_menu.sushi_title')}</h3>
                 <ul>
                     <li>
-            <span className="product-name">
-              {t('events.banquet_menu.dishes.californiaSushi.name')}
-            </span>
+                        <span className="product-name">
+                            {t('events.banquet_menu.dishes.californiaSushi.name')}
+                        </span>
                         <span className="product-subtitle">
-              {t('events.banquet_menu.dishes.californiaSushi.subtitle')}
-            </span>
+                            {t('events.banquet_menu.dishes.californiaSushi.subtitle')}
+                        </span>
                     </li>
                     <li>
-            <span className="product-name">
-              {t('events.banquet_menu.dishes.philadelphiaSushi.name')}
-            </span>
+                        <span className="product-name">
+                            {t('events.banquet_menu.dishes.philadelphiaSushi.name')}
+                        </span>
                         <span className="product-subtitle">
-              {t('events.banquet_menu.dishes.philadelphiaSushi.subtitle')}
-            </span>
+                            {t('events.banquet_menu.dishes.philadelphiaSushi.subtitle')}
+                        </span>
                     </li>
                     <li>
-            <span className="product-name">
-              {t('events.banquet_menu.dishes.prawnMakiSushi.name')}
-            </span>
+                        <span className="product-name">
+                            {t('events.banquet_menu.dishes.prawnMakiSushi.name')}
+                        </span>
                         <span className="product-subtitle">
-              {t('events.banquet_menu.dishes.prawnMakiSushi.subtitle')}
-            </span>
+                            {t('events.banquet_menu.dishes.prawnMakiSushi.subtitle')}
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -89,10 +89,20 @@ const MenuNR1 = () => {
                 <h3>{t('events.banquet_menu.drinks_title')}</h3>
                 <ul>
                     <li>
-                        <span className="product-name">MANGO KODUNELIMONAAD</span>
+                        <span className="product-name">
+                            {t('events.banquet_menu.dishes.vesi.name')}
+                        </span>
+                        <span className="product-subtitle">
+                            {t('events.banquet_menu.dishes.vesi.subtitle')}
+                        </span>
                     </li>
                     <li>
-                        <span className="product-name">KANNUVESI</span>
+                        <span className="product-name">
+                            {t('events.banquet_menu.dishes.limonaad.name')}
+                        </span>
+                        <span className="product-subtitle">
+                            {t('events.banquet_menu.dishes.limonaad.subtitle')}
+                        </span>
                     </li>
                 </ul>
             </div>

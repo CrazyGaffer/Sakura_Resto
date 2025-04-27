@@ -67,11 +67,7 @@ const BanquetMenu = () => {
 
             <div className="packages-footer">
                 <p className="packages-contact">{t('events.contact_text')}</p>
-                <ContactButton
-                    email="info@sakuraresto.ee"
-                    subject="Inquiry about event packages"
-                    body="Hi, I would like to know more about your party packages. Please send me further information."
-                />
+                <ContactButton />
             </div>
         </div>
     );

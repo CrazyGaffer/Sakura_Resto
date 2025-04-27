@@ -75,7 +75,7 @@
       "title_3": "Luksus",
       "description_3": "Koge ülimat rafineeritust kohandatud kulinaarsete loomingute ja eksklusiivsete mugavustega."
     },
-    "contact_text": "Üritusepaketi broneerimiseks või lisaküsimuste korral võtke palun ühendust meie meeskonnaga.",
+    "contact_text": "Banketimenüü broneerimiseks või lisaküsimuste korral võtke palun ühendust meie meeskonnaga.",
     "contact_button": { "text": "Võta meiega ühendust" },
     "banquet_menu": {
       "heading": "Banketimenüü",
@@ -122,6 +122,79 @@
         "prawnMakiSushi": {
           "name": "PRAWN MAKI SUSHI",
           "subtitle": "Tempura krevetid, terav kaste, toorjuust, kurk, masago"
+        },
+        "limonaad": {
+          "name": "LIMONAAD",
+          "subtitle": "Iga päev uus maitse"
+        },
+        "vesi": {
+          "name": "Kannuvesi",
+          "subtitle": "Vesi"
+        }
+      },
+      "menu_nr2_dishes": {
+        "dynamiteChicken": {
+          "name": "DYNAMITE CHICKEN",
+          "subtitle": "Krõbe kana terava kastmega"
+        },
+        "prawnCrunch": {
+          "name": "PRAWN CRUNCH",
+          "subtitle": "Krõbedad krevetid salati, teriyaki ja kimchi mayoga"
+        },
+        "parmigianoSarada": {
+          "name": "PARMIGIANO SARADA",
+          "subtitle": "Roheline salat, avokaado ja sojaoad maitsestatud parmesani ja wasabi kastmega"
+        },
+        "salmonBite": {
+          "name": "SALMON BITE",
+          "subtitle": "Bruschetta soolalõhe tar-tar ja toorjuustuga"
+        },
+        "snowcrabCornSalad": {
+          "name": "SNOWCRAB AND CORN SALAD",
+          "subtitle": "Salat riisi, maisi, kurgi ja lumekrabiga"
+        },
+        "sushiAppetizer": {
+          "name": "SUSHI",
+          "subtitle": "Sushi assortii lõhe, lumekrabi ja krevetidega"
+        },
+        "ribs": {
+          "name": "RIBS",
+          "subtitle": "Teriyaki searibid friikartuliga"
+        },
+        "prawns": {
+          "name": "PRAWNS",
+          "subtitle": "Värske salat küüslaugu krevetidega"
+        },
+        "salmonMain": {
+          "name": "SALMON",
+          "subtitle": "Praetud lõhefilee, avokaado kreem ja sushi riis"
+        },
+        "veganPoke": {
+          "name": "VEGAN POKE",
+          "subtitle": "Sushi riis, värske salat, köögiviljad, oad, kastmed ja krõbe tofu"
+        },
+        "sushiMain": {
+          "name": "SUSHI",
+          "subtitle": "Philadelphia sushi värske lõhega ja lõhe nigiri"
+        },
+        "mochi": {
+          "name": "MOCHI",
+          "subtitle": "Jaapani magustoit, mis on valmistatud magusast tambitud riisitaignast, mis on mähitud jäätise ümber"
+        },
+        "macha": {
+          "name": "MACHA",
+          "subtitle": "Rohelise tee-mousse kook karamelli ja küpsistega"
+        },
+        "kook": {
+          "name": "KOOK",
+          "subtitle": "Koogi tellimine kokkuleppel"
+        },
+        "kannuvesi": {
+          "name": "Table water"
+        },
+        "alcohol": {
+          "name": "ALKOHOL KOKKULEPPEL",
+          "subtitle": "Alkohoolsed joogid tellitakse eraldi"
         }
       },
       "menu_nr3_dishes": {
@@ -181,7 +254,8 @@
           "name": "KANNUVESI"
         },
         "alcohol": {
-          "name": "ALKOHOL KOKKULEPPEL"
+          "name": "ALKOHOL KOKKULEPPEL",
+          "subtitle": "Alkohoolsed joogid tellitakse eraldi"
         }
       }
     }

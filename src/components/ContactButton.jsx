@@ -1,5 +1,5 @@
 import { Link as ScrollLink } from 'react-scroll';
-import '../pages/events/ContactButton.css';
+import '/src/components/ContactButton.css';
 import { useTranslation } from 'react-i18next';
 
 const ContactButton = () => {

@@ -143,14 +143,20 @@ const MenuNR3 = () => {
                 <h3>{t('events.banquet_menu.drinks_title')}</h3>
                 <ul>
                     <li>
-            <span className="product-name">
-              {t('events.banquet_menu.menu_nr3_dishes.kannuvesi.name')}
-            </span>
+                        <span className="product-name">
+                            {t('events.banquet_menu.dishes.vesi.name')}
+                        </span>
+                        <span className="product-subtitle">
+                            {t('events.banquet_menu.dishes.vesi.subtitle')}
+                        </span>
                     </li>
                     <li>
-            <span className="product-name">
-              {t('events.banquet_menu.menu_nr3_dishes.alcohol.name')}
-            </span>
+                        <span className="product-name">
+                           {t('events.banquet_menu.menu_nr3_dishes.alcohol.name')}
+                        </span>
+                        <span className="product-subtitle">
+                            {t('events.banquet_menu.menu_nr3_dishes.alcohol.subtitle')}
+                        </span>
                     </li>
                 </ul>
             </div>

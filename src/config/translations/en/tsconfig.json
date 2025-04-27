@@ -75,7 +75,7 @@
       "title_3": "Luxury",
       "description_3": "Experience the ultimate in sophistication with bespoke culinary creations and exclusive amenities."
     },
-    "contact_text": "To reserve an event package or for further inquiries, please contact our dedicated team.",
+    "contact_text": "To book from the banquet menu or for further inquiries, please contact our dedicated team.",
     "contact_button": {
       "text": "Contact us"
     },
@@ -124,6 +124,14 @@
         "prawnMakiSushi": {
           "name": "PRAWN MAKI SUSHI",
           "subtitle": "Tempura prawns, spicy sauce, cream cheese, cucumber, masago"
+        },
+        "limonaad": {
+          "name": "LIMONAAD",
+          "subtitle": "Every day a new taste"
+        },
+        "vesi": {
+          "name": "Table water",
+          "subtitle": "Water"
         }
       },
       "menu_nr2_dishes": {
@@ -184,10 +192,11 @@
           "subtitle": "Traditional Korean Cookie"
         },
         "kannuvesi": {
-          "name": "KANNUVESI"
+          "name": "Table water"
         },
         "alcohol": {
-          "name": "ALCOHOL ON AGREEMENT"
+          "name": "ALCOHOL ON AGREEMENT",
+          "subtitle": "Alcoholic drinks are ordered separately"
         }
       },
       "menu_nr3_dishes": {
@@ -244,10 +253,11 @@
           "subtitle": "Cake order on agreement"
         },
         "kannuvesi": {
-          "name": "KANNUVESI"
+          "name": "Table water"
         },
         "alcohol": {
-          "name": "ALCOHOL ON AGREEMENT"
+          "name": "ALCOHOL ON AGREEMENT",
+          "subtitle": "Alcoholic drinks are ordered separately"
         }
       }
     }
