@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import logo from '/src/assets/logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -17,23 +18,18 @@ const Header = () => {
         { id: 'contact-section', label: t('navbar.contact') },
     ];
 
-    const toggleMenu = () => setMenuOpen((prev) => !prev);
+    const toggleMenu = () => setMenuOpen(prev => !prev);
     const closeMenu = () => setMenuOpen(false);
 
     useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-
+        const handleScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     useEffect(() => {
         document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
-        return () => {
-            document.body.style.overflow = 'auto';
-        };
+        return () => { document.body.style.overflow = 'auto'; };
     }, [menuOpen]);
 
     useEffect(() => {
@@ -45,44 +41,34 @@ const Header = () => {
                 setMenuOpen(false);
             }
         };
-
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return (
-        <header
-            className={`navbar ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-active' : ''}`}
-        >
+        <header className={`navbar ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-active' : ''}`}>
             <div className="navbar-container">
                 <div
-                    className="navbar-title"
+                    className="navbar-logo"
                     onClick={() => scroll.scrollToTop({ duration: 300 })}
                 >
-                    Sakura Resto
+                    <img src={logo} alt={t('navbar.logoAlt', 'Sakura Resto Logo')} />
                 </div>
+
                 {isMobile ? (
                     <>
                         <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
                             <ul>
-                                {navItems.map((item) => (
+                                {navItems.map(item => (
                                     <li key={item.id}>
-                                        <ScrollLink
-                                            to={item.id}
-                                            smooth={true}
-                                            duration={150}
-                                            onClick={closeMenu}
-                                        >
+                                        <ScrollLink to={item.id} smooth duration={150} onClick={closeMenu}>
                                             {item.label}
                                         </ScrollLink>
                                     </li>
                                 ))}
                             </ul>
                         </nav>
-                        <div
-                            className={`hamburger ${menuOpen ? 'active' : ''}`}
-                            onClick={toggleMenu}
-                        >
+                        <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
                             <span className="bar"></span>
                             <span className="bar"></span>
                             <span className="bar"></span>
@@ -91,13 +77,9 @@ const Header = () => {
                 ) : (
                     <nav className="nav-menu">
                         <ul>
-                            {navItems.map((item) => (
+                            {navItems.map(item => (
                                 <li key={item.id}>
-                                    <ScrollLink
-                                        to={item.id}
-                                        smooth={true}
-                                        duration={150}
-                                    >
+                                    <ScrollLink to={item.id} smooth duration={150}>
                                         {item.label}
                                     </ScrollLink>
                                 </li>

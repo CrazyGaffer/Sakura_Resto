@@ -35,6 +35,15 @@ html {
     z-index: 11;
 }
 
+.navbar-logo img {
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.navbar-logo img:hover {
+    transform: scale(1.05);
+}
+
 .navbar-title {
     font-size: 30px;
     font-weight: 700;
@@ -54,6 +63,10 @@ html {
 }
 
 @media (max-width: 1024px) {
+    .navbar-logo img {
+        height: 40px;
+    }
+
     .navbar:not(.scrolled):not(.menu-active) .hamburger .bar,
     .navbar:not(.scrolled):not(.menu-active) .navbar-title {
         color: white;
@@ -78,7 +91,6 @@ html {
     gap: 5px;
     z-index: 12;
 }
-
 .hamburger .bar {
     width: 25px;
     height: 3px;
@@ -86,15 +98,12 @@ html {
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform: translateY(0) rotate(0);
 }
-
 .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
-
 .hamburger.active .bar:nth-child(2) {
     opacity: 0;
 }
-
 .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
@@ -103,11 +112,9 @@ html {
     background: rgba(255, 255, 255, 1) !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .navbar.scrolled .nav-menu a {
     color: #333;
 }
-
 .navbar.scrolled .hamburger .bar {
     background-color: #333;
 }
@@ -115,7 +122,6 @@ html {
 .navbar:not(.scrolled) .nav-menu a {
     color: white;
 }
-
 .navbar:not(.scrolled) .hamburger .bar {
     background-color: white;
 }
@@ -123,13 +129,11 @@ html {
 .nav-menu {
     display: flex;
 }
-
 .nav-menu ul {
     display: flex;
     list-style: none;
     gap: 20px;
 }
-
 .nav-menu li a {
     text-decoration: none;
     color: inherit;
@@ -139,7 +143,6 @@ html {
     cursor: pointer;
     transition: color 0.3s ease;
 }
-
 .nav-menu li a:hover,
 .nav-menu li a.active {
     color: #e91e63 !important;
@@ -163,26 +166,21 @@ html {
         opacity: 0;
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
-
     .nav-menu.active {
         transform: translateY(0);
         opacity: 1;
     }
-
     .navbar-title {
         font-size: 25px;
     }
-
     .nav-menu ul {
         flex-direction: column;
         gap: 30px;
     }
-
     .nav-menu li a {
         color: #333 !important;
         padding: 12px 20px;
     }
-
     .nav-menu ul li {
         opacity: 0;
         transform: translateX(-100%) rotate(-15deg);
