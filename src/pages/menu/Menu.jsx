@@ -27,8 +27,8 @@ function Menu() {
 
                 <div className="divider"></div>
 
-                <div className="about-content">
-                    <div className="about-image">
+                <div className="menu-content">
+                    <div className="menu-image">
                         <div className="image-container">
                             <img
                                 src={item_2}
