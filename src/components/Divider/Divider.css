@@ -1,17 +1,12 @@
+
 .divider {
     width: 100%;
     margin: 80px auto;
-    /* remove the old border */
     border: none;
-    /* make it as tall as your “dot” diameter */
     height: 4px;
-    /* draw 2px-radius circles of #ccc, then transparent */
     background-image: radial-gradient(circle, #ccc 2px, transparent 2px);
-    /* repeat them horizontally only */
     background-repeat: repeat-x;
-    /* control spacing: 12px between dot-centers, and 4px tall */
     background-size: 13px 4px;
-    /* vertical-center the dots in the 4px tall divider */
     background-position: center;
 }
 
