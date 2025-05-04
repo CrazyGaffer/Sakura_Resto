@@ -114,14 +114,14 @@ $accent-dark:     #2a2a2a;
     padding-left: 4%;
   }
   @media (max-width: 480px) {
-    padding-top: calc(1.5rem + #{$mobile-navbar-height});
+    padding-top: #{$mobile-navbar-height};
     padding-right: 3%;
     padding-bottom: 1.5rem;
     padding-left: 3%;
     text-align: center;
   }
   @media (max-width: 375px) {
-    padding-top: calc(1rem + #{$mobile-navbar-height});
+    padding-top: #{$mobile-navbar-height};
     padding-right: 2%;
     padding-bottom: 1rem;
     padding-left: 2%;
