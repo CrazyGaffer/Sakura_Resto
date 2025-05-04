@@ -92,7 +92,7 @@ const WorkingHoursInfo = () => {
                 <span className="working-time">
                   11<span className="time-colon">:</span>00
                   <br />
-                  12<span className="time-colon">:</span>00
+                  00<span className="time-colon">:</span>00
                 </span>
                             </li>
                         </motion.ul>
