@@ -1,6 +1,9 @@
 @use "sass:color";
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
+$desktop-navbar-height: 80px;
+$mobile-navbar-height: 60px;
+
 $serif:           'Montserrat', sans-serif;
 $sans:            'Montserrat', sans-serif;
 $primary-color:   #e91e63;
@@ -8,17 +11,16 @@ $secondary-color: #f8f5f2;
 $text-dark:       #3a3a3a;
 $accent-dark:     #2a2a2a;
 
+* { box-sizing: border-box; }
+
 .hero {
-  /* full‑screen on desktop/tablet */
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
   background: $secondary-color;
+  overflow: visible;
 
   &-container {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    height: 100%;
+    grid-auto-rows: min-content;
 
     .image-slider { order: 2; }
     .content-column { order: 1; }
@@ -26,39 +28,27 @@ $accent-dark:     #2a2a2a;
     @media (max-width: 1024px) {
       grid-template-columns: 1fr;
       grid-template-rows: 50vh auto;
-
-      .image-slider,
-      .content-column { order: initial; }
+      .image-slider, .content-column { order: initial; }
     }
-
     @media (max-width: 768px) {
       grid-template-rows: 45vh auto;
-      gap: 0;
     }
-
     @media (max-width: 480px) {
       grid-template-rows: 40vh auto;
     }
-
     @media (max-width: 375px) {
       grid-template-rows: 35vh auto;
     }
-  }
-
-  /* allow content to grow on small screens so buttons stay visible */
-  @media (max-width: 768px) {
-    height: auto;
-    overflow: visible;
   }
 }
 
 .image-slider {
   position: relative;
-  height: 100%;
-  overflow: hidden;
   background: linear-gradient(45deg, $accent-dark, $text-dark);
   pointer-events: none;
   user-select: none;
+  min-height: 100vh;
+  overflow: hidden;
 
   .slide {
     position: absolute;
@@ -79,49 +69,62 @@ $accent-dark:     #2a2a2a;
   }
 
   @media (max-width: 1024px) {
-    height: 50vh;
     min-height: 280px;
+    height: 50vh;
   }
   @media (max-width: 768px) {
-    height: 45vh;
     min-height: 240px;
+    height: 45vh;
   }
   @media (max-width: 480px) {
-    height: 40vh;
     min-height: 200px;
+    height: 40vh;
   }
   @media (max-width: 375px) {
-    height: 35vh;
     min-height: 180px;
+    height: 35vh;
   }
 }
 
 .content-column {
+  padding-top: calc(3rem + #{$desktop-navbar-height});
+  padding-right: 8%;
+  padding-bottom: 3rem;
+  padding-left: 8%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3rem 8%;
   position: relative;
   z-index: 2;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
 
   @media (max-width: 1024px) {
-    padding: 2.5rem 6%;
+    padding-top: calc(2.5rem + #{$mobile-navbar-height});
+    padding-right: 6%;
+    padding-bottom: 2.5rem;
+    padding-left: 6%;
     background: rgba(255, 255, 255, 0.97);
     box-shadow: none;
   }
   @media (max-width: 768px) {
-    padding: 2rem 4%;
+    padding-top: calc(2rem + #{$mobile-navbar-height});
+    padding-right: 4%;
+    padding-bottom: 2rem;
+    padding-left: 4%;
   }
-
-  /* center all text under 480px */
   @media (max-width: 480px) {
-    padding: 1.5rem 3%;
+    padding-top: calc(1.5rem + #{$mobile-navbar-height});
+    padding-right: 3%;
+    padding-bottom: 1.5rem;
+    padding-left: 3%;
     text-align: center;
   }
   @media (max-width: 375px) {
-    padding: 1rem 2%;
+    padding-top: calc(1rem + #{$mobile-navbar-height});
+    padding-right: 2%;
+    padding-bottom: 1rem;
+    padding-left: 2%;
   }
 }
 
@@ -133,7 +136,6 @@ $accent-dark:     #2a2a2a;
     letter-spacing: 2px;
     margin-bottom: 1rem;
   }
-
   .title {
     font-family: $serif;
     font-size: clamp(1.8rem, 6vw, 3.2rem);
@@ -141,20 +143,19 @@ $accent-dark:     #2a2a2a;
     margin-bottom: 1.5rem;
     line-height: 1.2;
   }
-
   .description {
     font-family: $sans;
-    font-size: 1rem;               // fixed size
+    font-size: 1rem;
     color: rgba($accent-dark, 0.9);
     line-height: 1.6;
     max-width: 80%;
-    margin-bottom: 1.5rem;         // left-aligned on large screens
+    margin-bottom: 1.5rem;
 
     @media (max-width: 480px) {
-      margin: 0 auto 1.5rem;       // center on small screens
+      margin: 0 auto 1.5rem;
     }
     @media (max-width: 375px) {
-      font-size: 0.95rem;          // slight shrink on narrowest screens
+      font-size: 0.95rem;
     }
   }
 }
