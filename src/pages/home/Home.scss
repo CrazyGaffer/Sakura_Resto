@@ -31,10 +31,11 @@ $accent-dark:     #2a2a2a;
       .image-slider, .content-column { order: initial; }
     }
     @media (max-width: 768px) {
-      grid-template-rows: 45vh auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: 40vh auto;
     }
     @media (max-width: 480px) {
-      grid-template-rows: 40vh auto;
+      grid-template-rows: 35vh auto;
     }
     @media (max-width: 375px) {
       grid-template-rows: 35vh auto;
@@ -74,11 +75,11 @@ $accent-dark:     #2a2a2a;
   }
   @media (max-width: 768px) {
     min-height: 240px;
-    height: 45vh;
+    height: 40vh;
   }
   @media (max-width: 480px) {
     min-height: 200px;
-    height: 40vh;
+    height: 35vh;
   }
   @media (max-width: 375px) {
     min-height: 180px;
@@ -108,20 +109,20 @@ $accent-dark:     #2a2a2a;
     box-shadow: none;
   }
   @media (max-width: 768px) {
-    padding-top: calc(2rem + #{$mobile-navbar-height});
+    padding-top: 2rem;
     padding-right: 4%;
     padding-bottom: 2rem;
     padding-left: 4%;
   }
   @media (max-width: 480px) {
-    padding-top: #{$mobile-navbar-height};
+    padding-top: 1.5rem;
     padding-right: 3%;
     padding-bottom: 1.5rem;
     padding-left: 3%;
     text-align: center;
   }
   @media (max-width: 375px) {
-    padding-top: #{$mobile-navbar-height};
+    padding-top: 1.5rem;
     padding-right: 2%;
     padding-bottom: 1rem;
     padding-left: 2%;
