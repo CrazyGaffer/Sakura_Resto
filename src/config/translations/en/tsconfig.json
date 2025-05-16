@@ -59,7 +59,8 @@
     "subtitle": "Menu",
     "content": "Indulge in our exquisite lunch menu featuring a blend of traditional flavors with a modern twist. Our carefully curated selection highlights seasonal ingredients, innovative culinary techniques, and artful presentations that promise a memorable dining experience. Whether you're craving a hearty dish or a light bite, our lunch menu offers something for every palate in a relaxed, inviting atmosphere.",
     "content_2": "Discover our à la carte selection, where each dish is prepared to order. Enjoy a diverse range of options from timeless classics to innovative culinary creations, all crafted with the freshest ingredients and a creative flair that lets you tailor your meal to your unique taste.",
-    "button": "See Menu"
+    "button": "See Menu",
+    "drinksButton": "See drinks menu"
   },
   "events": {
     "heading": "Events",

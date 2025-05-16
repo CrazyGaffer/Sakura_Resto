@@ -45,14 +45,46 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.menu-text h2 {
+.menu-text h2,
+.about-text h2 {
     text-align: left;
 }
 
-.menu-text p {
+.menu-text p,
+.about-text p {
     text-align: left;
 }
 
+.divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 60px 0;
+}
+
+/* Button group: vertical column, fixed width, and equal button sizing */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;    /* stack vertically */
+    gap: 20px;                 /* vertical space between buttons */
+    margin-top: 30px;          /* space above the group */
+    width: 200px;              /* desired button width */
+    align-items: stretch;      /* make children fill this width */
+}
+
+.menu-buttons .button-container {
+    width: 100%;
+}
+
+.menu-buttons .button-container .read-more-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* -----------------------------
+   Tablet and small desktop
+   screens: 575px – 1024px
+   ----------------------------- */
 @media (max-width: 1024px) and (min-width: 575px) {
     .menu {
         padding: 50px 30px;
@@ -62,7 +94,8 @@
         flex-direction: column;
     }
 
-    .menu-text {
+    .menu-text,
+    .about-text {
         order: -1;
         text-align: left;
         padding: 20px 0;
@@ -90,23 +123,18 @@
     }
 }
 
-@media (max-width: 574px) {
+/* -----------------------------
+   Medium phones & small tablets
+   screens: up to 768px
+   ----------------------------- */
+@media (max-width: 768px) {
     .menu {
-        padding: 50px 30px;
+        padding: 40px 20px;
     }
 
     .menu-content {
         flex-direction: column;
-    }
-
-    .menu-text {
-        order: -1;
-        text-align: left;
-        padding: 20px 0;
-    }
-
-    .menu-image {
-        order: 1;
+        gap: 30px;
     }
 
     .menu-image img {
@@ -115,14 +143,82 @@
     }
 
     .menu h2 {
-        font-size: 1.7em;
+        font-size: 1.8em;
     }
 
     .menu p {
-        font-size: 0.95em;
+        font-size: 0.9em;
+    }
+
+    .menu-buttons {
+        margin-top: 20px;
+        gap: 15px;
+    }
+}
+
+/* -----------------------------
+   Small phones: up to 574px
+   ----------------------------- */
+@media (max-width: 574px) {
+    .menu {
+        padding: 30px 15px;
+    }
+
+    .menu-content {
+        flex-direction: column;
+    }
+
+    .menu-text,
+    .about-text {
+        order: -1;
+        padding: 15px 0;
+    }
+
+    .menu-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu h2 {
+        font-size: 1.6em;
+    }
+
+    .menu p {
+        font-size: 0.85em;
     }
 
     .menu-header .about-subtitle {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .divider {
+        margin: 40px 0;
+    }
+
+    .menu-buttons {
+        width: 100%;         /* buttons full-width on small screens */
+        gap: 15px;
+    }
+}
+
+/* -----------------------------
+   Extra-small phones: up to 480px
+   ----------------------------- */
+@media (max-width: 480px) {
+    .menu {
+        padding: 20px 10px;
+    }
+
+    .menu h2 {
+        font-size: 1.4em;
+    }
+
+    .menu p {
+        font-size: 0.8em;
+    }
+
+    .menu-buttons {
+        margin-top: 15px;
+        gap: 10px;
     }
 }

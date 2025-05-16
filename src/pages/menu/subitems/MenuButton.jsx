@@ -1,10 +1,7 @@
 import PropTypes from 'prop-types';
 import './MenuButton.css';
-import { useTranslation } from 'react-i18next';
 
-const MenuButton = ({ link }) => {
-    const { t } = useTranslation();
-
+const MenuButton = ({ link, children }) => {
     return (
         <div className="button-container">
             <a
@@ -13,7 +10,7 @@ const MenuButton = ({ link }) => {
                 rel="noopener noreferrer"
                 className="read-more-button"
             >
-                {t('menu.button')}
+                {children}
             </a>
         </div>
     );
@@ -21,6 +18,7 @@ const MenuButton = ({ link }) => {
 
 MenuButton.propTypes = {
     link: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
 };
 
 export default MenuButton;
