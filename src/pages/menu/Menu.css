@@ -1,5 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.read-more-button,
+.read-more-button.transparent {
+    box-sizing: border-box;
+}
+
+.read-more-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    padding: 14px 28px;
+    background: linear-gradient(45deg, #e91e63, #ff4081);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.read-more-button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+.read-more-button:active {
+    transform: translateY(0);
+    filter: brightness(0.95);
+}
+
+.read-more-button.transparent {
+    background: transparent !important;
+    color: #e91e63 !important;
+    border: 2px solid #e91e63;
+}
+
 .menu {
     padding: 100px 30px;
 }
@@ -12,7 +57,6 @@
 .menu-header {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     gap: 10px;
     margin-bottom: 5px;
 }
@@ -35,11 +79,25 @@
 .menu-buttons {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1rem;
 }
 
 .menu-buttons > * {
-    width: 200px;
+    margin: 0 !important;
+    min-width: 200px;
+    width: auto;
+}
+
+.alacarte-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 0;
+    justify-content: flex-start;
+}
+
+.alacarte-buttons > * {
+    min-width: 200px;
+    width: auto;
 }
 
 .menu h2 {
@@ -55,10 +113,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.menu-text h2 {
-    text-align: left;
-}
-
+.menu-text h2,
 .menu-text p {
     text-align: left;
 }
@@ -67,44 +122,25 @@
     .menu {
         padding: 50px 30px;
     }
-
     .menu-content {
         flex-direction: column;
     }
-
     .menu-text {
         order: -1;
-        text-align: left;
         padding: 20px 0;
     }
-
-    .menu-image {
-        order: 1;
-    }
-
     .menu-image img {
         width: 100%;
         height: auto;
     }
-
     .menu h2 {
         font-size: 2em;
     }
-
-    .menu p {
-        font-size: 0.95em;
-    }
-
-    .menu-header .about-subtitle {
-        font-size: 0.8rem;
-    }
-
-    .menu-buttons {
-        gap: 15px;
-    }
-
     .menu-buttons > * {
-        width: 180px;
+        min-width: 180px;
+    }
+    .alacarte-buttons > * {
+        min-width: 180px;
     }
 }
 
@@ -112,43 +148,22 @@
     .menu {
         padding: 50px 30px;
     }
-
     .menu-content {
         flex-direction: column;
     }
-
     .menu-text {
         order: -1;
-        text-align: left;
         padding: 20px 0;
     }
-
-    .menu-image {
-        order: 1;
-    }
-
     .menu-image img {
         width: 100%;
-        height: auto;
     }
-
     .menu h2 {
         font-size: 1.7em;
     }
-
-    .menu p {
-        font-size: 0.95em;
-    }
-
-    .menu-header .about-subtitle {
-        font-size: 0.8rem;
-    }
-
-    .menu-buttons {
-        gap: 10px;
-    }
-
-    .menu-buttons > * {
+    .menu-buttons > *,
+    .alacarte-buttons > * {
+        min-width: auto;
         width: 100%;
     }
 }

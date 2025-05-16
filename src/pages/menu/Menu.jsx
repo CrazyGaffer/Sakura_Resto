@@ -1,3 +1,4 @@
+// Menu.jsx (unchanged)
 import './Menu.css';
 import item_2 from '/src/assets/menu/item_2.jpg';
 import menuItem2 from '/src/assets/menu/menuItem1.jpeg';
@@ -20,11 +21,14 @@ function Menu() {
                         <h2>{t('menu.heading_2')}</h2>
                         <p>{t('menu.content_2')}</p>
 
-                        <div className="menu-buttons">
+                        <div className="menu-buttons alacarte-buttons">
                             <MenuButton link="https://www.sakuraresto.ee/_files/ugd/87015a_53fe56f6fbc34d07bf076e4ed04f215a.pdf">
                                 {t('menu.button')}
                             </MenuButton>
-                            <MenuButton link="https://www.sakuraresto.ee/_files/ugd/drinks.pdf">
+                            <MenuButton
+                                link="https://www.sakuraresto.ee/_files/ugd/drinks.pdf"
+                                className="transparent"
+                            >
                                 {t('menu.drinksButton')}
                             </MenuButton>
                         </div>
