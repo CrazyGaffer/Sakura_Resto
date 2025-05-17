@@ -1,4 +1,3 @@
-// Menu.jsx (unchanged)
 import './Menu.css';
 import item_2 from '/src/assets/menu/item_2.jpg';
 import menuItem2 from '/src/assets/menu/menuItem1.jpeg';
